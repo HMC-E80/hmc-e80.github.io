@@ -1,5 +1,5 @@
 .DS_Store
 desktop.ini
-.quarto/
-web/_site
+/.quarto/
+_site
 .vscode/*
