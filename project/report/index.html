@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.56">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>E80 Project Presentation and Report – E80 SP24</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">E80 SP24</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../lectures/"> 
+<span class="menu-text">Lectures</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-labs" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Labs</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-labs">    
+        <li>
+    <a class="dropdown-item" href="../../labs/overview">
+ <span class="dropdown-text">Overview and Safety</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../labs/lab0">
+ <span class="dropdown-text">Lab 0: Tutorial &amp; Skills Review</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../labs/lab1">
+ <span class="dropdown-text">Lab 1: Go Autonomous</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../labs/lab2">
+ <span class="dropdown-text">Lab 2: BEM</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../labs/lab3">
+ <span class="dropdown-text">Lab 3: Op-Amps</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../labs/lab4">
+ <span class="dropdown-text">Lab 4: Temperature</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../labs/lab5">
+ <span class="dropdown-text">Lab 5: Acoustics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../labs/lab6">
+ <span class="dropdown-text">Lab 6: Fluids</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-project" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Project</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-project">    
+        <li>
+    <a class="dropdown-item" href="../../project/overview">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../project/proposal">
+ <span class="dropdown-text">Design and Proposal</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../project/navigation">
+ <span class="dropdown-text">Navigation Jump Start</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../project/build">
+ <span class="dropdown-text">Build and Integrate</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../project/deploy">
+ <span class="dropdown-text">Field Deployment</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../project/report">
+ <span class="dropdown-text">Present and Report</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-references" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">References</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-references">    
+        <li>
+    <a class="dropdown-item" href="../../reference/inventory">
+ <span class="dropdown-text">Lab Inventory</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../reference/equipment">
+ <span class="dropdown-text">Lab Equipment</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../reference/board">
+ <span class="dropdown-text">Board Information</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../reference/design">
+ <span class="dropdown-text">Reference Designs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../reference/history">
+ <span class="dropdown-text">Old Final Projects</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/HMC-E80/E80"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#instructions" id="toc-instructions" class="nav-link active" data-scroll-target="#instructions">Instructions</a></li>
+  <li><a href="#analysis-week" id="toc-analysis-week" class="nav-link" data-scroll-target="#analysis-week">Analysis Week</a></li>
+  <li><a href="#recommended-outline" id="toc-recommended-outline" class="nav-link" data-scroll-target="#recommended-outline">Recommended Outline</a></li>
+  <li><a href="#final-presentation" id="toc-final-presentation" class="nav-link" data-scroll-target="#final-presentation">Final Presentation</a></li>
+  <li><a href="#final-report" id="toc-final-report" class="nav-link" data-scroll-target="#final-report">Final Report</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">E80 Project Presentation and Report</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Final Presentation Rubric <a href="../../project/report/presentation_rubric.html">html</a> <a href="presentation_rubric.docx">docx</a></p>
+<p>Final Report Rubric <a href="../../project/report/report_rubric.html">html</a> <a href="report_rubric.docx">docx</a></p>
+<p>Peer Review Feedback Instructions <a href="../../project/report/peer-review-instructions.html">html</a></p>
+<p>Peer Review Worksheet <a href="../../project/report/peer-review-worksheet.html">html</a> <a href="peer-review-worksheet.docx">docx</a></p>
+<p>Final Presentation Schedule <a href="https://docs.google.com/document/d/1ltmOAPcsXo1oMD4QBFbGct2N6RvV70-YT7UooeG7Ylw/edit">gdoc</a></p>
+<section id="instructions" class="level2">
+<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
+<p>The final week of the project is dedicated to analyzing your data, figuring out how to report it, and doing end-of-class surveys. After that, you prepare and deliver a final report and presentation to describe your efforts. This document describes the analysis week, the final report, and the final presentation.</p>
+</section>
+<section id="analysis-week" class="level2">
+<h2 class="anchored" data-anchor-id="analysis-week">Analysis Week</h2>
+<p>Though you are still free to work on your report and analysis in office hours and other E80 sections this week, <strong>you are required to attend your lab section</strong>. This is because we will do a few required activities, listed below, in lab. Some optional activities are available too.</p>
+<p><strong>Required: Fill out the end-of-semester evaluation</strong> – We are going to give you time in lab to fill out your end-of-semester course evaluations and the E80 post-survey. Note that participating in these evaluations is worth points on your final grade. Be sure to fill out an evaluation for your section professor. Odd numbered teams should also fill out a second evaluation for Prof.&nbsp;Spencer, and even numbered teams should also fill out a second evaluation for Prof.&nbsp;Brake.</p>
+<p><strong>Required: Have a writing conference with an instructor</strong> – You will also have a scheduled conference with an instructor where we will sit with your team to discuss our feedback on your Lab 6 tech memo. The goal of this meeting will be to share high-level feedback on what you did well and to suggest areas for improvement on your final report. A schedule of conference times and locations will be circulated via Discord.</p>
+<p><strong>Optional: Work with your team on writing and producing slides</strong> – All of your team members are guaranteed to be available during your lab section, so this can be high value writing and discussion time. Teaching staff will also be available to answer questions about writing and data presentation.</p>
+<p><strong>Optional: Conduct forensic experiments if needed</strong> – Experiments during analysis week are strictly limited, except for a very limited subset of measurements that we call “forensic experiments”. These experiments are allowed to help you figure out how a subsystem failed, or what you are seeing in your data. They are not intended to be additional deployments. Ask an instructor if you’re unsure whether your experiment should be allowed.</p>
+<p>Examples of good forensic experiments:</p>
+<ul>
+<li>A team needed to see how their measurements from an LED varied with angle to decipher their data, so they took their still functional sensor outside and waved it around to take that measurement.</li>
+<li>A team had inconsistent logging, so they turned their robot on and off with the box open and closed to prove that squeezing one particular wire caused the problem.</li>
+</ul>
+<p>Examples of experiments that we don’t want to see, which are outside the bounds of forensic experiments:</p>
+<ul>
+<li>Deploying your robot at pHake Lake.</li>
+<li>Deploying your robot in the test tank as a substitute deployment. Some very limited experiments may be OK (eg: to prove that you leak when you’re 1 m underwater), but an autonomous run to show your sensors working is not.</li>
+<li>Building or measuring new sensors; if it didn’t work, at least partially, during a deployment, then we’re not interested in seeing it in a final report.</li>
+</ul>
+</section>
+<section id="recommended-outline" class="level2">
+<h2 class="anchored" data-anchor-id="recommended-outline">Recommended Outline</h2>
+<p>Both your presentation and your final report will be telling a similar story: why did you do a robot deployment, what are the technical details of how your robot worked, and what can the audience take away from that. Therefore, we expect that most reports (and presentations) will be organized as below.</p>
+<p>All reports and presentations must contain the following:</p>
+<ul>
+<li>Description of safety precautions that you took during your robot deployment to ensure that you gathered data in a way that protected the environment and other people.</li>
+</ul>
+<p>Successful reports and presentations usually include discussions of:</p>
+<ul>
+<li>Science and/or engineering goals</li>
+<li>Sensors and mechanical modifications to achieve those goals</li>
+<li>Design process and calculations</li>
+<li>Pre-deployment modeling and expected measurements</li>
+<li>Data processing</li>
+<li>Comparisons between modeling and measured data</li>
+<li>Interpretation of these results</li>
+<li>Recommendations for future work</li>
+</ul>
+<p>This content is typically organized as follows (note that the report will also need an abstract even though it is not listed here):</p>
+<ol type="1">
+<li>Introduction - Describe your scientific or engineering goals.</li>
+<li>Sensor Design - for each sensor
+<ol type="a">
+<li>Theory of Input Quantity - What are the expected sensor input sizes (e.g.: temperature swings) from theory or historical data?</li>
+<li>Sensor Selection - What sensors did you select? Why? Do they match expected behavior.</li>
+<li>Circuit Design - Show full schematics, calculations used to select components, and calculations showing that signals will be in range for the Teensy.</li>
+<li>Software Considerations - Is the 10 Hz <code>default_robot.ino</code> sampling rate fast enough? Did you write any additional code for the sensor?</li>
+<li>Sensor Validation/Calibration - Show the sensor working in controlled conditions.</li>
+</ol></li>
+<li>Robot Design - Show mechanical calculations, sensor mounting designs, unusual details of waterproofing, and schematics for other circuits that haven’t been discussed yet (eg: regulators).</li>
+<li>Deployment Details - What steps were taken to prepare your robot for deployment? Where were the deployments (and what were the trajectories)? How did you account for safety in your deployments?</li>
+<li>Results - Include comparisons to theoretical models and ground truth measurements.</li>
+<li>Conclusion - Provide a recap, recommendations for future work, interpretation of results, and a main takeaway for the audience.</li>
+</ol>
+<p>It is possible to deviate from this outline if doing so would tell your robot’s story better, but this works well for almost all E80 deployments. Feel free to discuss such changes to the outline with instructors.</p>
+</section>
+<section id="final-presentation" class="level2">
+<h2 class="anchored" data-anchor-id="final-presentation">Final Presentation</h2>
+<p>On presentation day, 2024-05-01, you will give a fifteen-minute, in-person presentation followed by ten minutes of questions and answers. This presentation should be aimed at a technically competent audience with diverse training backgrounds that is unfamiliar with the details of your project. (e.g.: The audience is a group of professional engineers from different disciplines.) Every member of the team should participate in the presentation. Presentations will be graded using this <a href="../../project/report/presentation_rubric.html">rubric</a>.</p>
+<p>You should imagine the presentation is being given to employers or peers at a conference, which means that you should hold yourself to high standards of professionalism:</p>
+<ul>
+<li>practice until the presentation is smooth and well-polished,</li>
+<li>think carefully about the story your visual aids are telling,</li>
+<li>ensure that the visual aids are readable and high quality, and</li>
+<li>dress in <a href="http://www.casualpower.com/business_casual_tips/biz_attire.html">traditional business</a> or <a href="http://www.wisegeek.org/what-is-meant-by-business-casual-dress.htm">business casual</a> clothing.</li>
+</ul>
+<p>The questions during the Q&amp;A portion of your presentation will come from both the general technical audience and your instructors. They will range from straightforward to very detailed. Be sure to prepare by practicing fielding pointed questions and by cultivating a comprehensive understanding of your work. Preparing supplementary slides which you can deploy for common questions can help you during the Q&amp;A.</p>
+<p>The presentation schedule is available <a href="https://docs.google.com/document/d/1ltmOAPcsXo1oMD4QBFbGct2N6RvV70-YT7UooeG7Ylw/edit">here</a>. Please be at least ten minutes early to your presentation.</p>
+</section>
+<section id="final-report" class="level2">
+<h2 class="anchored" data-anchor-id="final-report">Final Report</h2>
+<p>Each team is responsible for submitting a report on their deployments in <a href="https://www.ieee.org/conferences/publishing/templates.html">IEEE format</a>. The report has a maximum length of ten pages including figures, references and appendices. Your purpose is to convey your experiments, your apparatus and your results such that a reader could replicate your experiment and compare their results to yours. You should assume your audience is made of technical professionals of diverse backgrounds (i.e.: not all instructors of the course) who are unfamiliar with your specific project. Note that this is a different audience than the presentation. <a href="../../project/report/report_rubric.html">This rubric</a> will be used to grade the reports.</p>
+<p>Here are a few tips for good report writing:</p>
+<ul>
+<li>The main body is often most digestible if it is written in several sections. Which sections are included and the ordering of your will depend on the specifics of the experiment, but some common, important topics are provided in the modified rubric.</li>
+<li>If it is impossible to address every point in the modified rubric while staying inside the page limit then (1) make your writing more compact by using mathematical notation, tables or figures and (2) prioritize what is most important for your report.</li>
+<li>Be sure to follow the practices of scientific writing: use quantifiable descriptions instead of vague adjectives (“a 25% change” instead of a “a big change”), make sure all plots have labeled axes with units, make sure text in figures and tables is large enough to read, don’t use the first person (including cheats like “the team did X”) and minimize passive voice by making the experiment or artifact the subject of your sentences.</li>
+<li>Make sure to do some pre-writing to organize your text. Decide what topics you want in the report and where you want to put them before you start writing. Don’t talk about topics in the wrong sections or repeat yourself unnecessarily.</li>
+<li>Don’t forget that your writing style has a huge impact on how your work is received. Make a careful editing pass to be sure that each sentence says what you mean it to say. Then make a second editing pass for spelling, punctuation, common grammatical errors (especially tense mismatch, which is endemic), and gracefulness of language.</li>
+</ul>
+<p>Here are <a href="https://drive.google.com/file/d/1S9CDXcDnjuwNG8Eaq6cG5EOcC_Bojqcw/view?usp=sharing">some examples</a> of student reports.</p>
+<p>A rough draft of your final report is due at 5:00 PM on the last day of classes.</p>
+<p>The final draft is due at at 11:59 PM the day before your final presentation.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

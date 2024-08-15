@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.56">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>E80: Experimental Engineering – E80 SP24</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">E80 SP24</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./lectures/"> 
+<span class="menu-text">Lectures</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-labs" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Labs</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-labs">    
+        <li>
+    <a class="dropdown-item" href="./labs/overview">
+ <span class="dropdown-text">Overview and Safety</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./labs/lab0">
+ <span class="dropdown-text">Lab 0: Tutorial &amp; Skills Review</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./labs/lab1">
+ <span class="dropdown-text">Lab 1: Go Autonomous</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./labs/lab2">
+ <span class="dropdown-text">Lab 2: BEM</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./labs/lab3">
+ <span class="dropdown-text">Lab 3: Op-Amps</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./labs/lab4">
+ <span class="dropdown-text">Lab 4: Temperature</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./labs/lab5">
+ <span class="dropdown-text">Lab 5: Acoustics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./labs/lab6">
+ <span class="dropdown-text">Lab 6: Fluids</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-project" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Project</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-project">    
+        <li>
+    <a class="dropdown-item" href="./project/overview">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./project/proposal">
+ <span class="dropdown-text">Design and Proposal</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./project/navigation">
+ <span class="dropdown-text">Navigation Jump Start</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./project/build">
+ <span class="dropdown-text">Build and Integrate</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./project/deploy">
+ <span class="dropdown-text">Field Deployment</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./project/report">
+ <span class="dropdown-text">Present and Report</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-references" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">References</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-references">    
+        <li>
+    <a class="dropdown-item" href="./reference/inventory">
+ <span class="dropdown-text">Lab Inventory</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./reference/equipment">
+ <span class="dropdown-text">Lab Equipment</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./reference/board">
+ <span class="dropdown-text">Board Information</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./reference/design">
+ <span class="dropdown-text">Reference Designs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./reference/history">
+ <span class="dropdown-text">Old Final Projects</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/HMC-E80/E80"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#important-dates" id="toc-important-dates" class="nav-link active" data-scroll-target="#important-dates">Important Dates</a></li>
+  <li><a href="#faculty-and-office-hours" id="toc-faculty-and-office-hours" class="nav-link" data-scroll-target="#faculty-and-office-hours">Faculty and Office Hours</a></li>
+  <li><a href="#meeting-times" id="toc-meeting-times" class="nav-link" data-scroll-target="#meeting-times">Meeting Times</a></li>
+  <li><a href="#mask-policy" id="toc-mask-policy" class="nav-link" data-scroll-target="#mask-policy">Mask Policy</a></li>
+  <li><a href="#digital-communication" id="toc-digital-communication" class="nav-link" data-scroll-target="#digital-communication">Digital Communication</a></li>
+  <li><a href="#course-kit-fee" id="toc-course-kit-fee" class="nav-link" data-scroll-target="#course-kit-fee">Course kit fee</a></li>
+  <li><a href="#team-and-group-assignments" id="toc-team-and-group-assignments" class="nav-link" data-scroll-target="#team-and-group-assignments">Team and Group Assignments</a></li>
+  <li><a href="#graded-submissions" id="toc-graded-submissions" class="nav-link" data-scroll-target="#graded-submissions">Graded Submissions</a>
+  <ul class="collapse">
+  <li><a href="#graded-submissions-breakdown" id="toc-graded-submissions-breakdown" class="nav-link" data-scroll-target="#graded-submissions-breakdown">Graded Submissions Breakdown</a></li>
+  <li><a href="#turn-in-on-canvas" id="toc-turn-in-on-canvas" class="nav-link" data-scroll-target="#turn-in-on-canvas">Turn-In on Canvas</a></li>
+  <li><a href="#specifications-grading" id="toc-specifications-grading" class="nav-link" data-scroll-target="#specifications-grading">Specifications Grading</a></li>
+  <li><a href="#graded-submissions-details" id="toc-graded-submissions-details" class="nav-link" data-scroll-target="#graded-submissions-details">Graded Submissions Details</a></li>
+  </ul></li>
+  <li><a href="#end-of-semester-grades" id="toc-end-of-semester-grades" class="nav-link" data-scroll-target="#end-of-semester-grades">End-of-Semester Grades</a></li>
+  <li><a href="#course-calendar" id="toc-course-calendar" class="nav-link" data-scroll-target="#course-calendar">Course Calendar</a></li>
+  <li><a href="#attendance-and-tardiness" id="toc-attendance-and-tardiness" class="nav-link" data-scroll-target="#attendance-and-tardiness">Attendance and Tardiness</a></li>
+  <li><a href="#late-work-policy" id="toc-late-work-policy" class="nav-link" data-scroll-target="#late-work-policy">Late Work Policy</a></li>
+  <li><a href="#incomplete-grade-policy" id="toc-incomplete-grade-policy" class="nav-link" data-scroll-target="#incomplete-grade-policy">Incomplete Grade Policy</a></li>
+  <li><a href="#pre--and-post-lab-work-policy" id="toc-pre--and-post-lab-work-policy" class="nav-link" data-scroll-target="#pre--and-post-lab-work-policy">Pre- and Post-Lab Work Policy</a></li>
+  <li><a href="#resubmission-policy" id="toc-resubmission-policy" class="nav-link" data-scroll-target="#resubmission-policy">Resubmission Policy</a></li>
+  <li><a href="#cooperation-between-teams" id="toc-cooperation-between-teams" class="nav-link" data-scroll-target="#cooperation-between-teams">Cooperation Between Teams</a></li>
+  <li><a href="#sharing-rubrics" id="toc-sharing-rubrics" class="nav-link" data-scroll-target="#sharing-rubrics">Sharing Rubrics</a></li>
+  <li><a href="#access-to-lab-during-the-final-project" id="toc-access-to-lab-during-the-final-project" class="nav-link" data-scroll-target="#access-to-lab-during-the-final-project">Access to Lab During the Final Project</a></li>
+  <li><a href="#accessibility-and-accommodations" id="toc-accessibility-and-accommodations" class="nav-link" data-scroll-target="#accessibility-and-accommodations">Accessibility and Accommodations</a></li>
+  <li><a href="#academic-honestyplagiarism" id="toc-academic-honestyplagiarism" class="nav-link" data-scroll-target="#academic-honestyplagiarism">Academic Honesty/Plagiarism</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">E80: Experimental Engineering</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>We are excited to have you in E80! You are going to build cool stuff and grow as an engineer!</p>
+<p>E80, Experimental Engineering, is a sophomore-level, semester-long required course, in which students conduct multiple experiments covering a number of engineering disciplines. These experiments are a training ground for a final project: a field deployment where student teams measure phenomena of their choice.</p>
+<p>Experimental Engineering is an essential part of the engineering curriculum at Harvey Mudd College, and has been offered as a course for over twenty years. Its predecessor E54 - which had more experiments and no field experience - was also offered for more than 20 years. In 2008 the course was revamped to change the field experience to flying fully-instrumented model rockets. In 2017 the course was revamped again with yet another new field experience: deploying fully autonomous underwater robots.</p>
+<p>The primary purpose of the course is to teach</p>
+<ul>
+<li>basic instrumentation and measurement techniques,</li>
+<li>analysis and presentation of data,</li>
+<li>technical report writing,</li>
+<li>how to use of experimental results for engineering design purposes,</li>
+<li>the beginnings of professional practice.</li>
+</ul>
+<section id="important-dates" class="level2">
+<h2 class="anchored" data-anchor-id="important-dates">Important Dates</h2>
+<p>Put these crucial lab and project dates on your calendar!</p>
+<ul>
+<li>Friday 2024-01-19, 1:15PM-3:15PM: Kickoff lecture in Shan 1430</li>
+<li>Friday 2024-02-23, 1:15PM-3:15PM: Project kickoff lecture in Shan 1430</li>
+<li><strong>Saturday</strong> 2024-04-20, 6:30AM-5:30PM: Robot deployment <em>on Saturday</em> at Dana Point. <br> <strong>ALL STUDENTS ARE EXPECTED TO ATTEND THE SATURDAY LAUNCH</strong></li>
+<li>Wednesday 2024-05-01, time TBD: Project presentations for all groups during presentation days.</li>
+</ul>
+</section>
+<section id="faculty-and-office-hours" class="level2">
+<h2 class="anchored" data-anchor-id="faculty-and-office-hours">Faculty and Office Hours</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 19%">
+<col style="width: 39%">
+<col style="width: 24%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Day</th>
+<th>Hours</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Matthew Spencer</td>
+<td>Monday</td>
+<td>9:30 am to 11:00 am and<br>1:00 pm to 4:00 pm</td>
+<td>Parsons 2358</td>
+</tr>
+<tr class="even">
+<td>Ethan Ritz</td>
+<td>Monday/Wednesday</td>
+<td>4:00 pm to 5:00 pm</td>
+<td>Middle tent in Strauss plaza</td>
+</tr>
+<tr class="odd">
+<td>Qimin Yang</td>
+<td>Tuesday</td>
+<td>9:00 am to 11:00 am</td>
+<td>Parsons 2365</td>
+</tr>
+<tr class="even">
+<td>Josh Brake</td>
+<td>Tuesday</td>
+<td>1:00 pm to 3:00 pm</td>
+<td>Tent outside Parsons</td>
+</tr>
+<tr class="odd">
+<td>Dre Helmns</td>
+<td>Wednesday</td>
+<td>1:00 pm to 3:00 pm</td>
+<td>Parsons 1292C</td>
+</tr>
+</tbody>
+</table>
+<p>You may attend any office hours, not just your section professor’s.</p>
+</section>
+<section id="meeting-times" class="level2">
+<h2 class="anchored" data-anchor-id="meeting-times">Meeting Times</h2>
+<ul>
+<li><p><u>Lab Section 1</u>:<br>
+Tuesday 1:15 p.m. to 5:15 p.m. in Parsons B171 &amp; B181 (Prof.&nbsp;Helmns)</p></li>
+<li><p><u>Lab Section 2</u>:<br>
+Wednesday 1:15 p.m. to 5:15 p.m. in Parsons B171 &amp; B181 (Prof.&nbsp;Yang)</p></li>
+<li><p><u>Lab Section 3</u>:<br>
+Thursday 1:15 p.m. to 5:15 p.m. in Parsons B171 &amp; B181 (Prof.&nbsp;Ritz)</p></li>
+<li><p>Writing and Reflection for all sections - Friday 1:15 p.m. - 3:15 p.m</p>
+<ul>
+<li>Section 1 - Shan 2440</li>
+<li>Section 2 - Shan 2440</li>
+<li>Section 3 - Shan 2440</li>
+</ul></li>
+</ul>
+<p>After spring break: There will be open lab hours in Parsons B171 &amp; B181 during the normally scheduled lab times.</p>
+<p>Students may only work in the E80 labs when a professor, staff or a proctor opens the lab. Any team may use the equipment in the labs during a lab section, but teams that are scheduled for the section have top priority for the equipment.</p>
+</section>
+<section id="mask-policy" class="level2">
+<h2 class="anchored" data-anchor-id="mask-policy">Mask Policy</h2>
+<p>Masks will be required for all E80 activities until further notice.</p>
+</section>
+<section id="digital-communication" class="level2">
+<h2 class="anchored" data-anchor-id="digital-communication">Digital Communication</h2>
+<ul>
+<li><a href="https://github.com/HMC-E80/E80-SP2024">Github</a> This is our Github repository, which lets you use Git to access E80 software. Git is a distributed version control system that allows you to copy source code and track changes to the code. <a href="./labs/lab0">Lab 0</a> will walk you through the steps to configure Git on your computer.</li>
+<li><a href="https://discord.gg/Eu7gFZKgcj">Discord</a> This is an invite to our Discord server. All digital communication and asynchronous help requests will go through Discord, so default to messaging there instead of emailing us.</li>
+<li><a href="https://harveymuddcollege.instructure.com/courses/1097">Canvas</a> This is our Canvas site. We will use Canvas to collect your assignments, receive your quiz responses and record your grades.</li>
+<li>All other information for the course is distributed on this website.</li>
+</ul>
+</section>
+<section id="course-kit-fee" class="level2">
+<h2 class="anchored" data-anchor-id="course-kit-fee">Course kit fee</h2>
+<ul>
+<li>There is a $65 kit fee per student. This fee can be waived in cases of financial hardship. Course instructors will not know about waiver requests.</li>
+<li>Kit payment can be made <a href="https://docs.google.com/forms/d/e/1FAIpQLSfLGyW_zk6jB89jHjIme0mkHV_LVAtXeJSDNIf7njMEDN1t1w/viewform">here</a>.</li>
+<li>Kit waiver request can be made <a href="https://docs.google.com/forms/d/e/1FAIpQLScM-5lYfwQAE_5v6WAz357C1cftwr4sNQRPj4dC_GaPD-ihvw/viewform">here</a>.</li>
+</ul>
+</section>
+<section id="team-and-group-assignments" class="level2">
+<h2 class="anchored" data-anchor-id="team-and-group-assignments">Team and Group Assignments</h2>
+<p>Almost all work in E80 is completed in teams. Some details about teams are below.</p>
+<ul>
+<li>Teams are assigned before your first laboratory meeting.</li>
+<li>These assignments will be made using whatever method your instructor desires, and the nominal team size is four members.</li>
+<li>Sometimes registration limits in a class will require teams of three or five members to be formed.</li>
+<li>These teams are designated using a 2 digit number where the first is your section number and the second is your team’s number (e.g.&nbsp;section 1’s team 1 is 11).</li>
+<li>You must report your team number on all assignments.</li>
+<li>For three of the labs (2, 3, and 4), you will need to split your team into 2 sub-teams.</li>
+<li>A different sub-team must be used for each of these Labs.</li>
+<li>Team assignments will be for the duration of the course.</li>
+<li>If you’re having problems on your team, talk to a professor or staff member <em>early</em> so we can try to help.</li>
+</ul>
+<p>Team assignments can be found on the <a href="https://harveymuddcollege.instructure.com/courses/1097/users">People tab on Canvas</a>.</p>
+</section>
+<section id="graded-submissions" class="level2">
+<h2 class="anchored" data-anchor-id="graded-submissions">Graded Submissions</h2>
+<section id="graded-submissions-breakdown" class="level3">
+<h3 class="anchored" data-anchor-id="graded-submissions-breakdown">Graded Submissions Breakdown</h3>
+<div class="center-table">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Item</th>
+<th style="text-align: center;">Weight</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="#lecture-quizzes">Lecture Quizzes</a></td>
+<td style="text-align: center;">7%</td>
+<td>Individual</td>
+</tr>
+<tr class="even">
+<td><a href="#surveys-and-team-check-ins">Surveys and Team Check-Ins</a></td>
+<td style="text-align: center;">6%</td>
+<td>Individual</td>
+</tr>
+<tr class="odd">
+<td><a href="#laboratory-submission-sheets">Laboratory Submission Sheets</a></td>
+<td style="text-align: center;">32%</td>
+<td>Team</td>
+</tr>
+<tr class="even">
+<td><a href="#laboratory-writing-assignments">Laboratory Writing Assignments</a></td>
+<td style="text-align: center;">15%</td>
+<td>Individual</td>
+</tr>
+<tr class="odd">
+<td><a href="#technical-memorandum">Technical Memorandum</a></td>
+<td style="text-align: center;">10%</td>
+<td>Individual</td>
+</tr>
+<tr class="even">
+<td><a href="#final-presentation">Final Presentation</a></td>
+<td style="text-align: center;">10%</td>
+<td>Team</td>
+</tr>
+<tr class="odd">
+<td><a href="#final-report">Final Report</a></td>
+<td style="text-align: center;">15%</td>
+<td>Team</td>
+</tr>
+<tr class="even">
+<td><a href="#participation">Participation</a></td>
+<td style="text-align: center;">5%</td>
+<td>Individual</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="turn-in-on-canvas" class="level3">
+<h3 class="anchored" data-anchor-id="turn-in-on-canvas">Turn-In on Canvas</h3>
+<p>All assignments that you need to complete, including links to quizzes, can be found in the <a href="https://harveymuddcollege.instructure.com/courses/1097/modules">Modules tab on Canvas</a>. You will always turn in assignments on Canvas or complete quizzes/surveys linked from Canvas.</p>
+</section>
+<section id="specifications-grading" class="level3">
+<h3 class="anchored" data-anchor-id="specifications-grading">Specifications Grading</h3>
+<p>The grading in E80 for submission sheets and writing assignments is based on whether or not your deliverables meet two different levels of specifications: <strong>effort</strong> and <strong>completion</strong>. The overall grade on an assignment is determined by how many of the sections meet either effort or completion.</p>
+<p>Effort specs describe <strong>good-faith effort</strong> whereas completion specs describe <strong>correctness</strong>.</p>
+<p>In most situations, completing all the effort specs is equivalent to a passing grade on the assignment. The remaining sections of completion specs raise your grade from a passing grade to full credit.</p>
+<p>If the initial version of a submitted assignment does not meet specs, it may be revised according to the stipulations of the course <a href="#resubmission-policy">resubmissions policy</a>.</p>
+</section>
+<section id="graded-submissions-details" class="level3">
+<h3 class="anchored" data-anchor-id="graded-submissions-details">Graded Submissions Details</h3>
+<section id="lecture-quizzes" class="level4">
+<h4 class="anchored" data-anchor-id="lecture-quizzes">Lecture Quizzes</h4>
+<ul>
+<li><p>There are seven video lecture sets that you are expected to watch. Each of these video sets has an associated online quiz. You must take each of these quizzes individually.</p></li>
+<li><p>You may not talk to other people in order to take the quiz, but they are open book, notes and internet. The one exception to the ‘no people’ rule is that you may speak with a professor to clarify ideas before you open the quiz associated with the lecture set.</p></li>
+</ul>
+</section>
+<section id="surveys-and-team-check-ins" class="level4">
+<h4 class="anchored" data-anchor-id="surveys-and-team-check-ins">Surveys and Team Check-Ins</h4>
+<ul>
+<li><p>You will be called upon to complete surveys at the beginning, middle and end of the class, and each week, you will be asked to complete a team check-in (a quick peer evaluation) for the lab done that week. Completing each of the check-ins is worth 0.5% of your grade, and completing each of the longer surveys is worth 1% of your grade.</p></li>
+<li><p>There are a total of 6 weekly check-ins (from weeks 2 through 7) and they are due each Friday at 3:30 pm.</p></li>
+<li><p>These are individual assignments</p></li>
+</ul>
+</section>
+<section id="laboratory-submission-sheets" class="level4">
+<h4 class="anchored" data-anchor-id="laboratory-submission-sheets">Laboratory Submission Sheets</h4>
+<ul>
+<li><p>There are a total of 8 labs in the class: Lab0 through Lab7. You must submit a submission sheet for each of the labs that contains data you collected during the lab. (Though note that in lab0 the Matlab on-ramp deliverable is the submission sheet.) This submission sheet will be evaluated for correctness: it’s a way of assessing whether your experimental procedure was correct during the lab. Each submission sheet you provide will be worth 4% of your final grade.</p></li>
+<li><p>These are group assignments, so there will be only one submission per team. The Matlab onramp for lab 0 is an exception: it is an individual assignment.</p></li>
+</ul>
+</section>
+<section id="laboratory-writing-assignments" class="level4">
+<h4 class="anchored" data-anchor-id="laboratory-writing-assignments">Laboratory Writing Assignments</h4>
+<ul>
+<li><p>You will be required to complete a writing assignment after labs 1-5. The purpose of the writing assignments is to train you in specific aspects of scientific writing: making figures, using tables, equations, etc. These assignments are completed entirely on Friday in the Writing and Reflection section. Each writing assignment will be worth 3% of your final grade, and you submit five assignments for a total of 15%.</p></li>
+<li><p>These are individual assignments. The team contract exercise in week 0 is an exception, there should be one team contract submission per team.</p></li>
+</ul>
+</section>
+<section id="technical-memorandum" class="level4">
+<h4 class="anchored" data-anchor-id="technical-memorandum">Technical Memorandum</h4>
+<ul>
+<li><p>Each student will write an individual technical memorandum on material covered in Lab 6. See the <a href="labs/lab6">Lab 6</a> page for more information.</p></li>
+<li><p>You must submit a tech memo to pass the class.</p></li>
+</ul>
+</section>
+<section id="final-presentation" class="level4">
+<h4 class="anchored" data-anchor-id="final-presentation">Final Presentation</h4>
+<ul>
+<li>Each team will make a final presentation during Presentation Days, on Wednesday, May 1st, 2024. A detailed schedule will be posted ASAP. The presentation is 15-minutes long followed by a 10-minute Q&amp;A session. The Final Presentation guidelines and rubric are found on the <a href="./labs/project/report">Final Project Report and Presentation page</a>.</li>
+</ul>
+</section>
+<section id="final-report" class="level4">
+<h4 class="anchored" data-anchor-id="final-report">Final Report</h4>
+<ul>
+<li>A final technical report will be submitted by each team on the results of the final AUV deployments. The report will be graded for both technical content and proper use of <a href="https://www.mit.edu/course/21/21.guide/">technical English</a>. A rough draft of your final report is due at 11:59 PM on 4/26/24. The final draft is due at 11:59 PM on 5/1/2024. The Final Report guidelines are found on the Final Project page.</li>
+</ul>
+</section>
+<section id="participation" class="level4">
+<h4 class="anchored" data-anchor-id="participation">Participation</h4>
+<ul>
+<li>The instructors will assign you a participation grade which is determined by their in-lab observations, your peer evaluations, and your regular progress through the project checkoffs.</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="end-of-semester-grades" class="level2">
+<h2 class="anchored" data-anchor-id="end-of-semester-grades">End-of-Semester Grades</h2>
+<p>Grades will be awarded on a standard grading scale (93.3% is an A, 90% A-, 86.6% is a B+, etc …) based on your total individual score. The professors reserve the right to award grades more leniently than this grading standard.</p>
+</section>
+<section id="course-calendar" class="level2">
+<h2 class="anchored" data-anchor-id="course-calendar">Course Calendar</h2>
+<p>A Google Sheet with the key dates and assignments in E80 can be found <a href="https://docs.google.com/spreadsheets/d/1qR7HhVNWtqK8va9gGP6NGhX_NoIblt1x9VRRuFam1ng/edit?usp=sharing">here</a>.</p>
+<p>You can also review the <a href="https://harveymuddcollege.instructure.com/courses/1097/modules">Modules tab on Canvas</a> for a week-by-week breakdown of what’s due with links to reference material and where to turn stuff in.</p>
+</section>
+<section id="attendance-and-tardiness" class="level2">
+<h2 class="anchored" data-anchor-id="attendance-and-tardiness">Attendance and Tardiness</h2>
+<p>Students sometimes have to miss E80 labs for an assortment of reasons. The instructors don’t record attendance because we assume that groups will work to equitably account for absences or tardiness. For example, if your group has a member with a planned absence for a particular lab, then you and your teammates should discuss how to shift more prelab work to the person who will be absent. If you don’t feel like everyone is pulling their fair share, talk to your group and talk to an instructor so we can help you navigate the situation.</p>
+</section>
+<section id="late-work-policy" class="level2">
+<h2 class="anchored" data-anchor-id="late-work-policy">Late Work Policy</h2>
+<p>No late work is accepted. You will receive no points for work submitted after deadlines. This is in keeping with good professional practice. Some assignments may allow for multiple attempts and resubmission, but the first attempt always needs to be submitted by the appropriate deadline.</p>
+</section>
+<section id="incomplete-grade-policy" class="level2">
+<h2 class="anchored" data-anchor-id="incomplete-grade-policy">Incomplete Grade Policy</h2>
+<p>Incomplete grades will be granted only in rare circumstances and require the approval of the instructor.</p>
+</section>
+<section id="pre--and-post-lab-work-policy" class="level2">
+<h2 class="anchored" data-anchor-id="pre--and-post-lab-work-policy">Pre- and Post-Lab Work Policy</h2>
+<p>The amount of time that you are free to work in lab is restricted. We enforce these restrictions for three main reasons:</p>
+<ol type="1">
+<li>to simulate demands that can arise in real-world engineering,</li>
+<li>to help students internalize the learning goals of the class, and</li>
+<li>to help keep E80 to a smaller time footprint.</li>
+</ol>
+<p>You are allowed to work in any way you would like on before a lab (pre-lab) as long as you do not touch any hardware. You may NOT collect data (for your experiment), manipulate or test hardware, populate a protoboard, or use the laboratory equipment outside of your lab hours. However, you may look at datasheets, write software, calculate expected results, prepare Excel sheets to do calculations in lab, ask how equipment works, run your preparations by professors, and pursue a variety of other activities. You can spend as much or as little time desired on the pre-lab activities, but successful teams spend a lot of time and energy before the lab starts.</p>
+<p>The post-lab period is for reflection, resubmission when it’s allowed, and taking a break from E80. You may NOT collect data, manipulate or test hardware, populate a protoboard, or use the laboratory equipment outside of lab. However, you may freely reprocess any data that you have already collected during a lab section. This includes, but is not limited to, writing MATLAB code for processing and visualizing your data.</p>
+<p>When in doubt about whether an activity is acceptable outside of lab, ask.</p>
+</section>
+<section id="resubmission-policy" class="level2">
+<h2 class="anchored" data-anchor-id="resubmission-policy">Resubmission Policy</h2>
+<p>Lab submission sheets and writing assignments in E80 are able to be resubmitted without penalty if they do not meet completion specs on the initial attempt. To be clear, this means that resubmitted assignments are worth the same amount as initial submission and full credit can be earned even if the initial submission does not fully meet the specifications.</p>
+<p>The resubmission policy is subject to the stipulations listed below:</p>
+<ol type="1">
+<li>You must submit <strong>something</strong> by the assignment deadline.
+<ul>
+<li>Don’t phone this in because there is limited time for resubmission.</li>
+</ul></li>
+<li>After you receive feedback, you can revise your submissions until spring break.
+<ul>
+<li>Most of specs can be done outside of lab with data.</li>
+<li>However, if you weren’t able to get good data, there is one week before spring break where you can go back to collect more.</li>
+</ul></li>
+<li>Resubmissions are checked off by an instructor during office hours.</li>
+<li>For all submissions, you will need to self-assess <strong>before</strong> you submit. Every assignment you submit should be accompanied along with a checklist of specs that you believe the assignment meets or does not meet.</li>
+<li>All resubmissions must be completed by spring break.</li>
+</ol>
+</section>
+<section id="cooperation-between-teams" class="level2">
+<h2 class="anchored" data-anchor-id="cooperation-between-teams">Cooperation Between Teams</h2>
+<p>Cooperation between teams is limited. The rules for each period of the week (pre-lab, during lab, post-lab and writing and reflection) are below. In this section, the word group will refer to a full team of students during a normal week or a sub-team of students during weeks where teams are split into sub-teams.</p>
+<ol type="1">
+<li><p>Pre-lab: A group may discuss the lab with another group to make sure they are clear on concepts and understanding. Groups may not share code, writing, or documentation with other groups.</p></li>
+<li><p>During Lab: Groups cannot work together, discuss concepts or understanding, share data, share code, or share writing. Groups may arrange to swap hardware to debug and test defective parts of an experiment or device, but they should strongly consider elevating their concerns to an instructor if part swaps are necessary or if parts are being destroyed.</p></li>
+<li><p>Post-Lab: Groups may work with other groups in the same way as the prelab: they may discuss concepts and understanding (including talking about the scale of measured results from lab).</p></li>
+<li><p>Writing and Reflection: Each student should be producing an individual work product and may not exchange code or writing with other students. Data may be shared among a group, but not between groups.</p></li>
+</ol>
+<p>These work restrictions are relaxed during the final project (after spring break): Groups may work on their robot at any time and may discuss any aspect of their robots with one another (as if the prelab policy always applies).</p>
+</section>
+<section id="sharing-rubrics" class="level2">
+<h2 class="anchored" data-anchor-id="sharing-rubrics">Sharing Rubrics</h2>
+<p>We will be returning/releasing graded lab report rubrics throughout the semester. It is an HONOR CODE VIOLATION to share these rubrics with other teams or with students enrolled in future versions of E80.</p>
+</section>
+<section id="access-to-lab-during-the-final-project" class="level2">
+<h2 class="anchored" data-anchor-id="access-to-lab-during-the-final-project">Access to Lab During the Final Project</h2>
+<ul>
+<li>Students may work in the labs any time that it is open.</li>
+<li>Students may only work in the E80 lab when a professor, staff member or proctor opens the lab.</li>
+<li>Any team may use the equipment in the E80 and electronics labs during a lab section, but teams which are scheduled for a section have top priority for the equipment.</li>
+</ul>
+</section>
+<section id="accessibility-and-accommodations" class="level2">
+<h2 class="anchored" data-anchor-id="accessibility-and-accommodations">Accessibility and Accommodations</h2>
+<p>Harvey Mudd College strives to make all learning experiences as accessible as possible. If you anticipate or experience academic barriers based on your disability (including mental health, chronic or temporary medical conditions). If you have any questions, please contact the Office of Accessible Education at <a href="mailto:access@g.hmc.edu">access@g.hmc.edu</a>. Students from the other Claremont Colleges should contact their home college’s disability officer. You also need to register with the <a href="https://www.hmc.edu/student-life/disability-resources/">Office of Disability Resources</a>. to establish reasonable accommodations.</p>
+</section>
+<section id="academic-honestyplagiarism" class="level2">
+<h2 class="anchored" data-anchor-id="academic-honestyplagiarism">Academic Honesty/Plagiarism</h2>
+<p><strong>Each student will be responsible for observing HMC’s Honor code and abiding by the Standards of Conduct:</strong><br>
+</p>
+<blockquote class="blockquote">
+<p>“All members of ASHMC are responsible for maintaining their integrity and the integrity of the College community in all academic matters and in all affairs concerning the community.” –<cite>ASHMC Constitution</cite></p>
+</blockquote>
+<ol type="1">
+<li>Thoughtful respect for the rights of others;</li>
+<li>Honesty and integrity in both academic and personal matters;</li>
+<li>Responsible behavior both on and off campus;</li>
+<li>Appropriate use of campus buildings and equipment, and;</li>
+<li>Compliance with College regulations and policies.</li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

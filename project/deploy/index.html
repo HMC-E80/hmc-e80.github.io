@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.56">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>E80 Project Field Deployments – E80 SP24</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">E80 SP24</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../lectures/"> 
+<span class="menu-text">Lectures</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-labs" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Labs</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-labs">    
+        <li>
+    <a class="dropdown-item" href="../../labs/overview">
+ <span class="dropdown-text">Overview and Safety</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../labs/lab0">
+ <span class="dropdown-text">Lab 0: Tutorial &amp; Skills Review</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../labs/lab1">
+ <span class="dropdown-text">Lab 1: Go Autonomous</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../labs/lab2">
+ <span class="dropdown-text">Lab 2: BEM</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../labs/lab3">
+ <span class="dropdown-text">Lab 3: Op-Amps</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../labs/lab4">
+ <span class="dropdown-text">Lab 4: Temperature</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../labs/lab5">
+ <span class="dropdown-text">Lab 5: Acoustics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../labs/lab6">
+ <span class="dropdown-text">Lab 6: Fluids</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-project" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Project</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-project">    
+        <li>
+    <a class="dropdown-item" href="../../project/overview">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../project/proposal">
+ <span class="dropdown-text">Design and Proposal</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../project/navigation">
+ <span class="dropdown-text">Navigation Jump Start</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../project/build">
+ <span class="dropdown-text">Build and Integrate</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../project/deploy">
+ <span class="dropdown-text">Field Deployment</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../project/report">
+ <span class="dropdown-text">Present and Report</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-references" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">References</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-references">    
+        <li>
+    <a class="dropdown-item" href="../../reference/inventory">
+ <span class="dropdown-text">Lab Inventory</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../reference/equipment">
+ <span class="dropdown-text">Lab Equipment</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../reference/board">
+ <span class="dropdown-text">Board Information</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../reference/design">
+ <span class="dropdown-text">Reference Designs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../reference/history">
+ <span class="dropdown-text">Old Final Projects</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/HMC-E80/E80"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#phake-lake" id="toc-phake-lake" class="nav-link active" data-scroll-target="#phake-lake">pHake Lake</a></li>
+  <li><a href="#rebuild-week" id="toc-rebuild-week" class="nav-link" data-scroll-target="#rebuild-week">Rebuild Week</a></li>
+  <li><a href="#dana-point" id="toc-dana-point" class="nav-link" data-scroll-target="#dana-point">Dana Point</a></li>
+  <li><a href="#best-practices" id="toc-best-practices" class="nav-link" data-scroll-target="#best-practices">Best Practices</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">E80 Project Field Deployments</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>You test your assembled robot by performing field deployments to gather live data from your sensors. The data you gather during these deployments is essential for your <a href="../../project/report">final report and presentation</a>. There are two deployments, one at pHake Lake during your normal lab section during the week of 2024-04-09, and the second at Dana Point on Saturday 2024-04-20. This document describes the deployments, the build time between deployments, and additional details about best practices during a deployment.</p>
+<section id="phake-lake" class="level2">
+<h2 class="anchored" data-anchor-id="phake-lake">pHake Lake</h2>
+<p>You are expected to test your AUV at the pHake Lake at the Bernard Field Station during your regular section time in the first deployment week (the week of 2024-04-09). You must be at the <a href="https://drive.google.com/file/d/1wdGyp2_50KINmBhqCJby9zoKUE3Mr1cf/view?usp=sharing">side gate</a> of Bernard Field Station by 1:15 pm on the day of your deployment. An instructor will meet the group at the gate at the start of your section. The main E80 Lab (Parsons B171) will be open from 12:30 pm - 1:00 pm this week so that you may retrieve your equipment.</p>
+<p>The goals of this test are:</p>
+<ol type="1">
+<li>Make sure your sensors and integrated robot work in the field</li>
+<li>Evaluate the quality of your data so you can improve it before your second deployment. There is about 1.5 weeks between this deployment and Dana Point, so you have some time to make changes.</li>
+<li>Acquire data that can be used in your final report and presentation in case something goes wrong in your second deployment.</li>
+</ol>
+<p>Safety information:</p>
+<ul>
+<li>Be sure to walk to the BFS gate in pairs and <strong>only cross at crosswalks</strong>.</li>
+<li>Sunscreen and water will be available during this deployment, but be sure you’ve eaten before you arrive.</li>
+<li>Faculty will announce a cancellation of the launch in the case of severe rain.</li>
+</ul>
+<p>Resources information:</p>
+<ul>
+<li>The <a href="../../reference/equipment">mobile lab facility</a> will be available at BFS.</li>
+<li>The teaching team will be out at BFS during deployments.</li>
+</ul>
+</section>
+<section id="rebuild-week" class="level2">
+<h2 class="anchored" data-anchor-id="rebuild-week">Rebuild Week</h2>
+<p>The week between your pHake Lake deployment and Dana Point is your final chance to test and verify your deployment checklist and fix any flaws that were discovered at pHake Lake. You will have your regular section time to rebuild, retest, and modify your system to get more meaningful data by adjusting such things as amplifier gains and offsets, sampling rate, sensor location on the AUV, and deployment times of your sensor. You will not have access to pHake Lake, but you will have access to the water tank during the week.</p>
+</section>
+<section id="dana-point" class="level2">
+<h2 class="anchored" data-anchor-id="dana-point">Dana Point</h2>
+<p>The final field deployment is on Saturday, 2024-04-20. Here are important details:</p>
+<ul>
+<li>We will take buses from Foothill Blvd just north of Parsons to Dana Point, leaving at 6:30 am sharp. <br> <strong>If you miss the bus, you will have to find your own way to Dana Point.</strong><br>
+</li>
+<li>Make sure your team is outside Parsons with your robot at 6:00 AM. Also make sure your team has gathered any extra supplies that you plan to bring before 6:00AM.</li>
+<li>Attendance will be taken to ensure that the bus doesn’t leave anyone behind at the end of the day, so make sure you are counted in the morning. Also make sure that you tell us if you are leaving separately from the bus.</li>
+</ul>
+<p>Safety information:</p>
+<ul>
+<li>Sunscreen and water will be provided</li>
+<li>Snacks and lunch (pizza, granola bars, chips) will be provided.</li>
+<li>Faculty will announce a cancellation of the launch in the case of severe rain. The launch may be rescheduled for Sunday in that case.</li>
+</ul>
+<p>Food information and Dietary Restrictions:</p>
+<ul>
+<li>Breakfast pastries will be provided before you board the bus. If your dietary restrictions prevent eating breakfast pastries, please arrange for your own breakfast.</li>
+<li>Contact Lynn Kim as soon as possible if your dietary restrictions prevent eating pizza for lunch. We will arrange for an alternative.</li>
+</ul>
+<p>Resources information:</p>
+<ul>
+<li>The <a href="../../reference/equipment">mobile lab facility</a> will be available.</li>
+<li>In addition, we will provide freshwater buckets and rice for recovering flooded robots.</li>
+</ul>
+<p>You are not allowed to do any deployments after launch day, so use this deployment well!</p>
+</section>
+<section id="best-practices" class="level2">
+<h2 class="anchored" data-anchor-id="best-practices">Best Practices</h2>
+<p>Deploying a robot is complicated business, and it’s easy to make a mistake. Following the best practices described in this section reduce the chance that you’ll make a mistake and increase the chances that you’ll get good data.</p>
+<p><strong>Safety Lines</strong> If your robot is diving, tie a string to it before you deploy it. Keep the string slack during deployment if things are going well, or use it to pull the robot to safety if things are going poorly.</p>
+<p><strong>Boat Escorts</strong> If your robot is unreachable from shore, which is common when surface navigating, then keeping a boat nearby is a good way to ensure that your robot can be recovered in case it does anything unsafe or risks damage to itself.</p>
+<p><strong>Calibrations</strong> Some sensors need to be recalibrated on site. Notably, magnetometer coefficients vary with your declination from the pole, and atmospheric pressure varies with your distance from sea level. You may also need to tune the range on light or temperature sensors to account for local brightness or water temperature. Be ready to do some basic calibrations on site, and be sure to do some test runs to make sure that your sensor outputs are in range before committing to a major deployment.</p>
+<p><strong>Ground Truth</strong>: You should take a ground truth measurement before each deployment so that you know the basic conditions your robot will deploy into. For instance, you could measure water temperature with a digital thermometer before putting your temperature-measuring robot in the water. This is essential for detecting bugs in your sensors or calibration: if you only have your robot data to work with, and your robot data is flawed, it’s difficult to back out what went wrong (or even detect that something went wrong).</p>
+<p><strong>Save your Data</strong>: Field data is precious, even if it looks bad. Make sure to save it! Save all of your data, and don’t leave it on the SD card to get accidentally deleted. It is helpful to have a folder where you can store all your data for each deployment, and to keep a spreadsheet in that folder so you can make notes about each file (when it was run, deployment location, notes on anything weird that happened, etc.).</p>
+<p><strong>Preview your Data</strong>: After you deploy your robot, you should check your data to see if it matches your ground truth and your expected behavior. To do this, you should have some Matlab or other visualization software ready before deployment. This step is important because it tells you if your deployment worked properly while you still have time to redeploy.</p>
+<p><strong>Experimental Plan</strong> Most of the advice above is concerned with an individual deployment, but you should also be thinking holistically about your experimental goals while deploying. How many deployments do you need, from what locations, and at what times of day? The experimental plan is the place to write down these details. The plan should also list the expected range of signals you expect to observe (based on theory or preliminary measurements) during the deployments. Finally, in the case of surface navigation, the plan should show the intended robot trajectory for each deployment and list how the robot will be recovered (kayak, it comes back and we grab it, pool hook, etc.).</p>
+<p><strong>Checklist</strong>: Most of the advice in this section is gives you more work to do before you launch. It’s very easy to forget a step and launch in a way that corrupts your data. The surest proof against such a mistake is writing a deployment checklist that spells out all the steps you should do before a launch. Use the checklist during a launch by having one team member read steps off of it while another works on the robot and verifies that steps are complete. Here is an <a href="https://drive.google.com/open?id=1MWqGn4acs9HfsRtGSR8tZrp-E_IN6IH4">example deployment checklist</a>.</p>
+<p>There are some additional practices that will help when you prepare specifically for deploying at Dana Point:</p>
+<p><strong>Buoyancy</strong>: Seawater and lake water have very different densities. A neutrally buoyant AUV in pHake Lake will bob like a cork in the ocean. Be ready to trim your ballast appropriately.</p>
+<p><strong>Electrical Coupling</strong>: Salt water and fresh water have very different conductivities, and that can affect the performance of your sensors in surprising ways. One thing we’ve noticed is that motor noise couples into sensors much more aggressively in salt water than in fresh water. Test this behavior in the salt water bath at Mudd, and consider stopping your motors during your deployment to take clean data. (This is easier in surface deployments than in dives because you need to maintain your depth during a dive.)</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

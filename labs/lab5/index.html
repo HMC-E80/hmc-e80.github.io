@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.56">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Lab 5: Underwater Acoustics and Fourier Analysis – E80 SP24</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">E80 SP24</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../lectures/"> 
+<span class="menu-text">Lectures</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-labs" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Labs</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-labs">    
+        <li>
+    <a class="dropdown-item" href="../../labs/overview">
+ <span class="dropdown-text">Overview and Safety</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../labs/lab0">
+ <span class="dropdown-text">Lab 0: Tutorial &amp; Skills Review</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../labs/lab1">
+ <span class="dropdown-text">Lab 1: Go Autonomous</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../labs/lab2">
+ <span class="dropdown-text">Lab 2: BEM</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../labs/lab3">
+ <span class="dropdown-text">Lab 3: Op-Amps</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../labs/lab4">
+ <span class="dropdown-text">Lab 4: Temperature</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../labs/lab5">
+ <span class="dropdown-text">Lab 5: Acoustics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../labs/lab6">
+ <span class="dropdown-text">Lab 6: Fluids</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-project" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Project</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-project">    
+        <li>
+    <a class="dropdown-item" href="../../project/overview">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../project/proposal">
+ <span class="dropdown-text">Design and Proposal</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../project/navigation">
+ <span class="dropdown-text">Navigation Jump Start</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../project/build">
+ <span class="dropdown-text">Build and Integrate</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../project/deploy">
+ <span class="dropdown-text">Field Deployment</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../project/report">
+ <span class="dropdown-text">Present and Report</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-references" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">References</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-references">    
+        <li>
+    <a class="dropdown-item" href="../../reference/inventory">
+ <span class="dropdown-text">Lab Inventory</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../reference/equipment">
+ <span class="dropdown-text">Lab Equipment</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../reference/board">
+ <span class="dropdown-text">Board Information</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../reference/design">
+ <span class="dropdown-text">Reference Designs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../reference/history">
+ <span class="dropdown-text">Old Final Projects</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/HMC-E80/E80"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#introduction-to-the-fft" id="toc-introduction-to-the-fft" class="nav-link" data-scroll-target="#introduction-to-the-fft"><span class="header-section-number">2</span> Introduction to the FFT</a></li>
+  <li><a href="#sec-interface" id="toc-sec-interface" class="nav-link" data-scroll-target="#sec-interface"><span class="header-section-number">3</span> Circuit Interfaces to Microphones</a></li>
+  <li><a href="#distance-measurement-based-on-amplitude" id="toc-distance-measurement-based-on-amplitude" class="nav-link" data-scroll-target="#distance-measurement-based-on-amplitude"><span class="header-section-number">4</span> Distance Measurement Based On Amplitude</a></li>
+  <li><a href="#sampling-audio-with-a-teensy" id="toc-sampling-audio-with-a-teensy" class="nav-link" data-scroll-target="#sampling-audio-with-a-teensy"><span class="header-section-number">5</span> Sampling Audio with a Teensy</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Lab 5: Underwater Acoustics and Fourier Analysis</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Team size: 4</p>
+<p>Submission Sheet: <a href="../../labs/lab5/submission.html">html</a> <a href="./submission.docx">docx</a></p>
+<p>Prelab Help Sheet: None for this lab, but you’ve got this! Review previous ones for ideas of how to prepare.</p>
+<p>Writing Assignment: <a href="../../labs/lab5/writing.html">html</a></p>
+<section id="introduction" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1</span> Introduction</h2>
+<p>In this lab you will work as a team of four to use acoustic measurements to find the position of your robot in the test tank. The acoustic measurements will depend on listening to beacons at fixed locations in the tank, and guessing your position relative to them. Because there will be many beacon signals in the tank at once, you will need to use Fourier analysis to understand the behavior of the signals. The purpose of this lab is to demonstrate the power of underwater acoustic measurements and to force you to wrangle early and often with Fourier analysis.</p>
+<p>After successful completion of this lab, you will be able to:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Use the FFT feature on the oscilloscope to interpret frequency domain signals.</label></li>
+<li><label><input type="checkbox">Comment on how the FFT of a signal changes when signal frequency, sampling rate and total sampling time are changed.</label></li>
+<li><label><input type="checkbox">Build a circuit interface to an electret microphone.</label></li>
+<li><label><input type="checkbox">Use the gain-bandwidth product of an op-amp to predict the achievable maximum gain.</label></li>
+<li><label><input type="checkbox">Describe the effect of multipath on the amplitudes of acoustic measurements.</label></li>
+</ul>
+<p>This is a rotation lab, so not all teams will be working on this lab in the same week. Odd numbered teams (11, 23, 35, etc.) will do this lab in week 6, while Even numbered teams (12, 24, 36, etc.) work on <a href="../../labs/lab6/index.html">Lab 6</a>. Even numbered teams will do this lab in week 7, while Odd numbered teams work on lab 6. Be sure to watch the correct videos, do the correct quiz, and put in prelab effort for the correct lab!</p>
+</section>
+<section id="introduction-to-the-fft" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="introduction-to-the-fft"><span class="header-section-number">2</span> Introduction to the FFT</h2>
+<p>The oscilloscope ( <a href="http://literature.cdn.keysight.com/litweb/pdf/75015-97045.pdf">Agilent/Keysight 2024A</a>, <a href="http://literature.cdn.keysight.com/litweb/pdf/5990-6618EN.pdf">spec sheet</a> ) has a feature that allows it to display a live FFT of a signal on one of the channels. In this section we’re going to use that feature to study the basic behavior of the FFT and to examine the effect of windowing on real world data. <strong>The whole team should participate in this section, at minimum by watching.</strong> Much of this section can be predicted and analyzed very accurately in prelab with sample data generated in MATLAB.</p>
+<p>The following signals are used in this section:</p>
+<ol type="1">
+<li>11 kHz sine wave, amplitude 1.5 V, offset 0 V.</li>
+<li>12 kHz sine wave, amplitude 1.5 V, offset 0 V.</li>
+<li>11 kHz square wave, amplitude 1.5 V, offset 0 V.</li>
+</ol>
+<p>Do the following:</p>
+<ol type="1">
+<li>Connect a function generator to an input channel of the oscilloscope.</li>
+<li>Double check that your oscilloscope channel is DC coupled and using an appropriate 1x/10x setting.</li>
+<li>Drive signal 1 into the oscilloscope</li>
+<li>Set the time scale of the oscilloscope so that 50 cycles of the signal fit on the screen.</li>
+<li>Use the math function of the oscilloscope to display the FFT of the signal. Set the span of the FFT to 100 kHz, the center to 50 kHz, and the window to rectangular.</li>
+<li>Capture an oscilloscope trace for the current signal, and for each of the signals below.
+<ol type="1">
+<li>Signal 2</li>
+<li>Signal 3</li>
+<li>Signal 3 with the the “window” setting changed from rectangular to Hanning.</li>
+<li>Signal 3 with the time scale changed to shrink the horizontal time axis.</li>
+</ol></li>
+<li>Capture some oscilloscope data and take an FFT of it using Matlab, then compare that FFT to the scope FFTs. Do so by following these steps.
+<ol type="1">
+<li>Turn off the FFT function on the scope</li>
+<li>Drive signal 3 into the oscilloscope and make sure that you are using the original x-axis scaling, not the shrink described in instruction 6.4.</li>
+<li>Ensure the “max length” setting is selected on the “save” menu and save the waveform</li>
+<li>Take the FFT of that data in Matlab with a rectangular window</li>
+<li>Take the FFT of that data in Matlab with a Hanning window<br>
+</li>
+<li>Contrast the Matlab FFT against the scope FFT from instructions 6.2 and 6.3.</li>
+</ol></li>
+</ol>
+</section>
+<section id="sec-interface" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="sec-interface"><span class="header-section-number">3</span> Circuit Interfaces to Microphones</h2>
+<p>You will need to use microphones to pick up sounds in the tank. We will be using a waterproof electret microphone called the <a href="http://www.cui.com/product/resource/cme-1538-100lb.pdf">CME-1538-100LB</a>.</p>
+<ol type="1">
+<li>Build the reference circuit from the datasheet for your electret microphone.</li>
+<li>Verify that you can receive signals with your electret microphone by clapping near it. You will need to set your scope to “Single” mode to capture your clap.</li>
+<li>Use the FFT functions to identify the frequencies in your hand clap signal.</li>
+</ol>
+<p>The electret microphone output is small (generally 10s of mV depending on the sound) and zero centered, so you will need to amplify the tank signals to see them your oscilloscope. Designing an amplifier is trickier than you’d expect because of an op-amp parameter called the <a href="https://en.wikipedia.org/wiki/Gain%E2%80%93bandwidth_product">Gain-Bandwidth product</a>.</p>
+<ol type="1">
+<li>Build an amplifier with a gain of 100 by cascading two stages that each have a gain of 10. Use dual-rail op-amps (like the TL081 or OP07).</li>
+<li>Calculate the bandwidth you expect out of each op-amp stage using the gain-bandwidth product of your op-amps.</li>
+<li>Test your amplifier using appropriate signals from the function generator.</li>
+<li>Record your test results and your amplifier schematic in the submission sheet.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Capacitive Coupling
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The reference circuit’s output is AC coupled, which means a capacitor is attached in series with the output. The capacitive coupling is why the microphone output is zero-centered. One way to understand the function of the coupling capacitor is by considering equivalent circuit models. The AC coupling capacitor and the loading from the oscilloscope combine to form a high pass filter. (Consider drawing a full circuit model to see that this is true.) This high pass filter DC signals while allowing high frequency signals to pass. Because DC has to be zero Volts at the filter output, the output signal has to be zero centered.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Phantom Power
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The electret microphone only has two ports – they are listed as Term 1 and Term 2 in the reference circuit – but those ports have to achieve three functions: provide a ground reference, provide power, and provide output signal. Term 2 is used for ground, which is pretty normal. However, Term 1 is used for both power and output signal. Delivering power on the signal line is called “Phantom Power” in more sophisticated audio systems, and it works because power is delivered at DC while the audio signal resides at higher frequencies.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Other Amplifier Tips
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>You need to use dual-rail op-amps for this design because your input signal (the microphone output) is zero centered and your gain is high. It’s possible to build a pair of offset amplifiers that provide a gain of 100 and appropriate offsets, but dual rail op-amps simplify your design.</p>
+<p>If your first amplifier stage is a non-inverting amplifier, then add a large resistor (~100k) between the positive amplifier input and ground. This resistor is necessary to prevent the input leakage current of your op-amp from changing your results. You don’t need this resistor if your first stage is an inverting amplifier.</p>
+<p>You may need to solder leads to this electret microphone to plug it into your breadboard. You should consider twisting the leads together to form twisted pair wire. These wires do not need to be very long. In the tank room, you will be provided with water-proofed microphones with long leads so that you can dip the microphones into the tank while your circuits remain on the work tables.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="distance-measurement-based-on-amplitude" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="distance-measurement-based-on-amplitude"><span class="header-section-number">4</span> Distance Measurement Based On Amplitude</h2>
+<p>One way to locate your robot in the water is to listen to three acoustic beacons and calculate your distance to each of them based on the beacon power received at your robot. Three beacons are installed in the test tank and will be constantly emitting sine waves of approximately 9 kHz, 11 kHz and 13 kHz, and that setup is pictured in <a href="#fig-tank" class="quarto-xref">Figure&nbsp;1</a>. You will need to use the microphones in the tank room, which have long wires, to put a microphone into the tank and measure the signals coming out of these beacons. Analyzing microphone data with the FFT will be essential because the signals of all of the beacons are present in the tank at the same time.</p>
+<div id="fig-tank" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tank-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/tank_room_with_beacons.jpg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tank-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Test tank with beacons and long microphones
+</figcaption>
+</figure>
+</div>
+<p>Prepare for your experiment by making models of what you expect to see</p>
+<ol type="1">
+<li>Find an analytical expression that describes power at a distance from an acoustic emitter.</li>
+<li>Your measurements in the tank will be FFT magnitudes of Voltages received at your microphone. Convert your analytical expression from describing received power to describing your expected FFT magnitude.</li>
+<li>You won’t have all the parameters for your analytical function (TX power, P-to-V conversion), but you can fit your model to your measured data anyway. Figure out how can you fit a function with unknown parameters to your measurements. Making some fake data in Matlab to test out your procedure may help.</li>
+<li>You need to be sure that your measurements capture evidence of multipath in the tank, and achieving that will require careful spacing of your measurements. Figure out how closely you need to space your measurements in order to observe multipath.</li>
+</ol>
+<p>Then carry out measurements in the tank</p>
+<ol type="1">
+<li>Attach a tank microphone to your amplifier from <a href="#sec-interface" class="quarto-xref">Section&nbsp;3</a>, and attach the amplifier output to an oscilloscope channel.</li>
+<li>Use your microphone, assisted by the oscilloscope FFT, to figure out which beacon corresponds to which frequency. The orientation of your microphone relative to the beacon can affect your measurement, so be sure to align the receive mic with the transmit speaker.</li>
+<li>For each beacon, measure the received Voltage magnitude as you move your microphone away from the beacon. As a reminder, the spacing of your measurements is very important for spotting an important real-world phenomenon called multipath, and you’ll need to rely on your earlier calculations to figure out that spacing.</li>
+<li>Make three plots, one for each beacon, showing the analytical model of beacon power on the same axes as your measured points.</li>
+</ol>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We are using both benchtop electronics and water in this lab, and the two don’t mix, so BE EXTREMELY CAREFUL when putting anything in the water, removing anything from the water or mounting anything near the water. Instructors will stop your experiments if they think they pose a water hazard to equipment.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Though this section shows that it’s possible to measure a robot’s position using power decay from a beacon, it’s much more common and reliable to measure a robot’s position using the time-of-flight of an acoustic pulse. See the time-of-flight <a href="../../reference/design/">reference design</a> for more details on how to use time-of-flight measurements for sounding.</p>
+</div>
+</div>
+</section>
+<section id="sampling-audio-with-a-teensy" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="sampling-audio-with-a-teensy"><span class="header-section-number">5</span> Sampling Audio with a Teensy</h2>
+<p>This section requires that you use the Teensy sampling rigs (shown in <a href="#fig-sampling-rig" class="quarto-xref">Figure&nbsp;2</a>) that have been set up in the tank room. The rigs consist of an amplifier with an offset attached to an E80 motherboard that samples the amplifier output. We provide software, <a href="https://github.com/HMC-E80/E80-SP2023/blob/main/MATLAB/E80_Lab_05_Teensy_Rig.m">E80_Lab05_Teensy_Rig.m</a> and <a href="https://github.com/HMC-E80/E80-SP2023/blob/main/E80_Lab_05_Teensy_Rig/E80_Lab_05_Teensy_Rig.ino">E80_Lab05_Teensy_Rig.ino</a> (which is already running on the rig), that allows you to adjust the sample rate of the Teensy, and we’re going to use that power to explore how sample rate affects real world data samples.</p>
+<div id="fig-sampling-rig" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sampling-rig-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/teensy_sampling_rig.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sampling-rig-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Teensy sampling rig
+</figcaption>
+</figure>
+</div>
+<ol type="1">
+<li>Connect a tank microphone to a Teensy sampling rig,</li>
+<li>Connect the rig to your computer with a micro USB cable</li>
+<li>Use the <a href="https://github.com/HMC-E80/E80-SP2023/blob/main/MATLAB/E80_Lab_05_Teensy_Rig.m">E80_Lab05_Teensy_Rig.m</a> software to measure vectors of sample data with sample rates of 10 kS/s and 100 kS/s (kilosamples per second).
+<ol type="1">
+<li>Edit the Matlab script to set the COM port</li>
+<li>Edit the Matlab script to set the sampling frequency</li>
+<li>Run the script</li>
+<li>Your sampled data will be in the <code>micSignal</code> variable, so save that variable under another name. Note the sampling frequency and the number of samples.</li>
+<li>Repeat steps 2, 3 and 4 for the second sampling frequency.</li>
+</ol></li>
+<li>Plot the magnitude of FFTs of the 10 kS/s and 100 kS/s sampled data. Describe any differences between the resulting graphs and explain what causes the differences.</li>
+<li>Plot the first 100 points of the time data for the 10 kS/s and 100 kS/s signals. Pay attention to the x axis of the signals. Describe any differences in the measured data and explain why they are there.</li>
+<li>What is the minimum sampling rate you should use to measure signals in the tank? Prove it by sampling data at that frequency and presenting an FFT of that data.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Be sure to return electret microphones, power amplifier boards and speakers to the electronics table.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In this section, as always, we connect to your Teensy pins through the E80 motherboard, which has protection circuits designed to prevent damage to the Teensy.</p>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.56">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Lab 6: Fluid Dynamics – E80 SP24</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">E80 SP24</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../lectures/"> 
+<span class="menu-text">Lectures</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-labs" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Labs</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-labs">    
+        <li>
+    <a class="dropdown-item" href="../../labs/overview">
+ <span class="dropdown-text">Overview and Safety</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../labs/lab0">
+ <span class="dropdown-text">Lab 0: Tutorial &amp; Skills Review</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../labs/lab1">
+ <span class="dropdown-text">Lab 1: Go Autonomous</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../labs/lab2">
+ <span class="dropdown-text">Lab 2: BEM</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../labs/lab3">
+ <span class="dropdown-text">Lab 3: Op-Amps</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../labs/lab4">
+ <span class="dropdown-text">Lab 4: Temperature</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../labs/lab5">
+ <span class="dropdown-text">Lab 5: Acoustics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../labs/lab6">
+ <span class="dropdown-text">Lab 6: Fluids</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-project" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Project</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-project">    
+        <li>
+    <a class="dropdown-item" href="../../project/overview">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../project/proposal">
+ <span class="dropdown-text">Design and Proposal</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../project/navigation">
+ <span class="dropdown-text">Navigation Jump Start</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../project/build">
+ <span class="dropdown-text">Build and Integrate</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../project/deploy">
+ <span class="dropdown-text">Field Deployment</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../project/report">
+ <span class="dropdown-text">Present and Report</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-references" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">References</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-references">    
+        <li>
+    <a class="dropdown-item" href="../../reference/inventory">
+ <span class="dropdown-text">Lab Inventory</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../reference/equipment">
+ <span class="dropdown-text">Lab Equipment</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../reference/board">
+ <span class="dropdown-text">Board Information</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../reference/design">
+ <span class="dropdown-text">Reference Designs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../reference/history">
+ <span class="dropdown-text">Old Final Projects</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/HMC-E80/E80"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#wind-tunnel-experiments" id="toc-wind-tunnel-experiments" class="nav-link" data-scroll-target="#wind-tunnel-experiments"><span class="header-section-number">2</span> Wind Tunnel Experiments</a>
+  <ul class="collapse">
+  <li><a href="#sec-know" id="toc-sec-know" class="nav-link" data-scroll-target="#sec-know"><span class="header-section-number">2.1</span> Getting to Know Your Wind Tunnel</a></li>
+  <li><a href="#sec-calibrate" id="toc-sec-calibrate" class="nav-link" data-scroll-target="#sec-calibrate"><span class="header-section-number">2.2</span> Wind-Speed to Fan Speed Calibration Curve</a></li>
+  <li><a href="#measuring-the-drag-forces-on-cylindrical-objects" id="toc-measuring-the-drag-forces-on-cylindrical-objects" class="nav-link" data-scroll-target="#measuring-the-drag-forces-on-cylindrical-objects"><span class="header-section-number">2.3</span> Measuring the Drag Forces on Cylindrical Objects</a></li>
+  <li><a href="#measuring-the-drag-forces-on-a-scale-robot-model" id="toc-measuring-the-drag-forces-on-a-scale-robot-model" class="nav-link" data-scroll-target="#measuring-the-drag-forces-on-a-scale-robot-model"><span class="header-section-number">2.4</span> Measuring the Drag Forces on a Scale Robot Model</a></li>
+  <li><a href="#plot-results" id="toc-plot-results" class="nav-link" data-scroll-target="#plot-results"><span class="header-section-number">2.5</span> Plot Results</a></li>
+  </ul></li>
+  <li><a href="#cfd-simulations-of-cylindrical-objects-and-robot-model" id="toc-cfd-simulations-of-cylindrical-objects-and-robot-model" class="nav-link" data-scroll-target="#cfd-simulations-of-cylindrical-objects-and-robot-model"><span class="header-section-number">3</span> CFD Simulations of Cylindrical Objects and Robot Model</a></li>
+  <li><a href="#cfd-simulations-of-wings" id="toc-cfd-simulations-of-wings" class="nav-link" data-scroll-target="#cfd-simulations-of-wings"><span class="header-section-number">4</span> CFD Simulations of Wings</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Lab 6: Fluid Dynamics</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Team size: 4</p>
+<p>Submission Sheet: <a href="../../labs/lab6/submission.html">html</a> <a href="./submission.docx">docx</a></p>
+<p>Writing Assignment: <a href="../../labs/lab6/writing.html">html</a></p>
+<p>Prelab Help Sheet: None for this lab, but you’ve got this! Review previous ones for ideas.</p>
+<section id="introduction" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1</span> Introduction</h2>
+<p>In this lab you will take measurements of objects in a wind tunnel, then simulate the wind tunnel experiments using computational fluid dynamics (CFD) software. This exercise will help you learn about fluid dynamics concepts, provide some possibilities for fluids-related final projects, and help you think about the how simulation, analysis and measurement work together. Simulation, hand analysis and measurement are tools that engineers can use to show that they are correct, and seeking agreement between the three (and knowing when to distrust one or the other) is an essential skill in every engineering discipline.</p>
+<p>After successful completion of this lab, you will be able to:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Demonstrate safe start-up and shut-down sequence for the wind tunnel.</label></li>
+<li><label><input type="checkbox">Determine wind speeds in the wind tunnel using a Pitot tube and digital manometer.</label></li>
+<li><label><input type="checkbox">Measure drag forces on various shapes in the wind tunnel at various flow velocities.</label></li>
+<li><label><input type="checkbox">Utilize COMSOL computational fluid dynamics (CFD) to model the drag and lift forces of the objects tested in the wind tunnel.</label></li>
+<li><label><input type="checkbox">Compare the results obtained in the wind tunnel to those predicted by COMSOL.</label></li>
+<li><label><input type="checkbox">Use COMSOL to create, simulate, and predict the lift and drag characteristics of wing-like objects.</label></li>
+</ul>
+<p>This lab will take place in the Engineering Computing Facility (ECF) in Parsons B178 and the wind tunnel room. E80 students should already have card access to Parsons B178. If you cannot access the room, please contact the Engineering Department Office.</p>
+<p>You will be using COMSOL Multiphysics software in this lab. COMSOL is complicated software, and you will struggle to finish the lab if you do not read about its use and practiced with it during prelab. Here are the prelab rules for COMSOL:</p>
+<ul>
+<li>You may practice using COMSOL and go through Granny Spark’s COMSOL tutorials as part of prelab.</li>
+<li>You may not run COMSOL simulations on lab-related objects outside of your designated lab time. These objects include the cylindrical objects tested in the wind tunnel, the “flat plate wing” and the NACA 6412 wing.</li>
+<li>You may not use COMSOL during any other section’s lab time slot because that can deprive students in lab of COMSOL licenses.</li>
+</ul>
+<p>Each team will have exactly 60 minutes to use the wind tunnel to run experiments and collect data. The order that teams are sent to the wind tunnel is random and determined at the start of the section, so be ready to go first!</p>
+<p>This is a rotation lab, so not all teams will be working on this lab in the same week. Even numbered teams (12, 24, 36, etc.) will do this lab in week 6, while Odd numbered teams (12, 24, 36, etc.) work on <a href="../../labs/lab5/index.html">Lab 5</a>. Odd numbered teams will do this lab in week 7, while Even numbered teams work on lab 5. Be sure to watch the correct videos, do the correct quiz, and put in prelab effort for the correct lab!</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Safety Tips for the Wind Tunnel</p>
+<ul>
+<li>Follow the dress code for E80 Lab.<br>
+</li>
+<li>Everyone must wear safety goggles during the test. Hearing protection will be provided if needed.</li>
+<li>Only turn the fan on after checking that there are no loose objects in the test chamber and the test chamber cover plate is secure.</li>
+<li>Ensure that all test personnel are at a safe distance from the wind tunnel itself (at least 24” in any direction).</li>
+<li>Make sure the article under test is securely fastened inside the test chamber.</li>
+<li>Never run the wind tunnel without a proctor or professor present.</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Prelab resources on fluids, aerodynamics, and COMSOL
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>NASA Beginner’s Guide to Aerodynamics (click <a href="https://www.grc.nasa.gov/www/k-12/airplane/short.html">here</a>)</li>
+<li>E80 fluid measurements lecture notes (click <a href="https://drive.google.com/file/d/1R1AHWD5GR1xRkoNJdMfdgkJvw1xmn8XO/view?usp=sharing">here</a>)</li>
+<li>Airfoil database (click <a href="http://www.airfoiltools.com/search/index?m%5Bgrp%5D=naca4d&amp;m%5Bsort%5D=1">here</a>)</li>
+<li>Airfoil and angle of attack definitions (click <a href="http://www.esru.strath.ac.uk/EandE/Web_sites/11-12/MORE/hydrofoil/img/1.jpg">here</a>)</li>
+<li>NASA Wing geometry definitions (click <a href="https://www.grc.nasa.gov/www/k-12/airplane/geom.html">here</a>)</li>
+<li>NASA Reynolds Number guide (click <a href="https://www.grc.nasa.gov/www/BGH/reynolds.html">here</a>)</li>
+<li>Grandma Spark’s step-by-step video guide to using COMSOL to model a cylinder in laminar flow (105 MB PowerPoint File, click <a href="https://drive.google.com/drive/folders/1llecHQqT-IsAfxxNEL-jZWsQFFYYczDG?usp=sharing">here</a>). Each slide on the PowerPoint contains a video! Make sure that you press play on each video!</li>
+<li>Grandma Spark’s step-by-step video guide to using COMSOL to model a NACA 0009 airfoil in laminar flow (164 MB PowerPoint File, click <a href="https://drive.google.com/drive/folders/1llecHQqT-IsAfxxNEL-jZWsQFFYYczDG?usp=sharing">here</a>) Each slide on the PowerPoint contains a video! Make sure that you press play on each video!</li>
+<li>COMSOL video tutorials for beginners (click <a href="https://www.comsol.com/video/how-set-up-run-simulation-comsol-multiphysics">here</a>)</li>
+<li>How to use COMSOL 3D geometry tools (click <a href="https://www.youtube.com/watch?v=1AggdrJzHyg">here</a>)</li>
+<li>How to form unions in COMSOL (click <a href="https://www.youtube.com/watch?v=Q7fOawr58H0">here</a>)</li>
+<li>Computing lift and drag forces in COMSOL (click <a href="https://www.comsol.com/blogs/how-do-i-compute-lift-and-drag/">here</a>)</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="wind-tunnel-experiments" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="wind-tunnel-experiments"><span class="header-section-number">2</span> Wind Tunnel Experiments</h2>
+<p>In this section you get a chance to operate Harvey Mudd’s wind tunnel! Pay attention to the wind tunnel safety tips in the introduction. Your team will have exactly 60 minutes to complete this section.</p>
+<section id="sec-know" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="sec-know"><span class="header-section-number">2.1</span> Getting to Know Your Wind Tunnel</h3>
+<p>In this sub-section, you will familiarize yourself with the wind tunnel. Do the following after a professor or proctor shows you the wind tunnel room.</p>
+<ol type="1">
+<li>Locate the important pieces of wind tunnel control and measurement technology items shown in <a href="#fig-controls" class="quarto-xref">Figure&nbsp;1</a>.</li>
+<li>Ensure that the LVDT box is turned on. If it is not, the switch is on the right side of the box in the rear. DO NOT TOUCH THE KNOBS ON THE FRONT OF THIS BOX.<br>
+</li>
+<li>Safely open the test chamber: Ensure that the fan is not running in the wind tunnel by pushing the “STOP” button on the RPM controller, then Open the wind tunnel test chamber by removing the four clamps and gently removing the window.</li>
+<li>Verify that there is nothing but a Pitot tube (which looks like <a href="https://dwyer-inst.com/series-160-stainless-steel-pitot-tube.html">this</a>) and the force measurement stand in the wind tunnel. If there are other objects in the wind tunnel, remove them.</li>
+<li>Observe the mounting of the Pitot tube in the wind tunnel. Ensure that the end of the tube is properly oriented directly facing the incoming airflow. Ensure that the pitot probe is connected to the <a href="http://www.dwyer-inst.com/Product/Pressure/Manometers/Digital/Series475">digital manometer</a>.</li>
+<li>Turn on the digital manometer. Zero it.</li>
+<li>Test the LVDT by doing the following while observing lift and drag force readouts:
+<ol type="1">
+<li>GENTLY push on the left side of the force measurement stand with one finger.</li>
+<li>GENTLY push on the right side of the force measurement stand with one finger.</li>
+<li>GENTLY push on the top of the force measurement stand with one finger.</li>
+<li>GENTLY pull on the top side of the force measurement stand with two fingers.</li>
+</ol></li>
+</ol>
+<div id="fig-controls" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-controls-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/ControlPanel.jpg" class="img-fluid figure-img"></p>
+<figcaption>RPM Controller</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/WhiteBox.jpg" class="img-fluid figure-img"></p>
+<figcaption>Fan Speed Display</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/LVDT.jpg" class="img-fluid figure-img"></p>
+<figcaption>LVDT Readout Above Test Chamber</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-controls-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Wind tunnel control and measurement boxes
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="sec-calibrate" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="sec-calibrate"><span class="header-section-number">2.2</span> Wind-Speed to Fan Speed Calibration Curve</h3>
+<p>In this subsection you will create a calibration curve that relates airspeed in the wind tunnel to fan RPM.</p>
+<ol type="1">
+<li>Perform safety checks for wind tunnel startup:
+<ul>
+<li>is the window on the test section clamped securely at four corners?</li>
+<li>is everyone wearing safety goggles?</li>
+<li>is the test chamber free of loose debris?</li>
+</ul></li>
+<li>Power up the wind tunnel by pushing the green button labeled “START” on the gray box.</li>
+<li>Adjust the fan speed with the knob on the RPM Controller while reading the RPM from the Fan Speed Display. Adjust the fan speed from 15% to 55% of max fan speed (in increments of 5%). At each fan speed:
+<ol type="1">
+<li>Measure the airspeed</li>
+<li>Record the lift and drag forces exhibited by the force measurement stand at each RPM setting. These values represent a the lift and drag of the test apparatus, and should be subtracted from the measured lift and drag in future tests.</li>
+</ol></li>
+<li>Zero the speed in the wind tunnel and push the red button labeled “STOP” on the gray box.</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To increase the accuracy of your wind speed measurements, allow time at each measurement for the wind tunnel to come to steady state. Also, repeat measurements with increasing and decreasing RPM to ensure reproducible results.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To calculate air velocity, you can use</p>
+<ul>
+<li>this Excel spreadsheet <a href="https://docs.google.com/spreadsheets/d/1JXKPa2uhD6FO39ZgqziKAnF7XNatieHe/edit?usp=share_link&amp;ouid=105511935419108795487&amp;rtpof=true&amp;sd=true">PitotVelocityCalculator</a></li>
+<li>this <a href="https://docs.google.com/spreadsheets/d/1m22gxiGKOKdak-1UFEZurIgK5epST0CCiMBFQLzDiQM/copy?usp=sharing">Google Sheet</a>,<br>
+</li>
+<li>the <a href="https://dwyer-inst.com/en/flowcalc">Dwyer Air Velocity Calculator</a></li>
+<li>the Dwyer Air Velocity Calculation Card that has been placed next to the wind tunnel.</li>
+</ul>
+<p>Using these tools or the card requires that you know:</p>
+<ul>
+<li>The ambient (room) temperature. Read the temperature sensor in the room.</li>
+<li>The relative humidity. Read the humidity sensor in the room.</li>
+<li>The absolute air pressure. Use a barometric pressure app on a cell phone.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="measuring-the-drag-forces-on-cylindrical-objects" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="measuring-the-drag-forces-on-cylindrical-objects"><span class="header-section-number">2.3</span> Measuring the Drag Forces on Cylindrical Objects</h3>
+<ol type="1">
+<li>Safely open the test chamber using the same steps as instruction 3 in <a href="#sec-know" class="quarto-xref">Section&nbsp;2.1</a>.</li>
+<li>Mount the cylindrical fixture on the force measurement stand and ensure that it is horizontal. Make sure that the side of the cylinder that says “FRONT TOWARDS FLOW” is facing the incoming flow.</li>
+<li>For each of “Nose #1”, “Nose #2” and “Nose #3”
+<ol type="1">
+<li>Install the nose on the cylinder. <strong>PLEASE BE GENTLE!</strong> You can break the force measurement stand. Ask for help if you think you are pushing hard.</li>
+<li>Safely power up the wind tunnel by performing the same checks as instruction 1 in <a href="#sec-calibrate" class="quarto-xref">Section&nbsp;2.2</a>.</li>
+<li>Record values for lift and drag shown on the LVDT box at zero flow velocity. These are instrument offsets that must be subtracted from your future measurements.</li>
+<li>Measure the drag force on the object from 15% to 55% of max fan speed (in increments of 5%).<br>
+</li>
+<li>Bring the flow back down to zero and press the red “STOP” button.</li>
+</ol></li>
+</ol>
+</section>
+<section id="measuring-the-drag-forces-on-a-scale-robot-model" class="level3" data-number="2.4">
+<h3 data-number="2.4" class="anchored" data-anchor-id="measuring-the-drag-forces-on-a-scale-robot-model"><span class="header-section-number">2.4</span> Measuring the Drag Forces on a Scale Robot Model</h3>
+<ol type="1">
+<li>Safely open the test chamber using the same steps as instruction 3 in <a href="#sec-know" class="quarto-xref">Section&nbsp;2.1</a>.</li>
+<li>Mount the 1/3 scale model of the robot in the wind tunnel chamber using a zip tie as shown in <a href="#fig-scaled" class="quarto-xref">Figure&nbsp;2</a>. Pay attention to its orientation.<br>
+</li>
+<li>Safely power up the wind tunnel by performing the same checks as instruction 1 in <a href="#sec-calibrate" class="quarto-xref">Section&nbsp;2.2</a>.</li>
+<li>Record necessary calibration information, then record drag force on the object from 15%-55% of max fan speed (in increments of 5%).</li>
+</ol>
+<div id="fig-scaled" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-scaled-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="img/IMG_0319.png" class="img-fluid figure-img"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="img/IMG_0322.png" class="img-fluid figure-img"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="img/IMG_0323.png" class="img-fluid figure-img"></p>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-scaled-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Mounting the scaled model of the robot in the test chamber.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="plot-results" class="level3" data-number="2.5">
+<h3 data-number="2.5" class="anchored" data-anchor-id="plot-results"><span class="header-section-number">2.5</span> Plot Results</h3>
+<ol type="1">
+<li>Return to Parsons B178</li>
+<li>Plot a calibration curve of airspeed in the test section versus RPM. Perform the necessary regression analysis and display the appropriate error bars.</li>
+<li>For each nose and the scale robot model:
+<ol type="1">
+<li>Plot a curve of drag force vs.&nbsp;Reynolds number</li>
+<li>Plot a curve of drag coefficient vs.&nbsp;Reynolds number using appropriate characteristic lengths and reference areas.</li>
+</ol></li>
+</ol>
+</section>
+</section>
+<section id="cfd-simulations-of-cylindrical-objects-and-robot-model" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="cfd-simulations-of-cylindrical-objects-and-robot-model"><span class="header-section-number">3</span> CFD Simulations of Cylindrical Objects and Robot Model</h2>
+<p>In this section we will perform fluid dynamics simulations of the same objects that are tested in the wind tunnel. This will offer us a chance to compare simulation and reality. We will also use similitude to compare our wind tunnel results against a simulation of a full-sized robot traveling in water.</p>
+<p>Make sure to download and watch Grandma Spark’s step-by-step video guide to using COMSOL to model a cylinder in laminar flow (106 MB PowerPoint File, click <a href="https://docs.google.com/presentation/d/1e_maE5dcjPOEUGKOjZue8UUbkSufHgzy/edit?usp=sharing&amp;ouid=100121681850908143159&amp;rtpof=true&amp;sd=true">here</a>). Each slide on the PowerPoint contains a video. Make sure that you press play on each video. The guide has specific instructions for creating some of the trickier plots below: the velocity profile and the filled pressure contour plot.</p>
+<p>First, carry out simulations for each of the nose cones used in the wind tunnel.</p>
+<ol type="1">
+<li>Build the nose cone in COMSOL so that its dimensions match <a href="#fig-noses" class="quarto-xref">Figure&nbsp;3</a>. Note that the wind tunnel test section is 1 ft x 1 ft x 2 ft.</li>
+<li>Perform COMSOL CFD simulations that replicate your tests in the wind tunnel.</li>
+<li>Use your simulated results to plot drag force vs.&nbsp;Reynolds number for air velocities between 5 m/s and 45 m/s (in increments of 10 m/s).</li>
+<li>Use your simulated results to plot coefficient of drag vs.&nbsp;Reynolds Number for air velocities between 5 m/s and 45 m/s (in increments of 10 m/s).</li>
+<li>Create a velocity profile (single slice at centerline of body) for the 45 m/s flow condition. Grandma Sparks step-by-step guide shows you how to do this.</li>
+<li>Create a pressure contour plot (Contour Type: Filled) for the 45 m/s flow condition. Grandma Sparks step-by-step guide shows you how to do this.</li>
+<li>Comment on how your computational results for drag and coefficient of drag compare to your experimental results. Come up with factors that could cause differences between the results.</li>
+</ol>
+<div id="fig-noses" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-noses-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/nose_cone_body.png" class="img-fluid figure-img"></p>
+<figcaption>Cylindrical object body</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/nose_cone_noses.png" class="img-fluid figure-img"></p>
+<figcaption>Nose cones</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-noses-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Nose cone assembly dimensions
+</figcaption>
+</figure>
+</div>
+<p>Second, simulate a full-scale model of your robot (found <a href="https://drive.google.com/file/d/1S4ma0dsIwoG4uevQlVbE5IhP2XK05xuQ/view?usp=sharing">here</a>) in water at various velocities such that the Reynolds number is comparable to the Reynolds number of the small-scale model of the robot in the wind tunnel.</p>
+<ol type="1">
+<li>Unlike the nose cones, you will import an already existing model of the robot:
+<ul>
+<li>Select Model Wizard -&gt; 3D -&gt; Laminar Flow -&gt; Stationary. Set units under the Geometry tab in the left hand column.</li>
+<li>Right click on “Geometry” in the left hand column and select “Import”. When importing, make sure that under “Objects to import” both the “Solids” and “Surfaces” boxes are checked and that under “For surface objects:” you select “Form solids” (see <a href="#fig-import" class="quarto-xref">Figure&nbsp;4</a> for a screenshot showing this setup).</li>
+<li>Create the box and set up the laminar flow simulation as usual.</li>
+</ul></li>
+<li>Plot the drag force vs.&nbsp;Reynolds Number for your simulated robot</li>
+<li>Plot the coefficient of drag vs.&nbsp;Reynolds Number for your simulated robot</li>
+<li>Comment on how your computational results for drag and coefficient of drag compare to your experimental results. Come up with factors that could cause differences between the results. Explain how similitude helps you to simulate at these very different scales.</li>
+</ol>
+<div id="fig-import" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-import-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/ImportSettings.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-import-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Import settings for importing robot model to COMSOL
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="cfd-simulations-of-wings" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="cfd-simulations-of-wings"><span class="header-section-number">4</span> CFD Simulations of Wings</h2>
+<p>In this section you will use CFD to simulate wings so that you can explore the effect of wing shape and angle of attack on lift and drag.</p>
+<p>For parts 2 and 3 of this section, please make sure to watch Grandma Spark’s step-by-step video guide to using COMSOL to model a NACA 0009 airfoil in laminar flow (164 MB PowerPoint File, click <a href="https://docs.google.com/presentation/d/1KFulcloNJmJO0Bwzbz9RL0ppA24EBcsr/edit?usp=sharing&amp;ouid=100121681850908143159&amp;rtpof=true&amp;sd=true">here</a>). Each slide on the PowerPoint contains a video. Make sure that you press play on each video.</p>
+<ol type="1">
+<li>Construct two wings in COMSOL.
+<ol type="1">
+<li>a “Flat Plate Wing” that COULD be tested in the wind tunnel using the dimensions in <a href="#fig-plate-wing" class="quarto-xref">Figure&nbsp;5</a>. Note that the wind tunnel test section is 1 ft x 1 ft x 2 ft.</li>
+<li>a wing based on the NACA 6412 airfoil that has a similar reference area as the “Flat Plate Wing”</li>
+</ol></li>
+<li>Identify the appropriate reference area and characteristic length to determine the lift force and coefficient of lift for the flat plate.</li>
+<li>Perform COMSOL CFD simulations of both wings (the “Flat Plate Wing” and the wing based on the NACA 6412 airfoil). Do so at three angles of attack (5°, 15°, and 45°) as the flow is varied between 5 m/s and 45 m/s. Then, for each wing, plot the following based on your simulated results:
+<ol type="1">
+<li>Plot the lift force vs.&nbsp;Reynolds Number. Plot a curve for each angle of attack on the same axes so that you can compare your results. Make sure to include a legend.<br>
+</li>
+<li>Plot the coefficient of lift vs.&nbsp;Reynolds Number. Plot a curve for each angle of attack on the same axes so that you can compare your results. Make sure to include a legend.<br>
+</li>
+<li>Create a pressure contour plot (Contour Type: Filled) for the 45 m/s flow condition at a 15 degree angle of attack.</li>
+</ol></li>
+<li>Compare the performance of the wings.
+<ol type="1">
+<li>How does the pressure on the bottom of the flat plate wing compare to the top of the flat plate wing at a 15 degree angle of attack?</li>
+<li>How does the NACA 6412 wing’s Coefficient of Lift compare to the flat plate at an angle of attack of 15 degrees?</li>
+<li>How do the pressure differences between the top and bottom surfaces of the NACA 6412 wing compare to the pressure difference on the flat plate at 45 m/s and a 15 degree angle of attack?</li>
+</ol></li>
+</ol>
+<div id="fig-plate-wing" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-plate-wing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p><img src="img/plate_wing_1.png" class="img-fluid figure-img"></p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p><img src="img/plate_wing_2.png" class="img-fluid figure-img"></p>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-plate-wing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Dimensions of a “flat plate wing” inspired by https://grabcad.com/library/naca0012-airfoil-1
+</figcaption>
+</figure>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
