@@ -90,6 +90,6 @@ The code should be able to produce a matrix with a user-specified number of colu
 Desired code output matrix.
 :::
 
-::: hint-box
-**Hint:** In MATLAB, if you create a matrix with a certain size and then you try to assign an element of that matrix outside of its existing dimensions, MATLAB won't give you an error. Instead, it will just extend the matrix outward as large as necessary to accommodate that new element.
+::: {.callout-note}
+In MATLAB, if you create a matrix with a certain size and then you try to assign an element of that matrix outside of its existing dimensions, MATLAB won't give you an error. Instead, it will just extend the matrix outward as large as necessary to accommodate that new element.
 :::
