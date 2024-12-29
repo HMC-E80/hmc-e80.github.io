@@ -111,8 +111,8 @@ Modified E79 ROV for use in E80.
 
 ## Battery
 
-Your AUV will need power, and we provide that with a battery pack. The battery pack used in E80 is a 3000 mAh to 3500 mAh, 30 C, 11.1 V LiPo battery pack. 
-To charge the batteries, we will use a [HiTec x1 Mini charger](https://hitecrcd.com//images/products/pdf/419_X1mini_Manual_BAS-V2-Web.pdf) or a [UP60AC multi charger](http://www.hrpdealer.com/pdf/manuals/UPTUP60AC%20Manual.pdf). Here are some helpful [images](https://drive.google.com/open?id=1K1DSOdeqAjU_JU-sTOdiBUnwMmpwUTPP) showing a correct charging setup. 
+Your AUV will need power, and we provide that with a battery pack. The battery pack used in E80 is a 3000 mAh to 3500 mAh, 40 C, 11.1 V LiPo battery pack. 
+To charge the batteries, we will use a [HiTec x1 Mini charger](https://drive.google.com/file/d/1q7Cchnw4c7wzFiuOYf5PHiICkSoq8qX5/view?usp=drive_link) or a [UP60AC multi charger](https://drive.google.com/file/d/1T9ghDlmI2UUg3yBbOCQxVdA6DsFghrLr/view?usp=drive_link). Here are some helpful [images](https://drive.google.com/open?id=1K1DSOdeqAjU_JU-sTOdiBUnwMmpwUTPP) showing a correct charging setup. 
 
 1. Read the manual on how to use the chargers. 
 2. Determine how many cells are in the battery pack, and the maximum, minimum and nominal voltage outputs of these battery packs. 
