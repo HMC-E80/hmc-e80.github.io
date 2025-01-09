@@ -172,7 +172,7 @@ The professors reserve the right to award grades more leniently than this gradin
 
 ## Course Calendar
 
-A Google Sheet with the key dates and assignments in E80 can be found [here]({{<var urls.course_calendar_gsheet >}}).
+A Google Sheet with the key dates and assignments in E80 can be found [here]({{<var urls.course_calendar_gsheet>}}).
 
 You can also review the [Modules tab on Canvas]({{<var urls.canvas_root>}}/modules) for a week-by-week breakdown of what's due with links to reference material and where to turn stuff in.
 
