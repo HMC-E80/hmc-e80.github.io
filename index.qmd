@@ -136,12 +136,12 @@ If the initial version of a submitted assignment does not meet specs, it may be 
 #### Surveys and Team Check-Ins
 
 - You will be called upon to complete surveys at the beginning, middle and end of the class, and each week, you will be asked to complete a team check-in (a quick peer evaluation) for the lab done that week. Completing each of the check-ins is worth 0.5% of your grade, and completing each of the longer surveys is worth 1% of your grade.
-- There are a total of 6 weekly check-ins (from weeks 2 through 7) and they are due each Friday at 3:30 pm.
+- There are a total of 7 weekly check-ins (weeks 2 - 7 and 10) and they are due each Friday at 3:30 pm.
 - These are individual assignments
 
 #### Laboratory Submission Sheets
 
-- There are a total of 8 labs in the class: Lab0 through Lab7. You must submit a submission sheet for each of the labs that contains data you collected during the lab. (Though note that in lab0 the Matlab on-ramp deliverable is the submission sheet.) This submission sheet will be evaluated for correctness: it's a way of assessing whether your experimental procedure was correct during the lab. Each submission sheet you provide will be worth 4% of your final grade.
+- There are a total of 8 labs in the class: Lab0 through Lab7. You must submit a submission sheet for each of the labs that contains data you collected during the lab. (There is no submission sheet for lab0. Instead, the Matlab on-ramp deliverable is due on Friday of that week.) This submission sheet will be evaluated for correctness: it's a way of assessing whether your experimental procedure was correct during the lab. Each submission sheet you provide will be worth 4% of your final grade.
 - These are group assignments, so there will be only one submission per team.  The Matlab onramp for lab 0 is an exception: it is an individual assignment.
 
 #### Laboratory Writing Assignments
