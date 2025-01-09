@@ -101,13 +101,13 @@ Team assignments can be found on the [People tab on Canvas]({{<var urls.canvas_r
 | Item                                                              | Weight |            | 
 |-------------------------------------------------------------------|:------:|------------| 
 | [Lecture Quizzes](#lecture-quizzes)                               |   7%   | Individual |
-| [Surveys and Team Check-Ins](#surveys-and-team-check-ins)         |   6%   | Individual |
+| [Surveys and Team Check-Ins](#surveys-and-team-check-ins)         |   6.5%   | Individual |
 | [Laboratory Submission Sheets](#laboratory-submission-sheets)     |   32%  | Team       |
 | [Laboratory Writing Assignments](#laboratory-writing-assignments) |   15%  | Individual |
 | [Technical Memorandum](#technical-memorandum)                     |   10%  | Individual |
 | [Final Presentation](#final-presentation)                         |   10%  | Team       |
 | [Final Report](#final-report)                                     |   15%  | Team       |
-| [Participation](#participation)                                   |   5%   | Individual |
+| [Participation](#participation)                                   |   4.5%   | Individual |
 :::
 
 ### Turn-In on Canvas
