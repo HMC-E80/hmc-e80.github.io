@@ -7,13 +7,13 @@
 github-url: https://github.com/HMC-E80/E80
 
 dates:
-  kickoff: 2024-01-19
-  project_kickoff: 2024-02-23
-  phake1: 2024-04-09
-  phake2: 2024-04-10
-  phake3: 2024-04-11
-  dana: 2024-04-20
-  present: 2024-05-01
+  kickoff: 2025-01-24
+  project_kickoff: 2025-02-28
+  phake1: 2025-04-15
+  phake2: 2025-04-16
+  phake3: 2025-04-17
+  dana: 2025-04-26
+  present: 2025-05-07
 
 people:
   purchasing: Prof. Brake
@@ -35,7 +35,7 @@ urls:
   final_presentation_schedule: 
   canvas_root: https://harveymuddcollege.instructure.com/courses/2237
   discord_invite: https://discord.gg/aUAEvN4zaD
-  kit_payment_form: 
-  kit_waiver_request: 
-  course_calendar_gsheet:
+  kit_payment_form: https://docs.google.com/forms/d/e/1FAIpQLSfvv5hv1MgA3dtqpN5Jcj_RVcCJeqGzUUsM7q-XdCrRbWUUPA/viewform
+  kit_waiver_request: https://docs.google.com/forms/d/e/1FAIpQLSeUrlL34Co46oOuCqvBE8raIYIUWgpKgcfq5IsncQM-i7hOzA/viewform
+  course_calendar_gsheet: https://docs.google.com/spreadsheets/d/190BgRvQjM9b6yAeer4c1VI6qyqKpyyniAP--FfZrUk4/edit?usp=drive_link
 
