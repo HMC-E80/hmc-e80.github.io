@@ -190,7 +190,7 @@ After completing these instructions you should have a folder on your computer wi
 
 Once you have the Arduino IDE installed, Github Desktop set up, and pins soldered on your Teensy, share the Teensy among your teammates to run through a few more Arduino tutorials:
 
-Test your connection to the Teensy by compiling and uploading the RGB LED example in the Arduino IDE.  Then ensure you can compile and uplaod the E80 code.
+Test your connection to the Teensy by compiling and uploading the RGB LED example in the Arduino IDE.  Then ensure you can compile and upload the E80 code.
 
 1. Plug your Teensy into your laptop
 2. Open the RGB LED example by navigating to `File -> Examples -> 0.1 Basics -> Blink`. 
@@ -214,7 +214,7 @@ You will not have a Teensy for pre-labs, but downloading the necessary software 
 
 Then try these tutorials if you have time.
 
-1. [Blinking lights on the Arduino board](https://www.pjrc.com/teensy/tutorial.html):  
+1. [Blinking lights on the Arduino board](https://www.pjrc.com/teensy/tutorial.html)
 2. [Hooking up an external LED](https://www.pjrc.com/teensy/tutorial2.html) 
 
 ## SD Card Reading
