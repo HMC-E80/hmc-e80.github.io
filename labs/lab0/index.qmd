@@ -40,6 +40,7 @@ Every member of the team should complete the following sections:
 - Arduino Practice
 - SD Card Reading
 - MATLAB Access
+- Binary File Reading
 - MATLAB On-ramp
 
 The remaining sections can be broken into parallel tasks
@@ -234,6 +235,24 @@ Then, do the following to install MATLAB on your computer:
 
 It is also possible to use an online copy of MATLAB [here](https://matlab.mathworks.com), but we discourage doing so in this course.
 
+## Binary File Reading
+In future labs, you will use MATLAB to read binary data saved on an SD card by the Teensy. The data is stored in two separate files: an `inf` file, which lists the variable names and types, and a `log` file, which contains the raw binary data. Both are needed to read the data.
+
+Here is an example of the two files that would be found on an SD card after a run:
+
+- [inf004.txt](https://drive.google.com/open?id=18-MICAN9QopCYHtpTnUVNme07YvaUmFD)\
+- [log004.bin](https://drive.google.com/open?id=1h086niwvAh4C3Gs6r4vE12ZvaD1KYria)
+
+Use the provided MATLAB script, [logreader.m](https://github.com/HMC-E80/E80-SP2023/blob/main/MATLAB/logreader.m) [found under the `MATLAB` directory of the E80 repo you should have cloned], to read the data from the sample files.
+
+
+1. Open `logreader.m` with MATLAB
+2. Move both files into your Current Folder
+![](img/matlab_lab0.png){#fig-matlab-currdir}
+3. Change the `filenum` variable to match the number of the files. For the sample files, this would be `004`
+4. Plot one of the variable to check that data was read correctly, e.g `plot(accelX)`
+
 ## MATLAB On-ramp
 
 If you have extra time during Lab 0 you may work on the MATLAB on-ramp tutorial.  You can find the assignment [here](./matlab-startup.qmd).
+
