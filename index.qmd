@@ -136,19 +136,30 @@ You may not talk to other people in order to take the quiz, but they are open bo
 
 #### Surveys and Team Check-Ins
 
-- You will be called upon to complete surveys at the beginning and end of the class, and each week, you will be asked to complete a team check-in (a quick peer evaluation) for the lab done that week. Completing each of the check-ins is worth 0.375% of your grade, and completing each of the longer surveys is worth 1% of your grade.
-- There are a total of 12 weekly check-ins (from weeks 2 - 8 and 10-14) and they are due each Friday at 3:30 pm.
-- These are individual assignments
+You will be called upon to complete surveys at the beginning and end of the class, and each week, you will be asked to complete a team check-in (a quick peer evaluation) for the lab done that week. Completing each of the check-ins is worth 0.375% of your grade, and completing each of the longer surveys is worth 1% of your grade.
+There are a total of 12 weekly check-ins (from weeks 2 - 8 and 10-14) and they are due each Friday at 3:30 pm.
+These are individual assignments
 
 #### Laboratory Submission Sheets
 
-- There are a total of 8 labs in the class: Lab0 through Lab7. You must submit a submission sheet for each of the labs that contains data you collected during the lab. (Though note that in lab0 the Matlab on-ramp deliverable is the submission sheet.) This submission sheet will be evaluated for correctness: it's a way of assessing whether your experimental procedure was correct during the lab. Each submission sheet you provide will be worth 4% of your final grade.
-- These are group assignments, so there will be only one submission per team.  The Matlab onramp for lab 0 is an exception: it is an individual assignment.
+There are a total of 8 labs in the class: Lab 0 through Lab 7.
+You must submit a submission sheet for each of the labs that contains data you collected during the lab. 
+(Though note that in Lab 0 the Matlab on-ramp deliverable is the submission sheet.)
+This submission sheet will be evaluated for correctness: it's a way of assessing whether your experimental procedure was correct during the lab. 
+Each submission sheet you provide will be worth 4% of your final grade.
+
+These are group assignments, so there will be only one submission per team.
+The Matlab onramp for Lab 0 is an exception: it is an individual assignment.
 
 #### Laboratory Writing Assignments
 
-- You will be required to complete a writing assignment after labs 1-6. The purpose of the writing assignments is to train you in specific aspects of scientific writing: making figures, using tables, equations, etc. These assignments are completed entirely on Friday in the Writing and Reflection section. Each writing assignment will be worth 2.5% of your final grade, and you submit six assignments for a total of 15%.
-- These are individual assignments.  The team contract exercise in week 0 is an exception, there should be one team contract submission per team.
+You will be required to complete a writing assignment after Labs 1-6.
+The purpose of the writing assignments is to train you in specific aspects of scientific writing: making figures, using tables, equations, etc. 
+These assignments are completed entirely on Friday in the Writing and Reflection section. 
+Each writing assignment will be worth 2.5% of your final grade, and you submit six assignments for a total of 15%.
+
+These are individual assignments.
+The team contract exercise in week 0 is an exception, there should be one team contract submission per team.
 
 #### Technical Memorandum
 
@@ -164,13 +175,17 @@ Each team will prepare a poster to be presented during the E80 poster session du
 
 #### Final Report
 
-- A final technical report will be submitted by each student on the results of the final AUV deployments. The report will be graded for both technical content and proper use of [technical English](https://www.mit.edu/course/21/21.guide/). A rough draft of your final report is due at noon on 4/29/25. The final draft is due at 11:59 PM on 5/6/2025. The Final Report guidelines are found on the Final Project page.
+A final technical report will be submitted by each student on the results of the final AUV deployments.
+The report will be graded for both technical content and proper use of [technical English](https://www.mit.edu/course/21/21.guide/).
+A rough draft of your final report is due at noon on 4/29/25. The final draft is due at 11:59 PM on 5/6/2025.
+The Final Report guidelines are found on the [Final Project Report and Poster page](/project/project/).
 
 #### Participation
 
-- The instructors will assign you a participation grade which is determined by their in-lab observations, your peer evaluations, and your regular progress through the project checkoffs.
+The instructors will assign you a participation grade which is determined by their in-lab observations, your peer evaluations, and your regular progress through the project checkoffs.
 
 ## End-of-Semester Grades
+
 Grades will be awarded on a standard grading scale (93.3% is an A, 90% A-, 86.6% is a B+, etc ...) based on your total individual score.
 The professors reserve the right to award grades more leniently than this grading standard.  
 
