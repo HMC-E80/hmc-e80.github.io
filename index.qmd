@@ -245,12 +245,14 @@ For example, if Alice, Bob, Charlie, and Donna are team members they may select 
 All three will get the updated grade.
 Alice, Bob, Charlie, and Donna may all select whatever sub-team lab they would like to resubmit.
 For the sub-team labs, supposed the team assignments were as follows:
+
   - Lab 2: Alice/Bob and Charlie/Donna
   - Lab 3: Alice/Charlie and Bob/Donna
   - Lab 4: Alice/Donna and Bob/Charlie.
 
 Each team member may individually select what lab they want to resubmit.
 For example, if they choose the following options then they will each get their grade updated for the labs they chose.
+
   - Alice: Lab 2
   - Bob: Lab 3
   - Charlie: Lab 4
