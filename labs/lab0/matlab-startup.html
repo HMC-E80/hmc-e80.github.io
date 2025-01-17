@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.39">
+<meta name="generator" content="quarto-1.6.40">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>E72+E80 MATLAB Tutorial – E80 SP24</title>
+<title>E72+E80 MATLAB Tutorial – HMC E80</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -35,10 +35,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-f699a4a04ce0aab1c48a2a5c7a9a9c74.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-fe40f9c45f90b599bb1088b839d34baf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -78,7 +78,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">E80 SP24</span>
+    <span class="navbar-title">HMC E80</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -255,6 +255,7 @@ ul.task-list li input[type="checkbox"] {
 <p>At the end of this assignment you will submit pieces of information:</p>
 <ol type="1">
 <li>A screenshot showing you’ve completed the assigned sections of the <a href="#matlab-onramp">MATLAB On-ramp tutorial</a>.</li>
+<li>A screenshot of your completed <code>debugme.m</code> script file.</li>
 <li>A brief, 2-3 sentence reflection detailing something you learned from the <a href="#matlab-plotting-video">plotting question</a>.</li>
 <li>A brief, 4-5 sentence reflection detailing something you learned from the <a href="#practice-debugging-in-matlab">debugging practice</a>.</li>
 </ol>
@@ -264,7 +265,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="matlab-tutorial">MATLAB Tutorial</h2>
 <section id="installing-matlab-on-your-personal-computer" class="level3">
 <h3 class="anchored" data-anchor-id="installing-matlab-on-your-personal-computer">1. Installing MATLAB on your personal computer</h3>
-<p>There is a version of MATLAB that youone can run in the cloud via a browser, but because we’ll be using MATLAB a lot in this class, so we recommend that you install it on your personal computer. To do so, follow <a href="https://docs.google.com/document/d/1-dmjftyCPrAWVC4g5OvJ4mv9C1jUWgiwmJVQw4iSR5w/edit">these instructions</a>. Please install MATLAB R2023b or later.</p>
+<p>There is a version of MATLAB that you can run in the cloud via a browser, but because we’ll be using MATLAB a lot in this class, so we recommend that you install it on your personal computer. To do so, follow <a href="https://docs.google.com/document/d/1-dmjftyCPrAWVC4g5OvJ4mv9C1jUWgiwmJVQw4iSR5w/edit">these instructions</a>. Please install MATLAB R2023b or later.</p>
 <p><strong>Important:</strong> When you are installing MATLAB, you’ll be asked what packages you want included. For E72, you need at minimum the following toolboxes:</p>
 <ul>
 <li>Curve Fitting Toolbox</li>
@@ -311,7 +312,7 @@ Figure&nbsp;1: Screenshot of MATLAB Onramp
 <h3 class="anchored" data-anchor-id="matlab-debugging-tips">4. MATLAB Debugging Tips</h3>
 <p>Watch this 17-minute video <a href="https://vimeo.com/501103844" target="_blank">https://vimeo.com/501103844</a> to learn how to find and fix errors in your MATLAB code. This skill will <em>greatly</em> aid you in all classes that require the use of MATLAB.</p>
 <p>If you want to try using the debugger yourself with this piece of code, download <a href="https://github.com/HMC-E80/E80/tree/main/MATLAB/debugpractice.m">debugpractice.m</a>.</p>
-<p>To download the file, you can click the little downward pointing arrow in the toolbard at the top right of the code.</p>
+<p>To download the file, you can click the little downward pointing arrow in the toolbar at the top right of the code.</p>
 <div id="fig-project-box-with-penetrator-bolt" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-project-box-with-penetrator-bolt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -337,8 +338,18 @@ Figure&nbsp;3: Desired code output matrix.
 </figcaption>
 </figure>
 </div>
-<div class="hint-box">
-<p><strong>Hint:</strong> In MATLAB, if you create a matrix with a certain size and then you try to assign an element of that matrix outside of its existing dimensions, MATLAB won’t give you an error. Instead, it will just extend the matrix outward as large as necessary to accommodate that new element.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In MATLAB, if you create a matrix with a certain size and then you try to assign an element of that matrix outside of its existing dimensions, MATLAB won’t give you an error. Instead, it will just extend the matrix outward as large as necessary to accommodate that new element.</p>
+</div>
 </div>
 
 
