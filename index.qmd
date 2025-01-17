@@ -135,8 +135,8 @@ If the initial version of a submitted assignment does not meet specs, it may be 
 
 #### Surveys and Team Check-Ins
 
-- You will be called upon to complete surveys at the beginning, middle and end of the class, and each week, you will be asked to complete a team check-in (a quick peer evaluation) for the lab done that week. Completing each of the check-ins is worth 0.5% of your grade, and completing each of the longer surveys is worth 1% of your grade.
-- There are a total of 7 weekly check-ins (weeks 2 - 7 and 10) and they are due each Friday at 3:30 pm.
+- You will be called upon to complete surveys at the beginning and end of the class, and each week, you will be asked to complete a team check-in (a quick peer evaluation) for the lab done that week. Completing each of the check-ins is worth 0.375% of your grade, and completing each of the longer surveys is worth 1% of your grade.
+- There are a total of 12 weekly check-ins (weeks 2 - 8 and 10 - 14) and they are due each Friday at 3:30 pm.
 - These are individual assignments
 
 #### Laboratory Submission Sheets
@@ -146,7 +146,7 @@ If the initial version of a submitted assignment does not meet specs, it may be 
 
 #### Laboratory Writing Assignments
 
-- You will be required to complete a writing assignment after labs 1-5. The purpose of the writing assignments is to train you in specific aspects of scientific writing: making figures, using tables, equations, etc. These assignments are completed entirely on Friday in the Writing and Reflection section. Each writing assignment will be worth 3% of your final grade, and you submit five assignments for a total of 15%.
+- You will be required to complete a writing assignment after labs 1-6. The purpose of the writing assignments is to train you in specific aspects of scientific writing: making figures, using tables, equations, etc. These assignments are completed entirely on Friday in the Writing and Reflection section. Each writing assignment will be worth 2.5% of your final grade, and you submit six assignments for a total of 15%.
 - These are individual assignments.  The team contract exercise in week 0 is an exception, there should be one team contract submission per team.
 
 #### Technical Memorandum
