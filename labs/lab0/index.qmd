@@ -263,7 +263,7 @@ This way, if we update the file in the future you can easily pull down the newes
 1. Open `logreader.m` with MATLAB
 2. Move both files into your Current Folder (see @fig-current-folder for a screenshot).
 3. Change the `filenum` variable to match the number of the files. For the sample files, this would be `004`.
-4. Plot one of the variable to check that data was read correctly (e.g., `plot(accelX)`)
+4. Plot one of the variables to check that data was read correctly (e.g., `plot(accelX)`)
 
 ::: {#fig-current-folder}
 ![](img/matlab_lab0.png)
