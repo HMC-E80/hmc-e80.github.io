@@ -260,6 +260,7 @@ window.Quarto = {
   <li><a href="#arduino-practice" id="toc-arduino-practice" class="nav-link" data-scroll-target="#arduino-practice">Arduino Practice</a></li>
   <li><a href="#sd-card-reading" id="toc-sd-card-reading" class="nav-link" data-scroll-target="#sd-card-reading">SD Card Reading</a></li>
   <li><a href="#matlab-access" id="toc-matlab-access" class="nav-link" data-scroll-target="#matlab-access">MATLAB Access</a></li>
+  <li><a href="#binary-file-reading" id="toc-binary-file-reading" class="nav-link" data-scroll-target="#binary-file-reading">Binary File Reading</a></li>
   <li><a href="#matlab-on-ramp" id="toc-matlab-on-ramp" class="nav-link" data-scroll-target="#matlab-on-ramp">MATLAB On-ramp</a></li>
   </ul>
 </nav>
@@ -316,6 +317,7 @@ window.Quarto = {
 <li>Arduino Practice</li>
 <li>SD Card Reading</li>
 <li>MATLAB Access</li>
+<li>Binary File Reading</li>
 <li>MATLAB On-ramp</li>
 </ul>
 <p>The remaining sections can be broken into parallel tasks</p>
@@ -392,7 +394,7 @@ Figure&nbsp;1: Modified E79 ROV for use in E80.
 </section>
 <section id="battery" class="level2">
 <h2 class="anchored" data-anchor-id="battery">Battery</h2>
-<p>Your AUV will need power, and we provide that with a battery pack. The battery pack used in E80 is a 3000 mAh to 3500 mAh, 30 C, 11.1 V LiPo battery pack. To charge the batteries, we will use a <a href="https://hitecrcd.com//images/products/pdf/419_X1mini_Manual_BAS-V2-Web.pdf">HiTec x1 Mini charger</a> or a <a href="http://www.hrpdealer.com/pdf/manuals/UPTUP60AC%20Manual.pdf">UP60AC multi charger</a>. Here are some helpful <a href="https://drive.google.com/open?id=1K1DSOdeqAjU_JU-sTOdiBUnwMmpwUTPP">images</a> showing a correct charging setup.</p>
+<p>Your AUV will need power, and we provide that with a battery pack. The battery pack used in E80 is a 3000 mAh to 3500 mAh, 40 C, 11.1 V LiPo battery pack. To charge the batteries, we will use a <a href="https://drive.google.com/file/d/1q7Cchnw4c7wzFiuOYf5PHiICkSoq8qX5/view?usp=drive_link">HiTec x1 Mini charger</a> or a <a href="https://drive.google.com/file/d/1T9ghDlmI2UUg3yBbOCQxVdA6DsFghrLr/view?usp=drive_link">UP60AC multi charger</a>. Here are some helpful <a href="https://drive.google.com/open?id=1K1DSOdeqAjU_JU-sTOdiBUnwMmpwUTPP">images</a> showing a correct charging setup.</p>
 <ol type="1">
 <li>Read the manual on how to use the chargers.</li>
 <li>Determine how many cells are in the battery pack, and the maximum, minimum and nominal voltage outputs of these battery packs.</li>
@@ -504,7 +506,7 @@ Figure&nbsp;2: Reference diagrams for Teensy assembly.
 <section id="arduino-practice" class="level2">
 <h2 class="anchored" data-anchor-id="arduino-practice">Arduino Practice</h2>
 <p>Once you have the Arduino IDE installed, Github Desktop set up, and pins soldered on your Teensy, share the Teensy among your teammates to run through a few more Arduino tutorials:</p>
-<p>Test your connection to the Teensy by compiling and uploading the RGB LED example in the Arduino IDE. Then ensure you can compile and uplaod the E80 code.</p>
+<p>Test your connection to the Teensy by compiling and uploading the RGB LED example in the Arduino IDE. Then ensure you can compile and upload the E80 code.</p>
 <ol type="1">
 <li>Plug your Teensy into your laptop</li>
 <li>Open the RGB LED example by navigating to <code>File -&gt; Examples -&gt; 0.1 Basics -&gt; Blink</code>.</li>
@@ -554,8 +556,7 @@ Note
 </div>
 <p>Then try these tutorials if you have time.</p>
 <ol type="1">
-<li><a href="https://www.pjrc.com/teensy/tutorial.html">Blinking lights on the Arduino board</a>:<br>
-</li>
+<li><a href="https://www.pjrc.com/teensy/tutorial.html">Blinking lights on the Arduino board</a></li>
 <li><a href="https://www.pjrc.com/teensy/tutorial2.html">Hooking up an external LED</a></li>
 </ol>
 </section>
@@ -574,6 +575,62 @@ Note
 <li>Select “Individual” license and complete the installation process.</li>
 </ol>
 <p>It is also possible to use an online copy of MATLAB <a href="https://matlab.mathworks.com">here</a>, but we discourage doing so in this course.</p>
+</section>
+<section id="binary-file-reading" class="level2">
+<h2 class="anchored" data-anchor-id="binary-file-reading">Binary File Reading</h2>
+<p>In future labs, you will use MATLAB to read binary data saved on an SD card by the Teensy. The data is stored in two separate files:</p>
+<ol type="1">
+<li>An <code>inf</code> file (<code>.txt</code> extension) which lists the variable names and types</li>
+<li>A <code>log</code> file (<code>.bin</code> extension) which contains the raw binary data.</li>
+</ol>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Both the <code>inf</code> and <code>log</code> files are needed to import your data.</p>
+</div>
+</div>
+<p>Here is an example of the two files that would be found on an SD card after a run:</p>
+<ul>
+<li><a href="./assets/INF004.TXT">inf004.txt</a></li>
+<li><a href="./assets/LOG004.BIN">log004.bin</a></li>
+</ul>
+<p>Use the provided MATLAB script, <a href="https://github.com/HMC-E80/E80/blob/main/MATLAB/logreader.m">logreader.m</a> (found under the <code>MATLAB</code> directory of the E80 repo you should have cloned), to read the data from the sample files.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The best practice is to use the file that is in the Git repository that you cloned instead of using another downloaded copy. This way, if we update the file in the future you can easily pull down the newest version and see the changes you’ve made compared to the original file.</p>
+</div>
+</div>
+<ol type="1">
+<li>Open <code>logreader.m</code> with MATLAB</li>
+<li>Move both files into your Current Folder (see <a href="#fig-current-folder" class="quarto-xref">Figure&nbsp;3</a> for a screenshot).</li>
+<li>Change the <code>filenum</code> variable to match the number of the files. For the sample files, this would be <code>004</code>.</li>
+<li>Plot one of the variables to check that data was read correctly (e.g., <code>plot(accelX)</code>)</li>
+</ol>
+<div id="fig-current-folder" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-current-folder-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/matlab_lab0.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-current-folder-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Screenshot showing how to place files in Matlab current folder.
+</figcaption>
+</figure>
+</div>
 </section>
 <section id="matlab-on-ramp" class="level2">
 <h2 class="anchored" data-anchor-id="matlab-on-ramp">MATLAB On-ramp</h2>
