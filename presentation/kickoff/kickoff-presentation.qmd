@@ -3,25 +3,8 @@ title: E80 Kickoff Presentation
 format:
   revealjs:
     slide-number: true
+    theme: [slides.scss]
 ---
-
-## Teaching Team
-
-::: {layout="[[1,1,1,1], [1,1,1]]"}
-![Prof. Josh Brake](images/brake.png){fig-align="left" width="150px"}
-
-![Prof. Dre Helmns](images/helmns.png){fig-align="left" width="150px"}
-
-![Prof. Ethan Ritz](images/ritz.png){fig-align="left" width="150px"}
-
-![Prof. Matt Spencer](images/spencer.png){fig-align="left" width="150px"}
-
-![Prof. Qimin Yang](images/yang.png){fig-align="left" width="150px"}
-
-![Lynn Kim](images/kim.png){fig-align="left" width="150px"}
-
-![Xavier Walter](images/walter.png){fig-align="left" width="150px"}
-:::
 
 ## E80 is about forming your engineering identity and learning how to do experiments {.smaller}
 
@@ -70,20 +53,31 @@ Growth requires **good stress** and **progressive overload**.
 :::
 :::
 
-## Course Overview {.smaller}
+## Course Overview
 
 Key places for course information:
 
--   Course website: <https://hmc-e80.github.io/E80/>
--   Discord
--   Canvas
+::: {.incremental}
+-   **Course website:** Source of truth for all course-related information. Contains all assignment instructions, templates, submission sheets, etc.
+-   **Discord:** Platform for getting help from the teaching team.
+-   **Canvas:** The place to submit everything.
+:::
 
-### **Lots of new stuff this year!**
+## Teaching Team
 
--   Shiny new website!
--   Redesigned labs!
--   New writing assignment format!
--   Resubmissions!
+::: {layout="[[1,1,1], [1,1]]"}
+
+
+![Prof. Josh Brake](images/brake.png){text-align=" width="150px"}
+
+![Prof. Dre Helmns](images/helmns.png){width="150px"}
+
+![Prof. Qimin Yang](images/yang.png){width="150px"}
+
+![Lynn Kim](images/kim.png){width="150px"}
+
+![Xavier Walter](images/walter.png){width="150px"}
+:::
 
 ## Course Overview: Labs & Project Phases {.smaller}
 
@@ -158,6 +152,8 @@ Look at the learning outcomes both for the overall E80 course, and Lab 1, and th
 -   Understand what information should be in the figure, figure caption, and text referencing the figure.
 :::
 
+# Schedule
+
 ## Scheduling & Details {.smaller}
 
 E80 moves quickly and you've got multiple things to turn in each week.
@@ -185,18 +181,18 @@ Bring deliverables from lab each week. Write a small section of a technical memo
 #### 4. Weekly Team Check In
 
 ::: fragment
-Fill out a survey to help you assess how your team is doing and if there are any issues developing. [Due Friday at 3:30 pm.]{style="color:red"}
+Fill out a survey to help you assess how your team is doing and if there are any issues developing. [We will give you time to complete this at the beginning of the Writing & Reflection Section on Friday. Due Friday at 3:30 pm.]{style="color:red"}
 :::
 
 ## Weekly Schedule {.smaller font-size="12"}
 
-| Day       | Lecture Quiz              | Submission Sheet     | Write Up     | Weekly Check In Peer Evaluation |
+| Day       | Lecture Quiz              | Submission Sheet     | Write Up     | Weekly Check In |
 |---------------|---------------|---------------|---------------|---------------|
-| Monday    | Quiz Due \@ Noon (Canvas) |                      |              |                                 |
-| Tuesday   |                           | Due \@ 5:15p (E80-1) |              |                                 |
-| Wednesday |                           | Due \@ 5:15p (E80-2) |              |                                 |
-| Thursday  |                           | Due \@ 5:15p (E80-3) |              |                                 |
-| Friday    |                           |                      | Due \@ 3:15p | Due \@ 3:30p                    |
+| Monday    | Noon (Canvas) |                      |              |                                 |
+| Tuesday   |                           | 5:15p (E80-1) |              |                                 |
+| Wednesday |                           | 5:15p (E80-2) |              |                                 |
+| Thursday  |                           | 5:15p (E80-3) |              |                                 |
+| Friday    |                           |                      | 3:15p | 3:30p                    |
 
 ## Scheduling Activity
 
@@ -210,12 +206,22 @@ Every week you need to have the following time carved out.
 | Take Lecture Quiz            | 30 minutes              |
 | Pre-lab Work & Team Meetings | 4.5 hours               |
 
-## Team Administrivia
+## Team Startup
 
-1.  Schedule a time for you to meet as a team of 4 each week.
+::::: {.columns}
+::: {.column width=70%}
+1. Schedule a time for you to meet as a team of 4 each week.
 2.  Create a shared file storage location (e.g., a shared Google Drive folder or Shared Drive).
 3.  Decide how you want to communicate this semester (e.g., email, text thread, Discord, Slack, etc.).
 4.  Block out time for all the activities on the previous slide on your calendar!
+:::
+::: {.column width=30%}
+![Status Tracker Spreadsheet](images/qr-code-to-tracker-spreadsheet.png)
+:::
+:::::
+
+
+# Grading Policies
 
 ## Specifications: Effort and Completion {.smaller}
 
@@ -241,18 +247,19 @@ In most situations, completing effort specs is equivalent to a passing grade on 
 
 Learning is about iterative feedback.
 
-This year we are introducing some new policies to allow you to revise your work if you don't meet all the specifications for an assignment on the first try.
+We allow you a limited number of opportunities to revise your work if you don't meet all the specifications for an assignment on the first try.
 
 ::: incremental
 1.  You must submit **something** by the deadline.
     - Don't phone this in because there is limited time for resubmission.
 2.  After you receive feedback, you can revise your submissions until spring break.
-    -   Most of specs can be done outside of lab with data.
-    -   However, if you weren't able to get good data, there is one week before spring break where you can go back to collect more.
+    -   Most of specs can be done outside of lab with data. However, if you weren't able to get good data, there is one week before spring break where you can go back to collect more.
 3.  Resubmissions are checked off by an instructor during office hours.
 4.  For all submissions, you will need to self-assess **before** you submit. Every assignment you submit should be accompanied along with a checklist of specs that you believe the assignment meets or does not meet.
 5.  All resubmissions must be completed by spring break.
 :::
+
+# Team Formation
 
 ## Google Project Aristotle describes the attributes of a high-functioning team
 
