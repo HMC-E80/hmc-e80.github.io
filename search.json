@@ -588,11 +588,11 @@
     "text": "Specifications\nEffort\n\nAbstract is present.\n\nCompletion\n\nConcisely summarizes the gist of each section of the lab report.\nArranges the sentences in the order the sections are presented in the lab report.\nIs self-sufficient and does not rely on results presented only in the body of the report.\nUses past tense to report what was done.\nStays within the maximum words allowed (usually 100-200 words)."
   },
   {
-    "objectID": "presentation/kickoff/kickoff-presentation.html#teaching-team",
-    "href": "presentation/kickoff/kickoff-presentation.html#teaching-team",
+    "objectID": "presentation/kickoff/kickoff-presentation.html#what-is-experimental-engineering",
+    "href": "presentation/kickoff/kickoff-presentation.html#what-is-experimental-engineering",
     "title": "E80 Kickoff Presentation",
-    "section": "Teaching Team",
-    "text": "Teaching Team\n\n\n\n\n\n\n\n\n\nProf. Josh Brake\n\n\n\n\n\n\n\nProf. Dre Helmns\n\n\n\n\n\n\n\nProf. Ethan Ritz\n\n\n\n\n\n\n\nProf. Matt Spencer\n\n\n\n\n\n\n\n\n\nProf. Qimin Yang\n\n\n\n\n\n\n\nLynn Kim\n\n\n\n\n\n\n\nXavier Walter"
+    "section": "What is experimental engineering?",
+    "text": "What is experimental engineering?\n\nTurn to the person next to you and discuss for 60 seconds.\nCome up with a word or phrase to share out that describes an aspect of what you think engineering is."
   },
   {
     "objectID": "presentation/kickoff/kickoff-presentation.html#e80-is-about-forming-your-engineering-identity-and-learning-how-to-do-experiments",
@@ -609,53 +609,53 @@
     "text": "Course Philosophy\nGrowth requires good stress and progressive overload."
   },
   {
+    "objectID": "presentation/kickoff/kickoff-presentation.html#teaching-team",
+    "href": "presentation/kickoff/kickoff-presentation.html#teaching-team",
+    "title": "E80 Kickoff Presentation",
+    "section": "Teaching Team",
+    "text": "Teaching Team\n\n\n\n\n\n\n\n\n\nProf. Josh Brake\n\n\n\n\n\n\n\nProf. Dre Helmns\n\n\n\n\n\n\n\nProf. Qimin Yang\n\n\n\n\n\n\n\n\n\nLynn Kim\n\n\n\n\n\n\n\nXavier Walter"
+  },
+  {
     "objectID": "presentation/kickoff/kickoff-presentation.html#course-overview",
     "href": "presentation/kickoff/kickoff-presentation.html#course-overview",
     "title": "E80 Kickoff Presentation",
     "section": "Course Overview",
-    "text": "Course Overview\nKey places for course information:\n\nCourse website: https://hmc-e80.github.io/E80/\nDiscord\nCanvas\n\nLots of new stuff this year!\n\nShiny new website!\nRedesigned labs!\nNew writing assignment format!\nResubmissions!"
+    "text": "Course Overview\nKey places for course information:\n\n\nCourse website: Source of truth for all course-related information. Contains all assignment instructions, templates, submission sheets, etc.\nDiscord: Platform for getting help from the teaching team.\nCanvas: The place to submit everything."
   },
   {
     "objectID": "presentation/kickoff/kickoff-presentation.html#course-overview-labs-project-phases",
     "href": "presentation/kickoff/kickoff-presentation.html#course-overview-labs-project-phases",
     "title": "E80 Kickoff Presentation",
     "section": "Course Overview: Labs & Project Phases",
-    "text": "Course Overview: Labs & Project Phases\nE80 has two main phases: lab and project.\nLabs\n\nEach lab has an experiment and a writing component.\n\nExperiments are done during your 4-hour lab section.\nWriting is done in the Friday Writing & Reflection period.\n\n\nProject\n\nThe project is the chance for you to design and perform your own experiment using the skills you’ve developed in the labs.\nYou propose an experiment and design a robot with the appropriate sensors to make measurements."
+    "text": "Course Overview: Labs & Project Phases\nLabs\n\nEach lab has an experiment and a writing component.\n\nExperiments are done during your 4-hour lab section.\nWriting is done in the Friday Writing & Reflection period.\n\n\nProject\n\nThe project is the chance for you to design and perform your own experiment using the skills you’ve developed in the labs.\nYou propose an experiment and design a robot with the appropriate sensors to make measurements."
   },
   {
     "objectID": "presentation/kickoff/kickoff-presentation.html#blooms-taxonomy",
     "href": "presentation/kickoff/kickoff-presentation.html#blooms-taxonomy",
     "title": "E80 Kickoff Presentation",
     "section": "Bloom’s Taxonomy",
-    "text": "Bloom’s Taxonomy\n\n\nFigure 1: Bloom’s Taxonomy, Vanderbilt University Center for Teaching.\n\n\n\n\n\n\n\nLearning Outcome Categorization\n\n\nLook at the learning outcomes both for the overall E80 course, and Lab 1, and the Lab 1 writing assignment and categorize them using Bloom’s Taxonomy."
+    "text": "Bloom’s Taxonomy\n\n\nFigure 1: Bloom’s Taxonomy, Vanderbilt University Center for Teaching."
   },
   {
     "objectID": "presentation/kickoff/kickoff-presentation.html#learning-outcome-categorization",
     "href": "presentation/kickoff/kickoff-presentation.html#learning-outcome-categorization",
     "title": "E80 Kickoff Presentation",
     "section": "Learning Outcome Categorization",
-    "text": "Learning Outcome Categorization\nE80 General\n\n\n\n\nDesign instrumentation\nGather, interpret, and present data\nLearn domain-specific skills (e.g., using op-amps and the wind tunnel)\n\n\n\nDeal with failure and learn from it.\nProfessionally present your experiments.\nKnow what good results look like.\nWork effectively on technical problems as a team under pressure."
-  },
-  {
-    "objectID": "presentation/kickoff/kickoff-presentation.html#learning-outcome-categorization-1",
-    "href": "presentation/kickoff/kickoff-presentation.html#learning-outcome-categorization-1",
-    "title": "E80 Kickoff Presentation",
-    "section": "Learning Outcome Categorization",
-    "text": "Learning Outcome Categorization\n\nLab 1\n\nModify an E79 robot to build an E80 robot.\nProgram your robot to traverse basic trajectories.\nExtract data from your robot, import it into MATLAB, and plot it.\nUse statistical measures to analyze data gathered from your robot.\nExplain the limitations and challenges of open loop control.\nRelate your robot’s behavior to governing equations from E79.\n\nLab 1 Writing\n\nLearn how to design a clear figure\nUnderstand what information should be in the figure, figure caption, and text referencing the figure."
+    "text": "Learning Outcome Categorization\n\n\n\n\nModify an E79 robot to build an E80 robot.\nProgram your robot to traverse basic trajectories.\nExtract data from your robot, import it into MATLAB, and plot it.\nUse statistical measures to analyze data gathered from your robot.\nExplain the limitations and challenges of open loop control.\nRelate your robot’s behavior to governing equations from E79.\n\n\n\n\n\n\n\n\n\n\n\n\nLearning Outcome Categorization\n\n\nCategorize the learning outcomes above using Bloom’s Taxonomy. Do it individually, then discuss with your neighbor."
   },
   {
     "objectID": "presentation/kickoff/kickoff-presentation.html#scheduling-details",
     "href": "presentation/kickoff/kickoff-presentation.html#scheduling-details",
     "title": "E80 Kickoff Presentation",
     "section": "Scheduling & Details",
-    "text": "Scheduling & Details\nE80 moves quickly and you’ve got multiple things to turn in each week.\nCanvas is the place to turn everything in!\n1. Lecture Quiz\n\nWatch lecture videos and take quiz each week. Due each Monday at 12 pm (noon).\n\n2. Lab Submission Sheet\n\nSubmit key deliverables collected in lab. Due at the end of your lab section each week (5:15 pm).\n\n3. Writing & Reflection Section\n\nBring deliverables from lab each week. Write a small section of a technical memo each week, review it to meet spec, and check it off with an instructor. Due at Friday at 3:15 pm.\n\n4. Weekly Team Check In\n\nFill out a survey to help you assess how your team is doing and if there are any issues developing. Due Friday at 3:30 pm."
+    "text": "Scheduling & Details\nE80 moves quickly and you’ve got multiple things to turn in each week.\nCanvas is the place to turn everything in!\n1. Lecture Quiz\n\nWatch lecture videos and take quiz each week. Due each Monday at 12 pm (noon).\n\n2. Lab Submission Sheet\n\nSubmit key deliverables collected in lab. Due at the end of your lab section each week (5:15 pm).\n\n3. Writing & Reflection Section\n\nBring deliverables from lab each week. Write a small section of a technical memo each week, review it to meet spec, and check it off with an instructor. Due at Friday at 3:15 pm.\n\n4. Weekly Team Check In\n\nFill out a survey to help you assess how your team is doing and if there are any issues developing. We will give you time to complete this at the beginning of the Writing & Reflection Section on Friday. Due Friday at 3:30 pm."
   },
   {
     "objectID": "presentation/kickoff/kickoff-presentation.html#weekly-schedule",
     "href": "presentation/kickoff/kickoff-presentation.html#weekly-schedule",
     "title": "E80 Kickoff Presentation",
     "section": "Weekly Schedule",
-    "text": "Weekly Schedule\n\n\n\n\n\n\n\n\n\n\nDay\nLecture Quiz\nSubmission Sheet\nWrite Up\nWeekly Check In Peer Evaluation\n\n\n\n\nMonday\nQuiz Due @ Noon (Canvas)\n\n\n\n\n\nTuesday\n\nDue @ 5:15p (E80-1)\n\n\n\n\nWednesday\n\nDue @ 5:15p (E80-2)\n\n\n\n\nThursday\n\nDue @ 5:15p (E80-3)\n\n\n\n\nFriday\n\n\nDue @ 3:15p\nDue @ 3:30p"
+    "text": "Weekly Schedule\n\n\n\n\n\n\n\n\n\n\nDay\nLecture Quiz\nSubmission Sheet\nWrite Up\nWeekly Check In\n\n\n\n\nMonday\nNoon (Canvas)\n\n\n\n\n\nTuesday\n\n5:15p (E80-1)\n\n\n\n\nWednesday\n\n5:15p (E80-2)\n\n\n\n\nThursday\n\n5:15p (E80-3)\n\n\n\n\nFriday\n\n\n3:15p\n3:30p"
   },
   {
     "objectID": "presentation/kickoff/kickoff-presentation.html#scheduling-activity",
@@ -665,18 +665,25 @@
     "text": "Scheduling Activity\nEvery week you need to have the following time carved out.\n\n\n\nItem\nTime Required [hours]\n\n\n\n\nLab\n4 hours\n\n\nWriting & Reflection\n2 hours\n\n\nWatch Lecture Videos\n1 hour\n\n\nTake Lecture Quiz\n30 minutes\n\n\nPre-lab Work & Team Meetings\n4.5 hours"
   },
   {
-    "objectID": "presentation/kickoff/kickoff-presentation.html#team-administrivia",
-    "href": "presentation/kickoff/kickoff-presentation.html#team-administrivia",
+    "objectID": "presentation/kickoff/kickoff-presentation.html#team-startup",
+    "href": "presentation/kickoff/kickoff-presentation.html#team-startup",
     "title": "E80 Kickoff Presentation",
-    "section": "Team Administrivia",
-    "text": "Team Administrivia\n\nSchedule a time for you to meet as a team of 4 each week.\nCreate a shared file storage location (e.g., a shared Google Drive folder or Shared Drive).\nDecide how you want to communicate this semester (e.g., email, text thread, Discord, Slack, etc.).\nBlock out time for all the activities on the previous slide on your calendar!"
+    "section": "Team Startup",
+    "text": "Team Startup\n\n\n\nSchedule a time for you to meet as a team of 4 each week.\nCreate a shared file storage location (e.g., a shared Google Drive folder or Shared Drive).\nDecide how you want to communicate this semester (e.g., email, text thread, Discord, Slack, etc.).\nBlock out time for all the activities on the previous slide on your calendar!\n\n\n\n\n\nStatus Tracker Spreadsheet"
+  },
+  {
+    "objectID": "presentation/kickoff/kickoff-presentation.html#pre-lab-vs.-post-lab",
+    "href": "presentation/kickoff/kickoff-presentation.html#pre-lab-vs.-post-lab",
+    "title": "E80 Kickoff Presentation",
+    "section": "Pre-lab vs. Post-lab",
+    "text": "Pre-lab vs. Post-lab\nE80 has strict limits on what you can and cannot do during pre-lab. Learning how to prepare well in pre-lab is one of the most important aspects for maximizing your learning in E80.\nDuring the pre-lab period you…\n\n\ncan: perform calculations, read datasheets, ask how equipment works, write software, calculate expected results, talk to professors.\nmay not: collect data, test hardware, populate breadboards, use laboratory equipment.\nWhen in doubt, ask a professor."
   },
   {
     "objectID": "presentation/kickoff/kickoff-presentation.html#specifications-effort-and-completion",
     "href": "presentation/kickoff/kickoff-presentation.html#specifications-effort-and-completion",
     "title": "E80 Kickoff Presentation",
     "section": "Specifications: Effort and Completion",
-    "text": "Specifications: Effort and Completion\nThe grading in E80 this semester for submission sheets and writing assignments will be based on whether or not your deliverables meet two different levels of specifications: effort and complete. The overall grade on an assignment will be determined by how many of the sections meet either effort or completion.\n\n\nEffort specs describe good-faith effort.\n\n\n\n\nCompletion specs describe correctness.\n\n\n\nIn most situations, completing effort specs is equivalent to a passing grade on the assignment and the remaining sections of completion specs are worth a grade level each."
+    "text": "Specifications: Effort and Completion\nThe grading in E80 this semester for submission sheets and writing assignments is based on whether or not your deliverables meet two different levels of specifications: effort and complete.\n\n\nEffort specs describe good-faith effort.\n\n\n\n\nCompletion specs describe correctness.\n\n\n\nIn most situations, completing effort specs is equivalent to a passing grade on the assignment and the remaining sections of completion specs are worth a grade level each."
   },
   {
     "objectID": "presentation/kickoff/kickoff-presentation.html#effort-and-completion-specifications-example-lab-1",
@@ -686,11 +693,18 @@
     "text": "Effort and Completion Specifications Example: Lab 1\n\nSample Effort and Completion Specifications"
   },
   {
-    "objectID": "presentation/kickoff/kickoff-presentation.html#resubmissions-policy",
-    "href": "presentation/kickoff/kickoff-presentation.html#resubmissions-policy",
+    "objectID": "presentation/kickoff/kickoff-presentation.html#resubmission-policy",
+    "href": "presentation/kickoff/kickoff-presentation.html#resubmission-policy",
     "title": "E80 Kickoff Presentation",
-    "section": "Resubmissions Policy",
-    "text": "Resubmissions Policy\nLearning is about iterative feedback.\nThis year we are introducing some new policies to allow you to revise your work if you don’t meet all the specifications for an assignment on the first try.\n\n\nYou must submit something by the deadline.\n\nDon’t phone this in because there is limited time for resubmission.\n\nAfter you receive feedback, you can revise your submissions until spring break.\n\nMost of specs can be done outside of lab with data.\nHowever, if you weren’t able to get good data, there is one week before spring break where you can go back to collect more.\n\nResubmissions are checked off by an instructor during office hours.\nFor all submissions, you will need to self-assess before you submit. Every assignment you submit should be accompanied along with a checklist of specs that you believe the assignment meets or does not meet.\nAll resubmissions must be completed by spring break."
+    "section": "Resubmission Policy",
+    "text": "Resubmission Policy\nLearning is about iterative feedback.\nWe allow you a limited number of opportunities to revise your work if you don’t meet all the specifications for an assignment on the first try.\n\n\nYou must submit something by the deadline.\nYou can revise and resubmit up to two submission sheets during the week before spring break.\nResubmissions are checked off in an in-person meeting with an instructor.\nFor all submissions, you will need to self-assess before you submit. Every assignment you submit should be accompanied along with a checklist of specs that you believe the assignment meets or does not meet.\nAll resubmissions must be completed by spring break."
+  },
+  {
+    "objectID": "presentation/kickoff/kickoff-presentation.html#resubmission-policy-continued",
+    "href": "presentation/kickoff/kickoff-presentation.html#resubmission-policy-continued",
+    "title": "E80 Kickoff Presentation",
+    "section": "Resubmission Policy Continued",
+    "text": "Resubmission Policy Continued\nThe resubmission policy limitations are described in detail on the syllabus. Please read it carefully!\n\n\nResubmitted assignments are worth full credit (i.e., no penalty for resubmitted work).\nAll writing assignments may be revised and resubmitted during resubmit week.\nUp to two lab submission sheets may be resubmitted:\n\nOne from a full-team lab (Labs 1, 5, or 6). It must be resubmitted by the entire team. The updated grade for this lab will be applied to all the team members.\nOne from a sub-team lab (Labs 2, 3, or 4) that will be completed as an individual. The updated grade will be applied only to the individual who resubmitted it (i.e., not to the other team member)."
   },
   {
     "objectID": "presentation/kickoff/kickoff-presentation.html#google-project-aristotle-describes-the-attributes-of-a-high-functioning-team",
@@ -711,7 +725,7 @@
     "href": "presentation/kickoff/kickoff-presentation.html#team-contract-activity",
     "title": "E80 Kickoff Presentation",
     "section": "Team Contract Activity",
-    "text": "Team Contract Activity\n\nGo to the website and download the team contract form (found on the lectures page).\nDiscuss with your team and fill out the missing sections.\nWhen you think you are finished, fill out the checklist of effort and completion specs and put up your green flag.\nAfter an instructor has come by and given you feedback, make the suggested revisions and submit a PDF of your the team contract and PDF of the completed checklist with any notes to Canvas."
+    "text": "Team Contract Activity\n\n\n\nGo to the course website and download the team contract form (found on the lectures page).\nDiscuss with your team and fill out the missing sections.\nWhen you think you are finished, fill out the checklist of effort and completion specs and change your status on the tracker spreadsheet.\nAfter you get feedback, make the suggested revisions and submit a PDF of your the team contract and PDF of the completed checklist with any notes to Canvas.\n\n\n\n\n\nStatus Tracker Spreadsheet"
   },
   {
     "objectID": "presentation/kickoff/kickoff-presentation.html#you-are-going-to-build-cool-stuff",
@@ -721,11 +735,18 @@
     "text": "You are going to build cool stuff!\n\n\n\n\n\nE80 main PCB\n\n\n\n\n\n\nPaul Zoeller, The Post and Courier.\n\n\n\nYour E80 board has a GPS, IMU, Tiny Computer, 5 amp Motor Driver, and you’ll use the full robot in Lab 1."
   },
   {
+    "objectID": "presentation/kickoff/kickoff-presentation.html#engineering-department-climate-survey",
+    "href": "presentation/kickoff/kickoff-presentation.html#engineering-department-climate-survey",
+    "title": "E80 Kickoff Presentation",
+    "section": "Engineering Department Climate Survey",
+    "text": "Engineering Department Climate Survey\nOpen your email and search for an email you received from Prof. Lape on Wednesday 1/22 with the subject line “Engineering Department Climate Survey”."
+  },
+  {
     "objectID": "presentation/kickoff/kickoff-presentation.html#snacks",
     "href": "presentation/kickoff/kickoff-presentation.html#snacks",
     "title": "E80 Kickoff Presentation",
     "section": "Snacks",
-    "text": "Snacks\nJoin us for snacks outside in the tents near Parsons!"
+    "text": "Snacks\nJoin us for a social in the Hixon Courtyard by the Koi pond with snacks and mingle with your peers, the E80 teaching team, and some engineering juniors and seniors."
   },
   {
     "objectID": "presentation/kickoff/team-contract-template.html",
