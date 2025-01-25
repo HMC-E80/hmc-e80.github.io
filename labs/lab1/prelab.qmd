@@ -3,7 +3,7 @@ title: Lab 1 Prelab Help Sheet
 number-sections: true
 ---
 
-Here are some ideas of useful prelab activities.  There are a lot, so it makes sense to apportion them among your team.  However, some activities (watching lecture videos, reading) should be completed by everyone. Be careful not to break up work too strictly, because many of the topics covered by the lab stretch across these prelab divisions; it makes sense to read carefully and try to identify linked problems and work before breaking up the tasks, and it makes sense to share individual findings thoroughly with the group.  
+Here are some ideas of useful pre-lab activities.  There are a lot, so it makes sense to apportion them among your team.  However, some activities (watching lecture videos, reading) should be completed by everyone. Be careful not to break up work too strictly, because many of the topics covered by the lab stretch across these pre-lab divisions; it makes sense to read carefully and try to identify linked problems and work before breaking up the tasks, and it makes sense to share individual findings thoroughly with the group.  
 
 ## Reading and Reference
 
@@ -25,7 +25,7 @@ Here are some ideas of useful prelab activities.  There are a lot, so it makes s
 - [ ] Write a version of `E80_Lab_01.ino` for testing motors and test compile it.
 - [ ] Write a version of `E80_lab_01.ino` for running the obstacle course and test compile it.
 - [ ] Import the sample `INF` and `BIN` file data using `logreader.m`.
-- [ ] Write software that will generate acceleation plots in Matlab based on the `logreader.m` sample data.
+- [ ] Write software that will generate acceleration plots in Matlab based on the `logreader.m` sample data.
 
 ## Statistics
 
