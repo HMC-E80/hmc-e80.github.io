@@ -33,7 +33,6 @@ All oscilloscope traces in this report should adhere to the following specificat
 - [ ] Show each of the requested quantities on a separate oscilloscope channel.
 - [ ] Scale the horizontal axis so 3-10 cycles of the input/output voltage waves are visible
 - [ ] Scale the vertical axis to maximize size of the input/output waves without clipping
-- [ ] Make sure the input/output waves use the same 0 V reference voltage.
 - [ ] Be exported using the screen capture function of the oscilloscope.  Phone pictures of oscilloscope data are unacceptable.  (Note that in a normal lab setting it would be essential to also capture CSV output from the oscilloscope for later mathematical processing.  No need to do that in this lab, screen captures are fine.)
 
 All pictures of circuits in this report should adhere to the following specification:
