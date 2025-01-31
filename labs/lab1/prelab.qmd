@@ -31,7 +31,7 @@ Here are some ideas of useful pre-lab activities.  There are a lot, so it makes 
 
 - [ ] Write code to find the mean of a dataset in Matlab.
 - [ ] Write code to find the standard deviation of a dataset in Matlab.
-- [ ] Write code to conduct a T-test for two datasets in Matlab.
+- [ ] Write code to conduct a T test for two datasets in Matlab.
 - [ ] Make sure you understand the math behind means and standard deviations.
 - [ ] Make sure you understand the math behind T tests (which isn't in the videos so you may have to dig through old notes or the internet).
 
