@@ -293,7 +293,7 @@ window.Quarto = {
 <li><label><input type="checkbox">Relate your robot’s behavior to governing equations from E79.</label></li>
 </ul>
 <p>Lab 1 is completed in teams of 4.</p>
-<p>Be sure to read the <a href="../../labs/overview/index.html">Lab Overview</a> to learn about safety requirements, expensive equipment handling and other rules. You must review all SAFETY QUESTION boxes below as part of prelab. If you ever reach a safety question box and either can’t answer it or feel unsure, grab an instructor.</p>
+<p>Be sure to read the <a href="../../labs/overview/index.html">Lab Overview</a> to learn about safety requirements, expensive equipment handling and other rules. You must review all SAFETY QUESTION boxes below as part of pre-lab. If you ever reach a safety question box and either can’t answer it or feel unsure, grab an instructor.</p>
 <p>At the end of the lab, you need to submit a completed submission sheet (see links above) on Canvas. Specifications for each part of the lab are included on the submission sheet.Recall that <strong>no late work is accepted</strong>, we will grade whatever is submitted before the deadlines. Since multiple submissions are allowed, you may want to submit a less-than-perfect draft early as insurance against missing the deadline.</p>
 </section>
 <section id="motherboard-assembly" class="level2" data-number="2">
@@ -364,8 +364,8 @@ Additional Motherboard Reference Information
 <li>Take the INF and BIN files off of the SD card and read them according to the following instructions.
 <ol type="i">
 <li>The Teensy creates two files to save data every time it runs: an INF file which contains text and a BIN file which contains your measured data in a binary format.</li>
-<li>Special programs are required to decode the binary data, and those programs also depend on having a matching INF file. We provide a MATLAB script for reading SD card data: <a href="https://github.com/HMC-E80/E80-SP2023/blob/main/MATLAB/logreader.m">logreader.m</a>.</li>
-<li>These links provide <a href="https://drive.google.com/open?id=18-MICAN9QopCYHtpTnUVNme07YvaUmFD">sample INF</a> and <a href="https://drive.google.com/open?id=1h086niwvAh4C3Gs6r4vE12ZvaD1KYria">sample BIN</a> files so you can test the MATLAB scripts during prelab. The sample file is very noisy, so it can’t be used to find answers to the questions later in this Section.</li>
+<li>Special programs are required to decode the binary data, and those programs also depend on having a matching INF file. We provide a MATLAB script for reading SD card data: <a href="https://github.com/HMC-E80/E80/blob/main/MATLAB/logreader.m">logreader.m</a>.</li>
+<li>These links provide <a href="../lab0/assets/INF004.TXT">sample INF</a> and <a href="../lab0/assets/LOG004.BIN">sample BIN</a> files so you can test the MATLAB scripts during prelab. The sample file is very noisy, so it can’t be used to find answers to the questions later in this Section.</li>
 </ol></li>
 <li>Verify that you are saving the following data to your SD card: acceleration values from your accelerometer, magnetic field strengths from your magnetometer, roll, pitch and yaw angles calculated from your IMU measurements, and motor PWM values.</li>
 <li>Verify that your motherboard can drive motors by attaching motors to motor ports A, B and C, then modifying and running <code>E80_Lab_01.ino</code> (which you <a href="https://hmc-e80.github.io/E80/labs/lab0/#arduino-practice">set up in lab 0</a>) to drive each of them. If your motors are not ready, you can measure the voltages at screw terminals A, B and C to observe whether they are being correctly applied by your software.</li>

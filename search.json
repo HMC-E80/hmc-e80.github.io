@@ -1712,7 +1712,7 @@
     "href": "labs/lab1/prelab.html",
     "title": "Lab 1 Prelab Help Sheet",
     "section": "",
-    "text": "Here are some ideas of useful prelab activities. There are a lot, so it makes sense to apportion them among your team. However, some activities (watching lecture videos, reading) should be completed by everyone. Be careful not to break up work too strictly, because many of the topics covered by the lab stretch across these prelab divisions; it makes sense to read carefully and try to identify linked problems and work before breaking up the tasks, and it makes sense to share individual findings thoroughly with the group."
+    "text": "Here are some ideas of useful pre-lab activities. There are a lot, so it makes sense to apportion them among your team. However, some activities (watching lecture videos, reading) should be completed by everyone. Be careful not to break up work too strictly, because many of the topics covered by the lab stretch across these pre-lab divisions; it makes sense to read carefully and try to identify linked problems and work before breaking up the tasks, and it makes sense to share individual findings thoroughly with the group."
   },
   {
     "objectID": "labs/lab1/prelab.html#reading-and-reference",
@@ -1726,14 +1726,14 @@
     "href": "labs/lab1/prelab.html#software",
     "title": "Lab 1 Prelab Help Sheet",
     "section": "2 Software",
-    "text": "2 Software\n\nDouble check that the E80 Git repo is available and working.\nTest compile E80_Lab_01.ino.\nWrite a version of E80_Lab_01.ino for testing motors and test compile it.\nWrite a version of E80_lab_01.ino for running the obstacle course and test compile it.\nImport the sample INF and BIN file data using logreader.m.\nWrite software that will generate acceleation plots in Matlab based on the logreader.m sample data."
+    "text": "2 Software\n\nDouble check that the E80 Git repo is available and working.\nTest compile E80_Lab_01.ino.\nWrite a version of E80_Lab_01.ino for testing motors and test compile it.\nWrite a version of E80_lab_01.ino for running the obstacle course and test compile it.\nImport the sample INF and BIN file data using logreader.m.\nWrite software that will generate acceleration plots in Matlab based on the logreader.m sample data."
   },
   {
     "objectID": "labs/lab1/prelab.html#statistics",
     "href": "labs/lab1/prelab.html#statistics",
     "title": "Lab 1 Prelab Help Sheet",
     "section": "3 Statistics",
-    "text": "3 Statistics\n\nWrite code to find the mean of a dataset in Matlab.\nWrite code to find the standard deviation of a dataset in Matlab.\nWrite code to conduct a T-test for two datasets in Matlab.\nMake sure you understand the math behind means and standard deviations.\nMake sure you understand the math behind T tests (which isn’t in the videos so you may have to dig through old notes or the internet)."
+    "text": "3 Statistics\n\nWrite code to find the mean of a dataset in Matlab.\nWrite code to find the standard deviation of a dataset in Matlab.\nWrite code to conduct a T test for two datasets in Matlab.\nMake sure you understand the math behind means and standard deviations.\nMake sure you understand the math behind T tests (which isn’t in the videos so you may have to dig through old notes or the internet)."
   },
   {
     "objectID": "labs/lab1/prelab.html#mechanical",
@@ -1761,7 +1761,7 @@
     "href": "labs/lab1/index.html#introduction",
     "title": "Lab 1: Go Autonomous",
     "section": "1 Introduction",
-    "text": "1 Introduction\nIn this lab you will transform the ROV (remotely operated vehicle) used in E79 into an AUV (autonomous underwater vehicle). An ROV is controlled from the surface through long cables, but an AUV carries an autonomous controller on board. While the AUVs you build in Lab 1 will all look the same, you will have a chance to modify these vehicles during the project. By end of semester, each robot will be configured and equipped for unique ocean-sampling experiments.\nAfter successful completion of this lab, you will be able to…\n\nPerform some steps of modifying an E79 robot to build an E80 robot.\nProgram your robot to traverse basic trajectories.\nExtract data from your robot, import it into Matlab, and plot it.\nUse statistical measures to analyze data gathered from your robot.\nExplain the limitations and challenges of open loop control.\nRelate your robot’s behavior to governing equations from E79.\n\nLab 1 is completed in teams of 4.\nBe sure to read the Lab Overview to learn about safety requirements, expensive equipment handling and other rules. You must review all SAFETY QUESTION boxes below as part of prelab. If you ever reach a safety question box and either can’t answer it or feel unsure, grab an instructor.\nAt the end of the lab, you need to submit a completed submission sheet (see links above) on Canvas. Specifications for each part of the lab are included on the submission sheet.Recall that no late work is accepted, we will grade whatever is submitted before the deadlines. Since multiple submissions are allowed, you may want to submit a less-than-perfect draft early as insurance against missing the deadline."
+    "text": "1 Introduction\nIn this lab you will transform the ROV (remotely operated vehicle) used in E79 into an AUV (autonomous underwater vehicle). An ROV is controlled from the surface through long cables, but an AUV carries an autonomous controller on board. While the AUVs you build in Lab 1 will all look the same, you will have a chance to modify these vehicles during the project. By end of semester, each robot will be configured and equipped for unique ocean-sampling experiments.\nAfter successful completion of this lab, you will be able to…\n\nPerform some steps of modifying an E79 robot to build an E80 robot.\nProgram your robot to traverse basic trajectories.\nExtract data from your robot, import it into Matlab, and plot it.\nUse statistical measures to analyze data gathered from your robot.\nExplain the limitations and challenges of open loop control.\nRelate your robot’s behavior to governing equations from E79.\n\nLab 1 is completed in teams of 4.\nBe sure to read the Lab Overview to learn about safety requirements, expensive equipment handling and other rules. You must review all SAFETY QUESTION boxes below as part of pre-lab. If you ever reach a safety question box and either can’t answer it or feel unsure, grab an instructor.\nAt the end of the lab, you need to submit a completed submission sheet (see links above) on Canvas. Specifications for each part of the lab are included on the submission sheet.Recall that no late work is accepted, we will grade whatever is submitted before the deadlines. Since multiple submissions are allowed, you may want to submit a less-than-perfect draft early as insurance against missing the deadline."
   },
   {
     "objectID": "labs/lab1/index.html#motherboard-assembly",
