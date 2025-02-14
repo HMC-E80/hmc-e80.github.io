@@ -38,7 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-35a77f3aec399cf736c3034f17e5450e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-78cfe847d91f0fbfdcc6616a475a92b7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -303,32 +303,21 @@ window.Quarto = {
 <li><label><input type="checkbox">Provides a table of results that matches the form below with at least five data points. Note the following:</label>
 <ul>
 <li>VOP is predicted output Voltage</li>
-<li><span class="math inline">\(\lambda\)</span>V is uncertainty in predicted output Voltage</li>
 <li>VOM is measured output Voltage</li>
-<li><span class="math inline">\(\lambda\)</span>M is uncertainty in measured output Voltage</li>
 <li>ERR is error between prediction and measurement</li>
 </ul></li>
 <li><label><input type="checkbox">A graph of a calibration curve between pressure and depth is provided. The data points match the points in the table below. Appropriate regressions and measures of uncertainty are plotted.</label></li>
-<li><label><input type="checkbox">Predicted and measured Voltages match to within uncertainty and are consistent with equations.</label></li>
-<li><label><input type="checkbox">Predicted and measured Voltage at 0 m depth is close to 0.3 V or 3.0 V.</label></li>
-<li><label><input type="checkbox">Predicted and measured Voltage at 40 cm depth is close to 0.3 V or 3.0 V (whichever is farthest from the 0 m measurement)</label></li>
+<li><label><input type="checkbox">Predicted and measured Voltages are consistent with equations.</label></li>
+<li><label><input type="checkbox">Predicted and measured Voltage at 0 m depth is close to 1.1 V or 2.2 V.</label></li>
+<li><label><input type="checkbox">Predicted and measured Voltage at 40 cm depth is close to 1.1 V or 2.2 V (whichever is farthest from the 0 m measurement)</label></li>
+<li><label><input type="checkbox">2-3 sentences on possible sources of uncertainty</label></li>
 </ul>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 15%">
-<col style="width: 12%">
-<col style="width: 22%">
-<col style="width: 12%">
-<col style="width: 22%">
-<col style="width: 12%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Depth (cm)</th>
 <th>VOP (V)</th>
-<th><span class="math inline">\(\lambda\)</span>V (V)</th>
 <th>VOM (V)</th>
-<th><span class="math inline">\(\lambda\)</span>M (V)</th>
 <th>ERR (%)</th>
 </tr>
 </thead>
@@ -338,13 +327,9 @@ window.Quarto = {
 <td></td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
 </tr>
 <tr class="even">
 <td>…</td>
-<td></td>
-<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -364,54 +349,33 @@ window.Quarto = {
 <p>Complete:</p>
 <ul class="task-list">
 <li><label><input type="checkbox">Equation relating op-amp input to op-amp output is correct.</label></li>
-<li><label><input type="checkbox">Predicted and measured resistance values are reported with uncertainty for 0 °C and 20 °C temperatures.</label></li>
-<li><label><input type="checkbox">Predicted and measured output voltages are reported with uncertainty for 0 °C and 20 °C temperatures.</label></li>
-<li><label><input type="checkbox">Predicted Voltages and measured voltages match to within uncertainty and are consistent with equations.</label></li>
+<li><label><input type="checkbox">Predicted and measured resistance values are reported for 0 °C and 20 °C temperatures.</label></li>
+<li><label><input type="checkbox">Predicted and measured output voltages are reported for 0 °C and 20 °C temperatures.</label></li>
+<li><label><input type="checkbox">Predicted Voltages and measured voltages are consistent with equations.</label></li>
 <li><label><input type="checkbox">Predicted and measured Voltage at 0 °C is close to 0.3 V or 3.0 V.</label></li>
 <li><label><input type="checkbox">Predicted and measured Voltage at 20 °C is close to 0.3V or 3.0 V (whichever is farthest from the 0 °C measurement).</label></li>
-</ul>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="report-on-steinhart-hart-fitting-of-thermistor" class="level2">
-<h2 class="anchored" data-anchor-id="report-on-steinhart-hart-fitting-of-thermistor">Report on Steinhart-Hart Fitting of Thermistor</h2>
-<p>Provide a table of results that matches the form below. Note the following: - T is the temperature measured by the digital thermometer - <span class="math inline">\(\lambda\)</span>T is uncertainty in T. - R is the resistance measured by the multimeter. - <span class="math inline">\(\lambda\)</span>R is uncertainty in R.</p>
-<p>Also provide extracted Steinhart-Hart coefficients with uncertainty and two graphs. One graph overlays R-T data, the Steinhart-Hart fit and the fit from the datasheet. The other provides residuals from the Steinhart-Hart fit.</p>
-<p>Effort:</p>
-<ul class="task-list">
-<li><label><input type="checkbox">At least four of table rows are filled in. May omit uncertainty columns.</label></li>
-<li><label><input type="checkbox">Provides graph of 1/T vs.&nbsp;R data.</label></li>
-</ul>
-<p>Complete:</p>
-<ul class="task-list">
-<li><label><input type="checkbox">All table rows are filled in.</label></li>
-<li><label><input type="checkbox">All uncertainties are included and correct.</label></li>
-<li><label><input type="checkbox">Includes code showing how to calculate Steinhart-Hart coefficients.</label></li>
-<li><label><input type="checkbox">Includes a plot of 1/T vs.&nbsp;R that shows measured points with uncertainty, fit based on datasheet equation, and fit based on extracted Steinhart-Hart coefficients.</label></li>
-<li><label><input type="checkbox">Include plot of residuals from Steinhart-Hart fit.</label></li>
+<li><label><input type="checkbox">2-3 sentences on possible sources of uncertainty</label></li>
 </ul>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>T (°C)</th>
-<th><span class="math inline">\(\lambda\)</span>T (°C)</th>
-<th>R (k<span class="math inline">\(\Omega\)</span>)</th>
-<th><span class="math inline">\(\lambda\)</span>R (k<span class="math inline">\(\Omega\)</span>)</th>
+<th>Temp (C)</th>
+<th>RP (<span class="math inline">\(\Omega\)</span>)</th>
+<th>VOP (V)</th>
+<th>VOM (V)</th>
+<th>ERR (%)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
+<td>0</td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="even">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
+<td>…</td>
 <td></td>
 <td></td>
 <td></td>
@@ -421,51 +385,73 @@ window.Quarto = {
 </table>
 <div style="page-break-after: always;"></div>
 </section>
-<section id="report-on-measurements-of-thermocouple" class="level2">
-<h2 class="anchored" data-anchor-id="report-on-measurements-of-thermocouple">Report on Measurements of Thermocouple</h2>
-<p>Provide a table of results that matches the form below. Note the following: - TT is the temperature measured by the digital thermometer - <span class="math inline">\(\lambda\)</span>T is uncertainty in TT. - TK is the temperature measured by the type-K thermocouple when the multimeter was in temperature mode. - <span class="math inline">\(\lambda\)</span>K is uncertainty in TK. - V is the thermocouple Voltage when the multimeter was in Voltage mode. - <span class="math inline">\(\lambda\)</span>V is the uncertainty in V. - CJC is the cold junction compensation Voltage. - TD is the temperature decoded from the Voltage in Thermocouple mode. - <span class="math inline">\(\lambda\)</span>D is the uncertainty in TD.</p>
+<section id="report-on-steinhart-hart-fitting-of-thermistor" class="level2">
+<h2 class="anchored" data-anchor-id="report-on-steinhart-hart-fitting-of-thermistor">Report on Steinhart-Hart Fitting of Thermistor</h2>
+<p>Provide a table of results that matches the form below. Note the following: - T is the temperature measured by the digital thermometer - R is the resistance measured by the multimeter.</p>
+<p>Also provide extracted Steinhart-Hart coefficients with uncertainty and two graphs. One graph overlays R-T data and the Non-linear Steinhart-Hart fit. The other provides residuals from the Steinhart-Hart fit.</p>
 <p>Effort:</p>
 <ul class="task-list">
-<li><label><input type="checkbox">At least two of table rows are filled in. May omit uncertainty columns.</label></li>
-<li><label><input type="checkbox">CJC column has at least a reasonable guess.</label></li>
+<li><label><input type="checkbox">At least four of table rows are filled in.</label></li>
+<li><label><input type="checkbox">Provides graph of T vs.&nbsp;R data.</label></li>
+<li><label><input type="checkbox">2-3 sentences on possible sources of uncertainty</label></li>
 </ul>
 <p>Complete:</p>
 <ul class="task-list">
 <li><label><input type="checkbox">All table rows are filled in.</label></li>
-<li><label><input type="checkbox">All uncertainties are included and correct.</label></li>
-<li><label><input type="checkbox">CJC column and decoded temperature are correct for measured Voltages.</label></li>
+<li><label><input type="checkbox">Includes code showing how to calculate Steinhart-Hart coefficients.</label></li>
+<li><label><input type="checkbox">Includes a plot of T vs.&nbsp;R that shows measured points with uncertainty and fit based on extracted Steinhart-Hart coefficients.</label></li>
+<li><label><input type="checkbox">Include plot of residuals from Steinhart-Hart fit.</label></li>
 </ul>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 7%">
-<col style="width: 15%">
-<col style="width: 7%">
-<col style="width: 15%">
-<col style="width: 7%">
-<col style="width: 15%">
-<col style="width: 8%">
-<col style="width: 7%">
-<col style="width: 15%">
-</colgroup>
 <thead>
 <tr class="header">
-<th>TT (°C)</th>
-<th><span class="math inline">\(\lambda\)</span>T (°C)</th>
-<th>TK (°C)</th>
-<th><span class="math inline">\(\lambda\)</span>K (°C)</th>
-<th>V (mV)</th>
-<th><span class="math inline">\(\lambda\)</span>V (mV)</th>
-<th>CJC (mV)</th>
-<th>TD (°C)</th>
-<th><span class="math inline">\(\lambda\)</span>D (°C)</th>
+<th>T (°C)</th>
+<th>R (k<span class="math inline">\(\Omega\)</span>)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td></td>
 <td></td>
+</tr>
+<tr class="even">
 <td></td>
 <td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="report-on-measurements-of-thermocouple" class="level2">
+<h2 class="anchored" data-anchor-id="report-on-measurements-of-thermocouple">Report on Measurements of Thermocouple</h2>
+<p>Provide a table of results that matches the form below. Note the following: - TT is the temperature measured by the digital thermometer - TK is the temperature measured by the type-K thermocouple when the multimeter was in temperature mode. - V is the thermocouple Voltage when the multimeter was in Voltage mode. - CJC is the cold junction compensation Voltage. - TD is the temperature decoded from the Voltage in Thermocouple mode.</p>
+<p>Effort:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">At least two of table rows are filled in.</label></li>
+<li><label><input type="checkbox">CJC column has at least a reasonable guess.</label></li>
+<li><label><input type="checkbox">2-3 sentences on possible sources of uncertainty</label></li>
+</ul>
+<p>Complete:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">All table rows are filled in.</label></li>
+<li><label><input type="checkbox">CJC column and decoded temperature are correct for measured Voltages.</label></li>
+</ul>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>TT (°C)</th>
+<th>TK (°C)</th>
+<th>V (mV)</th>
+<th>CJC (mV)</th>
+<th>TD (°C)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
 <td></td>
 <td></td>
 <td></td>
@@ -478,16 +464,8 @@ window.Quarto = {
 <td></td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 <tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 <td></td>
 <td></td>
 <td></td>
