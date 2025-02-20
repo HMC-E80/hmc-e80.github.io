@@ -153,7 +153,9 @@ Now that we have all the values, we can draw the final circuit diagram which is 
 A schematic of the completed offset amplifier.
 :::
 
-## Confirming operation with Falstad
+## Video Examples
+
+### Confirming operation with Falstad
 
 ::: {#fig-circuit-simulation}
 ![](images/falstad-offset-amplifier-schematic.png)
@@ -164,5 +166,11 @@ A schematic of the completed offset amplifier.
 The video below shows you how to build, debug, and simulate the circuit in online circuit simulator [Falstad](https://www.falstad.com/circuit/).
 
 <div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/1e822a4ebbb44002b5233d876d227198?sid=edf51c85-3763-49e6-9300-3b7cc34fb673" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+### A Graphical Illustration of the Linear Mapping of an Offset Amplifier
+
+The video below shows you a graphical illustration of what an offset amplifier is doing: creating a linear mapping between a range of input and output voltages.
+
+<div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/562fda7364c7401e935c0435bc8e8ae9?sid=3e397e8e-6e28-4a5d-80d9-7af8775208af" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 <!-- Link to solution circuit: https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgpABZsKBTAWjDACgBDEFBQ7lGiGx5BKASDzUqYePHDQwdMAgTYMNPGGKReksAqVqeNbVsKRyM2WwBO3GtLAohkQa2dUEV20LTgnQiL+HsiQPg6OzjSEbgFUaGF2iqL43KloktLwPsn28eICVPHZdoXcvHlC2HxZ5mwA5pXVkmXCgkUNIMR82H7dVTVQbABuXT2uY2mZ4LRF0DzyOlBQ0AhsAErgKC0OWy0YIVS72ND0RStrAO6TuIL9vR3X-RngNCmZbNcv3xUvYV+-dIVMDmIYAvgg+K7SFgyowsruWG3YK+SJIoKIiIo-60GIojRonEE-F4fLtT6BUTiYliclfAq7MplHFMxm-XYsxlc+IVTlUbDVJqED7XJw7aRvSphAD2XRAeKOkGIkhOrisWDQGAI6jOsDgECOcvoKAN3Ag2DYQA -->
