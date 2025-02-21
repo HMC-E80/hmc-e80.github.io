@@ -1134,6 +1134,62 @@
     "text": "Mobile Lab Facility\nDuring field deployments the E80 staff sets up a mobile lab facility to enable students to prototype and debug. It has the following equipment available:\n\nA set of work tables set up beneath shaded tents.\n\nA solar generator/battery sufficient to power the lab and charge a limited number of laptops.\nPower supplies\nOscilloscopes\nSoldering irons\nSome electronics supplies ~ op-amps and resistors.\nMultimeters\nCommon hand tools (wire strippers, diagonal cutters, screwdrivers, etc.)\nHeat shrink\nGlue\nHot air guns"
   },
   {
+    "objectID": "reference/tutorials/index.html",
+    "href": "reference/tutorials/index.html",
+    "title": "Tutorials",
+    "section": "",
+    "text": "This tutorial describes how to design, build, and simulate an offset amplifier."
+  },
+  {
+    "objectID": "reference/tutorials/index.html#designing-an-offset-amplifier",
+    "href": "reference/tutorials/index.html#designing-an-offset-amplifier",
+    "title": "Tutorials",
+    "section": "",
+    "text": "This tutorial describes how to design, build, and simulate an offset amplifier."
+  },
+  {
+    "objectID": "reference/tutorials/designing-an-offset-amplifier/index.html",
+    "href": "reference/tutorials/designing-an-offset-amplifier/index.html",
+    "title": "How to Design an Offset Amplifier",
+    "section": "",
+    "text": "This tutorial will describe how to build an offset amplifier. There are many different amplifier topologies that can be built, but for the sake of simplicity in E80 we will only build a specific implementation that will be described here."
+  },
+  {
+    "objectID": "reference/tutorials/designing-an-offset-amplifier/index.html#introduction-to-offset-amplifiers-in-e80",
+    "href": "reference/tutorials/designing-an-offset-amplifier/index.html#introduction-to-offset-amplifiers-in-e80",
+    "title": "How to Design an Offset Amplifier",
+    "section": "Introduction to Offset Amplifiers in E80",
+    "text": "Introduction to Offset Amplifiers in E80\nAn offset amplifier is a linear mapping.\nIt takes an input signal and manipulates it with two parameters:\n\nA gain which scales (multiplies) the input\nAn offset which shifts the input.\n\nThe amplifier we will describe below and that we recommend you use in E80 is described by the following equation:\n\\[\nV_\\text{out} = -G\\cdot V_\\text{in} + V_\\text{offset}\n\\tag{1}\\]\nWhere \\(G\\) is the gain and is strictly greater than 0 and \\(V_\\text{offset}\\) is the offset voltage and must lie between the supply rails of the op amp."
+  },
+  {
+    "objectID": "reference/tutorials/designing-an-offset-amplifier/index.html#the-offset-amplifier-topology",
+    "href": "reference/tutorials/designing-an-offset-amplifier/index.html#the-offset-amplifier-topology",
+    "title": "How to Design an Offset Amplifier",
+    "section": "The offset amplifier topology",
+    "text": "The offset amplifier topology\nThe circuit used to implement this equation is shown in Figure 1.\n\n\n\n\n\n\nFigure 1: A circuit diagram of the offset amplifier topology we use in E80.\n\n\n\nIn this circuit, \\(V_\\text{in}\\) is the input voltage that you want to scale and shift, \\(V_{+}\\) is the input voltage to the non-inverting input (which can be set using a voltage divider consisting of \\(V_\\text{dd}\\), \\(R_1\\) and \\(R_2\\)). \\(V_{dd}\\) is the supply voltage which is commonly 3.3 V or 5 V. Resistors \\(R_{f}\\) and \\(R_{n1}\\) are used to configure the gain.\nThe output voltage for this amplifier can be written as follows:\n\\[\nV_\\text{out} = - \\frac{R_f}{R_{n1}}\\cdot V_\\text{in} + \\left(1+G\\right)\\cdot V_+\n\\tag{2}\\]\nThe offset voltage \\(V_+\\) can in turn be configured using a voltage divider according to the equation below.\n\\[\nV_+ = V_\\text{dd} \\cdot \\frac{R_2}{R_1 + R_2}\n\\tag{3}\\]"
+  },
+  {
+    "objectID": "reference/tutorials/designing-an-offset-amplifier/index.html#analyzing-the-circuit",
+    "href": "reference/tutorials/designing-an-offset-amplifier/index.html#analyzing-the-circuit",
+    "title": "How to Design an Offset Amplifier",
+    "section": "Analyzing the circuit",
+    "text": "Analyzing the circuit\nComparing Equation 1 and Equation 2 we can see that the following relationships hold.\n\\[\n\\begin{align}\nG &= \\frac{R_f}{R_{n1}} \\\\\nV_\\text{offset} &= (1+G)\\cdot V_+\n\\end{align}\n\\]"
+  },
+  {
+    "objectID": "reference/tutorials/designing-an-offset-amplifier/index.html#how-to-build-an-offset-amplifier",
+    "href": "reference/tutorials/designing-an-offset-amplifier/index.html#how-to-build-an-offset-amplifier",
+    "title": "How to Design an Offset Amplifier",
+    "section": "How to build an offset amplifier",
+    "text": "How to build an offset amplifier\nThis section will describe how to implement the offset amplifier. The steps are as follows:\n\nDefine input and output voltage ranges\nCreated ordered pairs of input and output voltages\nCalculate gain and offset voltage\nChoose resistor values to implement desired gain and offset\n\nLet’s show this as an example.\n\nOffset amplifier example\nSay that you are given a sensor which outputs voltages within a range of 0.8 to 1.3 V. Given that the input voltage range of the analog to digital converter on our Teensy is 0 V to 3.3 V, we want to scale and shift the input voltage so that the transformed output voltage lies within this range. We also want to leave a bit of margin at the top and bottom of the range, so we’ll map the input voltage to the output voltage range 0.3 V to 3 V.\nFirst, lets start by creating a table to collect the desired input/output voltage pairs.\n\n\n\n\\(V_\\text{in}\\) [V]\n\\(V_\\text{out}\\) [V]\n\n\n\n\n0.8\n3\n\n\n1.3\n0.3\n\n\n\n\n\n\n\n\n\nWarning\n\n\n\nBecause our amplifier can only have a negative gain, we need to make sure that the minimum input voltage is paired with the maximum output voltage and the maximum input voltage is paired with the minimum output voltage.\n\n\nNext, we need to set our system of equations to solve for the gain and offset needed. That system of equations is given as:\n\\[\n\\begin{align}\n3 &= -G\\cdot 0.8 + \\left(1+G\\right) V_{+} \\\\\n0.3 &= -G\\cdot 1.3 + \\left(1+G\\right) V_{+}\n\\end{align}\n\\]\nThere are a variety of ways we can solve this system of equations. The simplest way is to subtract the bottom equation from the top equation. This eliminates the offset terms \\(\\left(1+G\\right) V_+\\) and gives us:\n\\[\n\\begin{align}\n2.7 = - G\\cdot(0.8 - 1.3) \\\\\n2.7 = - G\\cdot (-0.5) \\\\\nG = \\frac{2.7}{0.5} = 5.4.\n\\end{align}\n\\]\nOnce we have this gain value, we can return to either of the earlier equations and solve for \\(V_+\\).\n\\[\n\\begin{align}\n3 = - (5.4)(0.8) + \\left(1+5.4\\right) V_+ \\rightarrow\nV_+ = 1.14 \\text{ V}\n\\end{align}\n\\]\n\n\nSelecting components\nNext we need to implement these values using actual components and voltages in our circuit.\n\nImplementing Gain\nFirst, to implement the gain we need to choose the appropriate ratio of resistors. Since \\(G=\\frac{R_f}{R_{n1}}\\) we need to choose \\(R_f\\) and \\(R_\\text{n1}\\) together to implement them. Referring to the lab inventory page, we can see that we can achieve the desired gain by choosing a \\(1k\\Omega\\) resistor for \\(R_\\text{n1}\\) and using a 5.1 \\(k\\Omega\\) resistor in series with a 200 and 100 \\(\\Omega\\) resistor to reach \\(5.4k\\Omega\\) for \\(R_f\\).\n\n\nImplementing Offset Voltage\nNext we need to confirm the offset voltage. The offset voltage of 1.14 V can be achieved using a voltage divider to divide the 3.3 V source. We know the desired division ratio is \\(1.14/3.3=0.345\\). Reviewing the resistor table we can see that a divider given by \\(R_2=1k\\Omega\\) and \\(R_1=2k\\Omega\\) will give us a ratio of 0.333. This is not exactly the desired value of 0.345, but is within 10%.\n\n\n\n\n\n\nNote\n\n\n\nIf we wanted to get closer, we could increase the ratio by adding an additional resistor in series with \\(R_2\\). In general, we will need to always confirm the measured resistance value in lab with a mulitmeter before we try to dial the division ratio in given that the 5% tolerance given by the resistors will already create a level of inaccuracy compared to our design values.\n\n\nNow that we have all the values, we can draw the final circuit diagram which is shown below in Figure 2.\n\n\n\n\n\n\nFigure 2: A schematic of the completed offset amplifier."
+  },
+  {
+    "objectID": "reference/tutorials/designing-an-offset-amplifier/index.html#video-examples",
+    "href": "reference/tutorials/designing-an-offset-amplifier/index.html#video-examples",
+    "title": "How to Design an Offset Amplifier",
+    "section": "Video Examples",
+    "text": "Video Examples\n\nConfirming operation with Falstad\n\n\n\n\n\n\nFigure 3\n\n\n\nFigure 3 shows the circuit used to simulate our design.\nThe video below shows you how to build, debug, and simulate the circuit in online circuit simulator Falstad.\n\n\n\n\n\n\nA Graphical Illustration of the Linear Mapping of an Offset Amplifier\nThe video below shows you a graphical illustration of what an offset amplifier is doing: creating a linear mapping between a range of input and output voltages."
+  },
+  {
     "objectID": "reference/design/index.html",
     "href": "reference/design/index.html",
     "title": "Reference Designs",

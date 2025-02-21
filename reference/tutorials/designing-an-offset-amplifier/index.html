@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Josh Brake">
 
-<title>Lab 4 Prelab Help Sheet – HMC E80</title>
+<title>How to Design an Offset Amplifier – HMC E80</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +24,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-48ffa3e5b9d089919c6712c39e5b00f2.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-78cfe847d91f0fbfdcc6616a475a92b7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-48ffa3e5b9d089919c6712c39e5b00f2.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-78cfe847d91f0fbfdcc6616a475a92b7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -77,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">HMC E80</span>
     </a>
   </div>
@@ -88,11 +118,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../lectures/"> 
+    <a class="nav-link" href="../../../lectures/"> 
 <span class="menu-text">Lectures</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -101,35 +131,35 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-labs">    
         <li>
-    <a class="dropdown-item" href="../../labs/overview">
+    <a class="dropdown-item" href="../../../labs/overview">
  <span class="dropdown-text">Overview and Safety</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab0">
+    <a class="dropdown-item" href="../../../labs/lab0">
  <span class="dropdown-text">Lab 0: Tutorial &amp; Skills Review</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab1">
+    <a class="dropdown-item" href="../../../labs/lab1">
  <span class="dropdown-text">Lab 1: Go Autonomous</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab2">
+    <a class="dropdown-item" href="../../../labs/lab2">
  <span class="dropdown-text">Lab 2: BEM</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab3">
+    <a class="dropdown-item" href="../../../labs/lab3">
  <span class="dropdown-text">Lab 3: Op-Amps</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab4">
+    <a class="dropdown-item" href="../../../labs/lab4">
  <span class="dropdown-text">Lab 4: Temperature</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab5">
+    <a class="dropdown-item" href="../../../labs/lab5">
  <span class="dropdown-text">Lab 5: Acoustics</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab6">
+    <a class="dropdown-item" href="../../../labs/lab6">
  <span class="dropdown-text">Lab 6: Fluids</span></a>
   </li>  
     </ul>
@@ -140,27 +170,27 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-project">    
         <li>
-    <a class="dropdown-item" href="../../project/overview">
+    <a class="dropdown-item" href="../../../project/overview">
  <span class="dropdown-text">Overview</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../project/proposal">
+    <a class="dropdown-item" href="../../../project/proposal">
  <span class="dropdown-text">Design and Proposal</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../project/navigation">
+    <a class="dropdown-item" href="../../../project/navigation">
  <span class="dropdown-text">Navigation Jump Start</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../project/build">
+    <a class="dropdown-item" href="../../../project/build">
  <span class="dropdown-text">Build and Integrate</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../project/deploy">
+    <a class="dropdown-item" href="../../../project/deploy">
  <span class="dropdown-text">Field Deployment</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../project/report">
+    <a class="dropdown-item" href="../../../project/report">
  <span class="dropdown-text">Present and Report</span></a>
   </li>  
     </ul>
@@ -171,27 +201,27 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-references">    
         <li>
-    <a class="dropdown-item" href="../../reference/inventory">
+    <a class="dropdown-item" href="../../../reference/inventory">
  <span class="dropdown-text">Lab Inventory</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../reference/equipment">
+    <a class="dropdown-item" href="../../../reference/equipment">
  <span class="dropdown-text">Lab Equipment</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../reference/board">
+    <a class="dropdown-item" href="../../../reference/board">
  <span class="dropdown-text">Board Information</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../reference/design">
+    <a class="dropdown-item" href="../../../reference/design">
  <span class="dropdown-text">Reference Designs</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../reference/tutorials">
+    <a class="dropdown-item" href="../../../reference/tutorials">
  <span class="dropdown-text">Tutorials</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../reference/history">
+    <a class="dropdown-item" href="../../../reference/history">
  <span class="dropdown-text">Old Final Projects</span></a>
   </li>  
     </ul>
@@ -219,15 +249,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#reading-and-reference" id="toc-reading-and-reference" class="nav-link active" data-scroll-target="#reading-and-reference">Reading and Reference</a></li>
-  <li><a href="#circuit-design" id="toc-circuit-design" class="nav-link" data-scroll-target="#circuit-design">Circuit Design</a></li>
-  <li><a href="#multimeter-modes-and-use" id="toc-multimeter-modes-and-use" class="nav-link" data-scroll-target="#multimeter-modes-and-use">Multimeter Modes and Use</a></li>
-  <li><a href="#thermistors-and-steinhart-hart" id="toc-thermistors-and-steinhart-hart" class="nav-link" data-scroll-target="#thermistors-and-steinhart-hart">Thermistors and Steinhart-Hart</a></li>
-  <li><a href="#non-linear-fitting" id="toc-non-linear-fitting" class="nav-link" data-scroll-target="#non-linear-fitting">Non-linear Fitting</a></li>
-  <li><a href="#thermistors-and-steinhart-hart-1" id="toc-thermistors-and-steinhart-hart-1" class="nav-link" data-scroll-target="#thermistors-and-steinhart-hart-1">Thermistors and Steinhart-Hart</a></li>
-  <li><a href="#thermocouples-nist-tables-and-cold-junction-compensation" id="toc-thermocouples-nist-tables-and-cold-junction-compensation" class="nav-link" data-scroll-target="#thermocouples-nist-tables-and-cold-junction-compensation">Thermocouples, NIST Tables and Cold Junction Compensation</a></li>
-  <li><a href="#who-is-bringing-the-ice" id="toc-who-is-bringing-the-ice" class="nav-link" data-scroll-target="#who-is-bringing-the-ice">Who is Bringing the Ice?</a></li>
-  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
+  <li><a href="#introduction-to-offset-amplifiers-in-e80" id="toc-introduction-to-offset-amplifiers-in-e80" class="nav-link active" data-scroll-target="#introduction-to-offset-amplifiers-in-e80">Introduction to Offset Amplifiers in E80</a></li>
+  <li><a href="#the-offset-amplifier-topology" id="toc-the-offset-amplifier-topology" class="nav-link" data-scroll-target="#the-offset-amplifier-topology">The offset amplifier topology</a></li>
+  <li><a href="#analyzing-the-circuit" id="toc-analyzing-the-circuit" class="nav-link" data-scroll-target="#analyzing-the-circuit">Analyzing the circuit</a></li>
+  <li><a href="#how-to-build-an-offset-amplifier" id="toc-how-to-build-an-offset-amplifier" class="nav-link" data-scroll-target="#how-to-build-an-offset-amplifier">How to build an offset amplifier</a>
+  <ul class="collapse">
+  <li><a href="#offset-amplifier-example" id="toc-offset-amplifier-example" class="nav-link" data-scroll-target="#offset-amplifier-example">Offset amplifier example</a></li>
+  <li><a href="#selecting-components" id="toc-selecting-components" class="nav-link" data-scroll-target="#selecting-components">Selecting components</a></li>
+  </ul></li>
+  <li><a href="#video-examples" id="toc-video-examples" class="nav-link" data-scroll-target="#video-examples">Video Examples</a>
+  <ul class="collapse">
+  <li><a href="#confirming-operation-with-falstad" id="toc-confirming-operation-with-falstad" class="nav-link" data-scroll-target="#confirming-operation-with-falstad">Confirming operation with Falstad</a></li>
+  <li><a href="#a-graphical-illustration-of-the-linear-mapping-of-an-offset-amplifier" id="toc-a-graphical-illustration-of-the-linear-mapping-of-an-offset-amplifier" class="nav-link" data-scroll-target="#a-graphical-illustration-of-the-linear-mapping-of-an-offset-amplifier">A Graphical Illustration of the Linear Mapping of an Offset Amplifier</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -236,13 +270,19 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Lab 4 Prelab Help Sheet</h1>
+<h1 class="title">How to Design an Offset Amplifier</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Josh Brake </p>
+          </div>
+  </div>
     
   
     
@@ -253,35 +293,191 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This is the last prelab help sheet you’re going to get! Instead of detailed prelab items, this just lists general categories you might consider when planning prelab work.</p>
-<section id="reading-and-reference" class="level2">
-<h2 class="anchored" data-anchor-id="reading-and-reference">Reading and Reference</h2>
+<p>This tutorial will describe how to build an offset amplifier. There are many different amplifier topologies that can be built, but for the sake of simplicity in E80 we will only build a specific implementation that will be described here.</p>
+<section id="introduction-to-offset-amplifiers-in-e80" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-to-offset-amplifiers-in-e80">Introduction to Offset Amplifiers in E80</h2>
+<p>An offset amplifier is a linear mapping.</p>
+<p>It takes an input signal and manipulates it with two parameters:</p>
+<ol type="1">
+<li>A gain which <strong>scales</strong> (multiplies) the input</li>
+<li>An offset which <strong>shifts</strong> the input.</li>
+</ol>
+<p>The amplifier we will describe below and that we recommend you use in E80 is described by the following equation:</p>
+<p><span id="eq-linear-mapping"><span class="math display">\[
+V_\text{out} = -G\cdot V_\text{in} + V_\text{offset}
+\tag{1}\]</span></span></p>
+<p>Where <span class="math inline">\(G\)</span> is the gain and is strictly greater than 0 and <span class="math inline">\(V_\text{offset}\)</span> is the offset voltage and must lie between the supply rails of the op amp.</p>
 </section>
-<section id="circuit-design" class="level2">
-<h2 class="anchored" data-anchor-id="circuit-design">Circuit Design</h2>
+<section id="the-offset-amplifier-topology" class="level2">
+<h2 class="anchored" data-anchor-id="the-offset-amplifier-topology">The offset amplifier topology</h2>
+<p>The circuit used to implement this equation is shown in <a href="#fig-offset-amplifier-circuit-diagram" class="quarto-xref">Figure&nbsp;1</a>.</p>
+<div id="fig-offset-amplifier-circuit-diagram" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-offset-amplifier-circuit-diagram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/generic-offset-amplifier-schematic.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-offset-amplifier-circuit-diagram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: A circuit diagram of the offset amplifier topology we use in E80.
+</figcaption>
+</figure>
+</div>
+<p>In this circuit, <span class="math inline">\(V_\text{in}\)</span> is the input voltage that you want to scale and shift, <span class="math inline">\(V_{+}\)</span> is the input voltage to the non-inverting input (which can be set using a voltage divider consisting of <span class="math inline">\(V_\text{dd}\)</span>, <span class="math inline">\(R_1\)</span> and <span class="math inline">\(R_2\)</span>). <span class="math inline">\(V_{dd}\)</span> is the supply voltage which is commonly 3.3 V or 5 V. Resistors <span class="math inline">\(R_{f}\)</span> and <span class="math inline">\(R_{n1}\)</span> are used to configure the gain.</p>
+<p>The output voltage for this amplifier can be written as follows:</p>
+<p><span id="eq-offset-amplifier"><span class="math display">\[
+V_\text{out} = - \frac{R_f}{R_{n1}}\cdot V_\text{in} + \left(1+G\right)\cdot V_+
+\tag{2}\]</span></span></p>
+<p>The offset voltage <span class="math inline">\(V_+\)</span> can in turn be configured using a voltage divider according to the equation below.</p>
+<p><span id="eq-voltage-divider"><span class="math display">\[
+V_+ = V_\text{dd} \cdot \frac{R_2}{R_1 + R_2}
+\tag{3}\]</span></span></p>
 </section>
-<section id="multimeter-modes-and-use" class="level2">
-<h2 class="anchored" data-anchor-id="multimeter-modes-and-use">Multimeter Modes and Use</h2>
+<section id="analyzing-the-circuit" class="level2">
+<h2 class="anchored" data-anchor-id="analyzing-the-circuit">Analyzing the circuit</h2>
+<p>Comparing <a href="#eq-linear-mapping" class="quarto-xref">Equation&nbsp;1</a> and <a href="#eq-offset-amplifier" class="quarto-xref">Equation&nbsp;2</a> we can see that the following relationships hold.</p>
+<p><span class="math display">\[
+\begin{align}
+G &amp;= \frac{R_f}{R_{n1}} \\
+V_\text{offset} &amp;= (1+G)\cdot V_+
+\end{align}
+\]</span></p>
 </section>
-<section id="thermistors-and-steinhart-hart" class="level2">
-<h2 class="anchored" data-anchor-id="thermistors-and-steinhart-hart">Thermistors and Steinhart-Hart</h2>
+<section id="how-to-build-an-offset-amplifier" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-build-an-offset-amplifier">How to build an offset amplifier</h2>
+<p>This section will describe how to implement the offset amplifier. The steps are as follows:</p>
+<ol type="1">
+<li>Define input and output voltage ranges</li>
+<li>Created ordered pairs of input and output voltages</li>
+<li>Calculate gain and offset voltage</li>
+<li>Choose resistor values to implement desired gain and offset</li>
+</ol>
+<p>Let’s show this as an example.</p>
+<section id="offset-amplifier-example" class="level3">
+<h3 class="anchored" data-anchor-id="offset-amplifier-example">Offset amplifier example</h3>
+<p>Say that you are given a sensor which outputs voltages within a range of 0.8 to 1.3 V. Given that the input voltage range of the analog to digital converter on our Teensy is 0 V to 3.3 V, we want to scale and shift the input voltage so that the transformed output voltage lies within this range. We also want to leave a bit of margin at the top and bottom of the range, so we’ll map the input voltage to the output voltage range 0.3 V to 3 V.</p>
+<p>First, lets start by creating a table to collect the desired input/output voltage pairs.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><span class="math inline">\(V_\text{in}\)</span> [V]</th>
+<th><span class="math inline">\(V_\text{out}\)</span> [V]</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0.8</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>1.3</td>
+<td>0.3</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Because our amplifier can only have a negative gain, we need to make sure that the minimum input voltage is paired with the maximum output voltage and the maximum input voltage is paired with the minimum output voltage.</p>
+</div>
+</div>
+<p>Next, we need to set our system of equations to solve for the gain and offset needed. That system of equations is given as:</p>
+<p><span class="math display">\[
+\begin{align}
+3 &amp;= -G\cdot 0.8 + \left(1+G\right) V_{+} \\
+0.3 &amp;= -G\cdot 1.3 + \left(1+G\right) V_{+}
+\end{align}
+\]</span></p>
+<p>There are a variety of ways we can solve this system of equations. The simplest way is to subtract the bottom equation from the top equation. This eliminates the offset terms <span class="math inline">\(\left(1+G\right) V_+\)</span> and gives us:</p>
+<p><span class="math display">\[
+\begin{align}
+2.7 = - G\cdot(0.8 - 1.3) \\
+2.7 = - G\cdot (-0.5) \\
+G = \frac{2.7}{0.5} = 5.4.
+\end{align}
+\]</span></p>
+<p>Once we have this gain value, we can return to either of the earlier equations and solve for <span class="math inline">\(V_+\)</span>.</p>
+<p><span class="math display">\[
+\begin{align}
+3 = - (5.4)(0.8) + \left(1+5.4\right) V_+ \rightarrow
+V_+ = 1.14 \text{ V}
+\end{align}
+\]</span></p>
 </section>
-<section id="non-linear-fitting" class="level2">
-<h2 class="anchored" data-anchor-id="non-linear-fitting">Non-linear Fitting</h2>
+<section id="selecting-components" class="level3">
+<h3 class="anchored" data-anchor-id="selecting-components">Selecting components</h3>
+<p>Next we need to implement these values using actual components and voltages in our circuit.</p>
+<section id="implementing-gain" class="level4">
+<h4 class="anchored" data-anchor-id="implementing-gain">Implementing Gain</h4>
+<p>First, to implement the gain we need to choose the appropriate ratio of resistors. Since <span class="math inline">\(G=\frac{R_f}{R_{n1}}\)</span> we need to choose <span class="math inline">\(R_f\)</span> and <span class="math inline">\(R_\text{n1}\)</span> together to implement them. Referring to the <a href="reference/inventory/">lab inventory page</a>, we can see that we can achieve the desired gain by choosing a <span class="math inline">\(1k\Omega\)</span> resistor for <span class="math inline">\(R_\text{n1}\)</span> and using a 5.1 <span class="math inline">\(k\Omega\)</span> resistor in series with a 200 and 100 <span class="math inline">\(\Omega\)</span> resistor to reach <span class="math inline">\(5.4k\Omega\)</span> for <span class="math inline">\(R_f\)</span>.</p>
 </section>
-<section id="thermistors-and-steinhart-hart-1" class="level2">
-<h2 class="anchored" data-anchor-id="thermistors-and-steinhart-hart-1">Thermistors and Steinhart-Hart</h2>
+<section id="implementing-offset-voltage" class="level4">
+<h4 class="anchored" data-anchor-id="implementing-offset-voltage">Implementing Offset Voltage</h4>
+<p>Next we need to confirm the offset voltage. The offset voltage of 1.14 V can be achieved using a voltage divider to divide the 3.3 V source. We know the desired division ratio is <span class="math inline">\(1.14/3.3=0.345\)</span>. Reviewing the resistor table we can see that a divider given by <span class="math inline">\(R_2=1k\Omega\)</span> and <span class="math inline">\(R_1=2k\Omega\)</span> will give us a ratio of 0.333. This is not exactly the desired value of 0.345, but is within 10%.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If we wanted to get closer, we could increase the ratio by adding an additional resistor in series with <span class="math inline">\(R_2\)</span>. In general, we will need to always confirm the measured resistance value in lab with a mulitmeter before we try to dial the division ratio in given that the 5% tolerance given by the resistors will already create a level of inaccuracy compared to our design values.</p>
+</div>
+</div>
+<p>Now that we have all the values, we can draw the final circuit diagram which is shown below in <a href="#fig-completed-example-offset-amplifier" class="quarto-xref">Figure&nbsp;2</a>.</p>
+<div id="fig-completed-example-offset-amplifier" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-completed-example-offset-amplifier-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/solution-offset-amplifier-schematic.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-completed-example-offset-amplifier-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: A schematic of the completed offset amplifier.
+</figcaption>
+</figure>
+</div>
 </section>
-<section id="thermocouples-nist-tables-and-cold-junction-compensation" class="level2">
-<h2 class="anchored" data-anchor-id="thermocouples-nist-tables-and-cold-junction-compensation">Thermocouples, NIST Tables and Cold Junction Compensation</h2>
 </section>
-<section id="who-is-bringing-the-ice" class="level2">
-<h2 class="anchored" data-anchor-id="who-is-bringing-the-ice">Who is Bringing the Ice?</h2>
 </section>
-<section id="results" class="level2">
-<h2 class="anchored" data-anchor-id="results">Results</h2>
+<section id="video-examples" class="level2">
+<h2 class="anchored" data-anchor-id="video-examples">Video Examples</h2>
+<section id="confirming-operation-with-falstad" class="level3">
+<h3 class="anchored" data-anchor-id="confirming-operation-with-falstad">Confirming operation with Falstad</h3>
+<div id="fig-circuit-simulation" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-circuit-simulation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/falstad-offset-amplifier-schematic.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-circuit-simulation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-circuit-simulation" class="quarto-xref">Figure&nbsp;3</a> shows the circuit used to simulate our design.</p>
+<p>The video below shows you how to build, debug, and simulate the circuit in online circuit simulator <a href="https://www.falstad.com/circuit/">Falstad</a>.</p>
+<div style="position: relative; padding-bottom: 62.5%; height: 0;">
+<iframe src="https://www.loom.com/embed/1e822a4ebbb44002b5233d876d227198?sid=edf51c85-3763-49e6-9300-3b7cc34fb673" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+</iframe>
+</div>
+</section>
+<section id="a-graphical-illustration-of-the-linear-mapping-of-an-offset-amplifier" class="level3">
+<h3 class="anchored" data-anchor-id="a-graphical-illustration-of-the-linear-mapping-of-an-offset-amplifier">A Graphical Illustration of the Linear Mapping of an Offset Amplifier</h3>
+<p>The video below shows you a graphical illustration of what an offset amplifier is doing: creating a linear mapping between a range of input and output voltages.</p>
+<div style="position: relative; padding-bottom: 62.5%; height: 0;">
+<iframe src="https://www.loom.com/embed/562fda7364c7401e935c0435bc8e8ae9?sid=3e397e8e-6e28-4a5d-80d9-7af8775208af" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+</iframe>
+</div>
+<!-- Link to solution circuit: https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgpABZsKBTAWjDACgBDEFBQ7lGiGx5BKASDzUqYePHDQwdMAgTYMNPGGKReksAqVqeNbVsKRyM2WwBO3GtLAohkQa2dUEV20LTgnQiL+HsiQPg6OzjSEbgFUaGF2iqL43KloktLwPsn28eICVPHZdoXcvHlC2HxZ5mwA5pXVkmXCgkUNIMR82H7dVTVQbABuXT2uY2mZ4LRF0DzyOlBQ0AhsAErgKC0OWy0YIVS72ND0RStrAO6TuIL9vR3X-RngNCmZbNcv3xUvYV+-dIVMDmIYAvgg+K7SFgyowsruWG3YK+SJIoKIiIo-60GIojRonEE-F4fLtT6BUTiYliclfAq7MplHFMxm-XYsxlc+IVTlUbDVJqED7XJw7aRvSphAD2XRAeKOkGIkhOrisWDQGAI6jOsDgECOcvoKAN3Ag2DYQA -->
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
