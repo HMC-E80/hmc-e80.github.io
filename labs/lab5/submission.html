@@ -263,27 +263,32 @@ ul.task-list li input[type="checkbox"] {
 <div style="page-break-after: always;"></div>
 <section id="report-on-the-fft-of-signals-directly-applied-to-the-scope" class="level2">
 <h2 class="anchored" data-anchor-id="report-on-the-fft-of-signals-directly-applied-to-the-scope">Report on the FFT of Signals Directly Applied to the Scope</h2>
-<p>The manual for this section requests five oscilloscope traces, which will be referred to here as traces 1-5 based on the list below. Traces should follow the instructions in the manual (50 cycles on screen, FFT span is 100 kHz, FFT center is 50 kHz). Further, the input signal should be on channel 1 and the math mode should be scaled to be clearly visible:</p>
-<ol type="1">
-<li>Signal 1</li>
-<li>Signal 2</li>
-<li>Signal 3 with rectangular window</li>
-<li>Signal 3 with Hanning window</li>
-<li>Signal 3 with rectangular window and changed x-axis</li>
-</ol>
-<p>The manual also requests two Matlab plots</p>
-<ol type="1">
-<li>Matlab plot of FFT magnitude for signal 3 with rectangular window</li>
-<li>Matlab plot of FFT magnitude for signal 3 with Hanning window</li>
-</ol>
+<p>The manual for this section requests four oscilloscope traces, which will be referred to here as traces 1-4 based on the list below. Traces should follow the instructions in the manual (50 cycles on screen, FFT span is 100 kHz, FFT center is 50 kHz). Further, the input signal should be on channel 1 and the math mode should be scaled to be clearly visible:</p>
+<dl>
+<dt>Trace 1</dt>
+<dd>
+Signal 1
+</dd>
+<dt>Trace 2</dt>
+<dd>
+Signal 2
+</dd>
+<dt>Trace 3</dt>
+<dd>
+Signal 3 with rectangular window
+</dd>
+<dt>Trace 4</dt>
+<dd>
+Signal 3 with Hanning window
+</dd>
+</dl>
+<p>The manual also requests one Matlab plot of FFT magnitude for signal 3 with Hanning window</p>
 <p>These traces and plots should be included in this section with a specific organization. They should be displayed as five side-by-side pairs of figures, each with ~1 sentence commenting on the differences between the left and the right figure. The commentary should specifically relate the changes to FFT theory. The pairs are:</p>
 <ul class="task-list">
 <li><label><input type="checkbox">Trace 1 vs.&nbsp;Trace 2</label></li>
 <li><label><input type="checkbox">Trace 1 vs.&nbsp;Trace 3</label></li>
 <li><label><input type="checkbox">Trace 3 vs.&nbsp;Trace 4</label></li>
-<li><label><input type="checkbox">Trace 4 vs.&nbsp;Trace 5</label></li>
-<li><label><input type="checkbox">Trace 3 vs.&nbsp;Matlab Plot 1</label></li>
-<li><label><input type="checkbox">Trace 4 vs.&nbsp;Matlab plot 2</label></li>
+<li><label><input type="checkbox">Trace 4 vs.&nbsp;Matlab plot</label></li>
 </ul>
 <p>Effort:</p>
 <ul class="task-list">
@@ -325,7 +330,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>Complete:</p>
 <ul class="task-list">
-<li><label><input type="checkbox">Includes calculations suggesting how frequently multipath patterns will repeat in data and how close to space x-axis samples to capture those patterns.</label></li>
+<li><label><input type="checkbox">Includes 2-3 sentences suggesting how frequently multipath patterns will repeat in data and how close to space x-axis samples to capture those patterns.</label></li>
 <li><label><input type="checkbox">Plots show multipath effects overlaid onto typical magnitude decay behavior.</label></li>
 <li><label><input type="checkbox">Analytical model for received Voltage magnitude is overlaid onto the plots.</label></li>
 </ul>
