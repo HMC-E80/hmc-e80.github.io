@@ -1,0 +1,34 @@
+---
+title: "Lab 6 Writing Template"
+subtitle: Introductions
+format:
+  html: default
+  docx: default
+---
+
+## Statement of Work
+
+This writing template is designed to help you plan your Tech Memo for Lab 6.
+
+At the completion of this worksheet you should have:
+
+- [ ] An outline of the sections you plan to include
+- [ ] A topic sentence for each paragraph
+- [ ] Sketches of each figure
+- [ ] Formatted versions of each equation you plan to include
+
+Before you leave writing section today you need to check in with a professor or proctor to demonstrate that you have completed this checklist.
+You will also submit a rough draft of your working document with the information above.
+
+## Outline
+
+There are a variety of ways that you can organize your tech memo.
+The list of sections below is a suggested place to start, but you should feel free to modify it to best fit your rhetorical purpose.
+Consult with a professor or proctor if you have any questions.
+
+1. Abstract
+2. Introduction
+3. Methods
+4. Results
+5. Conclusion
+6. References
