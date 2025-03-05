@@ -50,7 +50,40 @@ Once you've finished discussing that point, end that paragraph and start a new o
 
 In today's section, you'll use topic sentences as a way to outline your memo.
 
+A topic sentence should provide:
+
+- A clear and concise description of the main idea of the paragraph that follows.
+- A transition (if necessary) from previous discussion.
+
+For example, consider the following topics sentences for an introduction to the temperature sensing lab.
+
+> Each temperature sensor that will be tested has a varying response time based on its thermal mass.
+
+This sentence might be followed with a specific discussion of the response times.
+
+> In addition to varying response times, the range of temperatures that can be measured with each sensor should also be considered when selecting a sensor for a particular application.
+
+Note that this sentence provides a transition from previous discussion (response times) and then gives a clear statement of what will be discussed in the paragraph below.
+
 ### Equations
+
+Equations are an important part of technical writing as describing a concept with a mathematical description in an equation is often much clearer and more concise than trying to explain it in text.
+Whenever you prepare an equation in text, you should make sure they follow the following rules:
+
+- Format equation with an equation editor (e.g., MS Word's equation editor or LaTeX).
+- Use italicized math font (e.g., Cambria Math in MS Work) and Greek characters where appropriate.
+- Subscripts and superscripts should be used instead of carets ($^$) or underscores ($_$).
+- Every equation should be referenced in the main text.
+- Every variable should be defined.
+
+For example, consider the example below.
+
+$$
+y = m\cdot x+b
+$$ {#eq-example}
+
+@eq-example describes a line $y$, where $m$ is the slope and $b$ is the y-intercept.
+
 
 {{< pagebreak >}}
 
