@@ -32,3 +32,121 @@ Consult with a professor or proctor if you have any questions.
 4. Results
 5. Conclusion
 6. References
+
+## Technical Tune-up
+
+In this section we'll talk about how to do two more things you'll need to do in your tech memo and we haven't yet covered in detail: topic sentences and equations.
+
+### Topic Sentences
+
+Clear topic sentences are a critical part of making your technical writing accessible and easy to understand.
+Each paragraph should start with a clear topic sentence that states the main point of the paragraph.
+Then, the rest of the paragraph will provide supporting evidence.
+Once you finish that idea, you should start a new paragraph with a new topic sentence.
+
+The general temptation for budding engineers is to put too much in a single paragraph.
+Make sure you limit yourself to only one big idea per paragraph.
+Once you've finished discussing that point, end that paragraph and start a new one.
+
+In today's section, you'll use topic sentences as a way to outline your memo.
+
+### Equations
+
+{{< pagebreak >}}
+
+## Template
+
+The sections below include template text to help you begin outlining your tech memo.
+
+### List of Figures
+
+#### Figure 1
+
+::: {#fig-1}
+![](./img/plate_wing_2.png)
+
+Insert image above and replace this text with your caption.
+:::
+
+Replace image above and replace this text with your caption.
+
+- What are the key features of your figure/plot?
+- What should the reader take away?
+
+#### Figure 2
+
+::: {#fig-2}
+![](./img/plate_wing_2.png)
+
+Insert image above and replace this text with your caption.
+:::
+
+Replace this text with supporting text for your paragraph.
+
+- What are the key features of your figure/plot?
+- What should the reader take away?
+
+#### Figure 3
+
+::: {#fig-3}
+![](./img/plate_wing_2.png)
+
+Replace image above and replace this text with your caption.
+:::
+
+Replace image above and replace this text with your caption.
+
+- What are the key features of your figure/plot?
+- What should the reader take away?
+
+### Key Equations
+
+$$
+Replace with Equation
+$$
+
+Text to explain equation.
+
+
+$$
+Replace with Equation
+$$
+
+Text to explain equation.
+
+### Outline
+
+#### Abstract
+
+- Replace with paragraph 1 topic sentence
+- Replace with paragraph 2 topic sentence
+- Replace with paragraph 3 topic sentence
+- ...
+
+#### Introduction
+
+- Replace with paragraph 1 topic sentence
+- Replace with paragraph 2 topic sentence
+- Replace with paragraph 3 topic sentence
+- ...
+
+#### Methods
+
+- Replace with paragraph 1 topic sentence
+- Replace with paragraph 2 topic sentence
+- Replace with paragraph 3 topic sentence
+- ...
+
+#### Results
+
+- Replace with paragraph 1 topic sentence
+- Replace with paragraph 2 topic sentence
+- Replace with paragraph 3 topic sentence
+- ...
+
+#### Conclusion
+
+- Replace with paragraph 1 topic sentence
+- Replace with paragraph 2 topic sentence
+- Replace with paragraph 3 topic sentence
+- ...
