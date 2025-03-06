@@ -13,8 +13,8 @@ This writing template is designed to help you plan your Tech Memo for Lab 6.
 At the completion of this worksheet you should have:
 
 - [ ] An outline of the sections you plan to include
-- [ ] A topic sentence for each paragraph
-- [ ] Sketches of each figure
+- [ ] A topic sentence for each paragraph of your memo
+- [ ] Sketches or preliminary drafts of each figure
 - [ ] Formatted versions of each equation you plan to include
 
 Before you leave writing section today you need to check in with a professor or proctor to demonstrate that you have completed this checklist.
@@ -75,6 +75,7 @@ Whenever you prepare an equation in text, you should make sure they follow the f
 - Subscripts and superscripts should be used instead of carets ($^$) or underscores ($_$).
 - Every equation should be referenced in the main text.
 - Every variable should be defined.
+- Every equation should be numbered.
 
 For example, consider the example below.
 
@@ -83,7 +84,6 @@ y = m\cdot x+b
 $$ {#eq-example}
 
 @eq-example describes a line $y$, where $m$ is the slope and $b$ is the y-intercept.
-
 
 {{< pagebreak >}}
 
