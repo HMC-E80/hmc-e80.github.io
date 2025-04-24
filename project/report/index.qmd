@@ -8,7 +8,9 @@ Final Report Rubric [html](report_rubric.qmd) [docx](report_rubric.docx)
 
 Peer Review Feedback Instructions [html](peer-review-instructions.qmd)
 
-Peer Review Worksheet [html](peer-review-worksheet.qmd) [docx](peer-review-worksheet.docx)
+Peer Review Worksheet [html](peer-review-worksheet.qmd) [docx](peer-review-worksheet.docx) 
+
+Poster Session Timeline [html](poster-session.qmd)
 
 <!-- Final Presentation Schedule [gdoc]({{<var urls.final_presentation_schedule>}}) -->
 
@@ -83,7 +85,19 @@ It is possible to deviate from this outline if doing so would tell your robot's 
 
 ## Final Poster
 
+Each team will create a poster, to be delivered during Presentation Days on {{<var dates.poster_session >}}. 
+Each team poster should be completed and uploaded by {{<var dates.poster_draft >}} at noon.
 
+Each poster should include the following sections:
+
+- **Introduction:** Briefly describe your final project, what you set out to measure, and the hypothesis you planned to test.
+- **Methods:** Describe the sensors you built and how they were used to measure the quantities of interest.
+- **Results:** Present plots of data captured from your deployment at pHake Lake and/or Dana Point along with captions.
+- **Discussion:** Discuss what the results mean and opportunities for future work.
+
+Instructions for the poster session can be found [here](poster-session.qmd).
+
+A PowerPoint Template for your poster is provided [here](examples/E80_PosterTemplate.pptx).
 
 ## Final Report
 
