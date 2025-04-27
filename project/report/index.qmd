@@ -4,6 +4,8 @@ title: "E80 Project Final Deliverables"
 
 <!-- Final Presentation Rubric [html](presentation_rubric.qmd) [docx](presentation_rubric.docx) -->
 
+Final Report Worksheet [html](report-worksheet.qmd) [docx](report-worksheet.docx)
+
 Final Report Rubric [html](report_rubric.qmd) [docx](report_rubric.docx)
 
 Peer Review Feedback Instructions [html](peer-review-instructions.qmd)
