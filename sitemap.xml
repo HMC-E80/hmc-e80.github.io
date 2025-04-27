@@ -2,250 +2,262 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://HMC-E80.github.io/hmc-e80.github.io/lectures/index.html</loc>
-    <lastmod>2025-04-21T23:26:21.747Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab5/index.html</loc>
-    <lastmod>2025-04-21T23:26:21.484Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab4/prelab.html</loc>
-    <lastmod>2025-04-21T23:26:21.467Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab4/writing.html</loc>
-    <lastmod>2025-04-21T23:26:21.467Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab4/submission.html</loc>
-    <lastmod>2025-04-21T23:26:21.467Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab3/writing-template.html</loc>
-    <lastmod>2025-04-21T23:26:21.429Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab3/index.html</loc>
-    <lastmod>2025-04-21T23:26:21.429Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/overview/index.html</loc>
-    <lastmod>2025-04-21T23:26:21.682Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab2/writing-template.html</loc>
-    <lastmod>2025-04-21T23:26:21.425Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab2/index.html</loc>
-    <lastmod>2025-04-21T23:26:21.425Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab1/prelab.html</loc>
-    <lastmod>2025-04-21T23:26:21.369Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab1/writing.html</loc>
-    <lastmod>2025-04-21T23:26:21.369Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab1/submission.html</loc>
-    <lastmod>2025-04-21T23:26:21.369Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab0/index.html</loc>
-    <lastmod>2025-04-21T23:26:21.348Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab6/writing.html</loc>
-    <lastmod>2025-04-21T23:26:21.682Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab6/submission.html</loc>
-    <lastmod>2025-04-21T23:26:21.682Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/project/report/presentation_rubric.html</loc>
-    <lastmod>2025-04-21T23:26:21.869Z</lastmod>
+    <lastmod>2025-04-27T03:10:18.032Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/hmc-e80.github.io/project/report/index.html</loc>
-    <lastmod>2025-04-21T23:26:21.868Z</lastmod>
+    <lastmod>2025-04-27T03:10:18.150Z</lastmod>
   </url>
   <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/project/build/checklist-breadboard.html</loc>
-    <lastmod>2025-04-21T23:26:21.813Z</lastmod>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/project/report/report-worksheet.html</loc>
+    <lastmod>2025-04-27T03:10:18.151Z</lastmod>
   </url>
   <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/project/build/checklist-soldered-pcb.html</loc>
-    <lastmod>2025-04-21T23:26:21.813Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/project/deploy/deployment-checklist.html</loc>
-    <lastmod>2025-04-21T23:26:21.820Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/project/proposal/template.html</loc>
-    <lastmod>2025-04-21T23:26:21.860Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/project/proposal/submission.html</loc>
-    <lastmod>2025-04-21T23:26:21.860Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/project/navigation/index.html</loc>
-    <lastmod>2025-04-21T23:26:21.834Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/reference/board/index.html</loc>
-    <lastmod>2025-04-21T23:26:21.869Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/reference/design/index.html</loc>
-    <lastmod>2025-04-21T23:26:21.876Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/reference/tutorials/designing-an-offset-amplifier/index.html</loc>
-    <lastmod>2025-04-21T23:26:22.013Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/reference/equipment/index.html</loc>
-    <lastmod>2025-04-21T23:26:21.876Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/presentation/project/project-presentation.html</loc>
-    <lastmod>2025-04-21T23:26:21.813Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/presentation/kickoff/team-contract-specs.html</loc>
-    <lastmod>2025-04-21T23:26:21.767Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/presentation/kickoff/team-contract-template.html</loc>
-    <lastmod>2025-04-21T23:26:21.767Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/presentation/kickoff/team-contract-guidelines.html</loc>
-    <lastmod>2025-04-21T23:26:21.767Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/presentation/kickoff/kickoff-presentation.html</loc>
-    <lastmod>2025-04-21T23:26:21.767Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/presentation/project/abstract-writing-assignment.html</loc>
-    <lastmod>2025-04-21T23:26:21.767Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/index.html</loc>
-    <lastmod>2025-04-21T23:26:21.329Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/reference/tutorials/index.html</loc>
-    <lastmod>2025-04-21T23:26:22.013Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/reference/inventory/index.html</loc>
-    <lastmod>2025-04-21T23:26:22.011Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/reference/history/index.html</loc>
-    <lastmod>2025-04-21T23:26:22.011Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/project/navigation/submission.html</loc>
-    <lastmod>2025-04-21T23:26:21.834Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/project/overview/index.html</loc>
-    <lastmod>2025-04-21T23:26:21.835Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/project/proposal/index.html</loc>
-    <lastmod>2025-04-21T23:26:21.859Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/project/deploy/index.html</loc>
-    <lastmod>2025-04-21T23:26:21.820Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/project/build/index.html</loc>
-    <lastmod>2025-04-21T23:26:21.820Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/project/build/checklist-integrate.html</loc>
-    <lastmod>2025-04-21T23:26:21.813Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/project/report/report_rubric.html</loc>
-    <lastmod>2025-04-21T23:26:21.869Z</lastmod>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/project/report/poster-session.html</loc>
+    <lastmod>2025-04-27T03:10:18.151Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/hmc-e80.github.io/project/report/peer-review-instructions.html</loc>
-    <lastmod>2025-04-21T23:26:21.868Z</lastmod>
+    <lastmod>2025-04-27T03:10:18.150Z</lastmod>
   </url>
   <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/project/report/peer-review-worksheet.html</loc>
-    <lastmod>2025-04-21T23:26:21.869Z</lastmod>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/project/build/checklist-breadboard.html</loc>
+    <lastmod>2025-04-27T03:10:18.096Z</lastmod>
   </url>
   <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab6/index.html</loc>
-    <lastmod>2025-04-21T23:26:21.682Z</lastmod>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/project/build/checklist-soldered-pcb.html</loc>
+    <lastmod>2025-04-27T03:10:18.096Z</lastmod>
   </url>
   <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab6/writing-template.html</loc>
-    <lastmod>2025-04-21T23:26:21.682Z</lastmod>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/project/deploy/deployment-checklist.html</loc>
+    <lastmod>2025-04-27T03:10:18.102Z</lastmod>
   </url>
   <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab0/matlab-startup.html</loc>
-    <lastmod>2025-04-21T23:26:21.348Z</lastmod>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/project/navigation/index.html</loc>
+    <lastmod>2025-04-27T03:10:18.116Z</lastmod>
   </url>
   <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab1/index.html</loc>
-    <lastmod>2025-04-21T23:26:21.369Z</lastmod>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/project/proposal/index.html</loc>
+    <lastmod>2025-04-27T03:10:18.141Z</lastmod>
   </url>
   <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab1/writing-template.html</loc>
-    <lastmod>2025-04-21T23:26:21.369Z</lastmod>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/project/proposal/submission.html</loc>
+    <lastmod>2025-04-27T03:10:18.141Z</lastmod>
   </url>
   <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab2/submission.html</loc>
-    <lastmod>2025-04-21T23:26:21.425Z</lastmod>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/reference/board/index.html</loc>
+    <lastmod>2025-04-27T03:10:18.152Z</lastmod>
   </url>
   <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab2/writing.html</loc>
-    <lastmod>2025-04-21T23:26:21.425Z</lastmod>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/reference/tutorials/index.html</loc>
+    <lastmod>2025-04-27T03:10:18.293Z</lastmod>
   </url>
   <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab2/prelab.html</loc>
-    <lastmod>2025-04-21T23:26:21.425Z</lastmod>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/reference/history/index.html</loc>
+    <lastmod>2025-04-27T03:10:18.292Z</lastmod>
   </url>
   <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab3/submission.html</loc>
-    <lastmod>2025-04-21T23:26:21.429Z</lastmod>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/reference/design/index.html</loc>
+    <lastmod>2025-04-27T03:10:18.158Z</lastmod>
   </url>
   <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab3/writing.html</loc>
-    <lastmod>2025-04-21T23:26:21.429Z</lastmod>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/presentation/project/abstract-writing-assignment.html</loc>
+    <lastmod>2025-04-27T03:10:18.051Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/presentation/kickoff/kickoff-presentation.html</loc>
+    <lastmod>2025-04-27T03:10:18.051Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/presentation/kickoff/team-contract-guidelines.html</loc>
+    <lastmod>2025-04-27T03:10:18.051Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab3/prelab.html</loc>
-    <lastmod>2025-04-21T23:26:21.429Z</lastmod>
+    <lastmod>2025-04-27T03:10:17.728Z</lastmod>
   </url>
   <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab4/index.html</loc>
-    <lastmod>2025-04-21T23:26:21.467Z</lastmod>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab3/index.html</loc>
+    <lastmod>2025-04-27T03:10:17.728Z</lastmod>
   </url>
   <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab4/writing-template.html</loc>
-    <lastmod>2025-04-21T23:26:21.467Z</lastmod>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab3/writing-template.html</loc>
+    <lastmod>2025-04-27T03:10:17.728Z</lastmod>
   </url>
   <url>
-    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab5/submission.html</loc>
-    <lastmod>2025-04-21T23:26:21.484Z</lastmod>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab1/writing.html</loc>
+    <lastmod>2025-04-27T03:10:17.670Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab1/submission.html</loc>
+    <lastmod>2025-04-27T03:10:17.670Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab2/prelab.html</loc>
+    <lastmod>2025-04-27T03:10:17.724Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab2/index.html</loc>
+    <lastmod>2025-04-27T03:10:17.724Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab2/writing-template.html</loc>
+    <lastmod>2025-04-27T03:10:17.724Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab4/writing.html</loc>
+    <lastmod>2025-04-27T03:10:17.763Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab4/submission.html</loc>
+    <lastmod>2025-04-27T03:10:17.763Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab6/writing.html</loc>
+    <lastmod>2025-04-27T03:10:17.970Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab6/submission.html</loc>
+    <lastmod>2025-04-27T03:10:17.970Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab0/matlab-startup.html</loc>
+    <lastmod>2025-04-27T03:10:17.649Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab5/writing.html</loc>
-    <lastmod>2025-04-21T23:26:21.484Z</lastmod>
+    <lastmod>2025-04-27T03:10:17.780Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab5/submission.html</loc>
+    <lastmod>2025-04-27T03:10:17.780Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab5/index.html</loc>
+    <lastmod>2025-04-27T03:10:17.780Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab0/index.html</loc>
+    <lastmod>2025-04-27T03:10:17.649Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab6/writing-template.html</loc>
+    <lastmod>2025-04-27T03:10:17.970Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab6/index.html</loc>
+    <lastmod>2025-04-27T03:10:17.969Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab4/writing-template.html</loc>
+    <lastmod>2025-04-27T03:10:17.763Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab4/index.html</loc>
+    <lastmod>2025-04-27T03:10:17.763Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab4/prelab.html</loc>
+    <lastmod>2025-04-27T03:10:17.763Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab2/submission.html</loc>
+    <lastmod>2025-04-27T03:10:17.724Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab2/writing.html</loc>
+    <lastmod>2025-04-27T03:10:17.724Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab1/writing-template.html</loc>
+    <lastmod>2025-04-27T03:10:17.670Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab1/index.html</loc>
+    <lastmod>2025-04-27T03:10:17.669Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab1/prelab.html</loc>
+    <lastmod>2025-04-27T03:10:17.669Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab3/submission.html</loc>
+    <lastmod>2025-04-27T03:10:17.728Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/lab3/writing.html</loc>
+    <lastmod>2025-04-27T03:10:17.728Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/labs/overview/index.html</loc>
+    <lastmod>2025-04-27T03:10:17.970Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/presentation/kickoff/team-contract-template.html</loc>
+    <lastmod>2025-04-27T03:10:18.051Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/presentation/kickoff/team-contract-specs.html</loc>
+    <lastmod>2025-04-27T03:10:18.051Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/presentation/project/project-presentation.html</loc>
+    <lastmod>2025-04-27T03:10:18.095Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/reference/inventory/index.html</loc>
+    <lastmod>2025-04-27T03:10:18.292Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/reference/equipment/index.html</loc>
+    <lastmod>2025-04-27T03:10:18.158Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/reference/tutorials/designing-an-offset-amplifier/index.html</loc>
+    <lastmod>2025-04-27T03:10:18.293Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/index.html</loc>
+    <lastmod>2025-04-27T03:10:17.631Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/project/proposal/template.html</loc>
+    <lastmod>2025-04-27T03:10:18.141Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/project/navigation/submission.html</loc>
+    <lastmod>2025-04-27T03:10:18.116Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/project/overview/index.html</loc>
+    <lastmod>2025-04-27T03:10:18.116Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/project/deploy/index.html</loc>
+    <lastmod>2025-04-27T03:10:18.102Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/project/build/index.html</loc>
+    <lastmod>2025-04-27T03:10:18.102Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/project/build/checklist-integrate.html</loc>
+    <lastmod>2025-04-27T03:10:18.096Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/project/report/peer-review-worksheet.html</loc>
+    <lastmod>2025-04-27T03:10:18.151Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/project/report/report_rubric.html</loc>
+    <lastmod>2025-04-27T03:10:18.151Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/project/report/final-report-template.html</loc>
+    <lastmod>2025-04-27T03:10:18.150Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/hmc-e80.github.io/project/report/presentation_rubric.html</loc>
+    <lastmod>2025-04-27T03:10:18.151Z</lastmod>
   </url>
 </urlset>
