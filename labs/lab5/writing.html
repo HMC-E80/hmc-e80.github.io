@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.29">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -67,14 +67,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../../">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-64a6037f4857ceebff346ce316655a16.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-6a05e5f35095af84eca7077488d38d8b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -298,13 +299,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="statement-of-work" class="level2">
 <h2 class="anchored" data-anchor-id="statement-of-work">Statement of Work</h2>
 <p>Create a short MATLAB script to simulate an 11 kHz square wave with an amplitude 1.5 V and an offset 0 V. You can do this however you would like, but the following code will work.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">N</span> <span class="op">=</span> <span class="fl">100</span><span class="op">;</span> <span class="co">% Number of points</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">N</span> <span class="op">=</span> <span class="fl">100</span><span class="op">;</span> <span class="co">% Number of points</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="va">freq</span> <span class="op">=</span> <span class="fl">11e3</span><span class="op">;</span> <span class="co">% Frequency [Hz]</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="va">period</span> <span class="op">=</span> <span class="fl">1</span><span class="op">/</span><span class="va">freq</span><span class="op">;</span> <span class="co">% Period [s]</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="va">dt</span> <span class="op">=</span> <span class="va">period</span><span class="op">/</span><span class="fl">10</span><span class="op">;</span> <span class="co">% Sampling period [s]</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="va">t</span> <span class="op">=</span> <span class="fl">0</span><span class="op">:</span><span class="va">dt</span><span class="op">:</span>(<span class="va">N</span><span class="op">-</span><span class="fl">1</span>)<span class="op">*</span><span class="va">dt</span><span class="op">;</span> <span class="co">% Time vector [s]</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="va">A</span> <span class="op">=</span> <span class="fl">1.5</span><span class="op">;</span> <span class="co">% Wave amplitude [V]</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="va">y</span> <span class="op">=</span> <span class="va">A</span><span class="op">*</span><span class="va">square</span>(<span class="fl">2</span><span class="op">*</span><span class="va">pi</span><span class="op">*</span><span class="va">freq</span><span class="op">*</span><span class="va">t</span>)<span class="op">;</span> <span class="co">% Create square wave (Note: must have the signal processing toolbox installed to use square())</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="va">y</span> <span class="op">=</span> <span class="va">A</span><span class="op">*</span><span class="va">square</span>(<span class="fl">2</span><span class="op">*</span><span class="va">pi</span><span class="op">*</span><span class="va">freq</span><span class="op">*</span><span class="va">t</span>)<span class="op">;</span> <span class="co">% Create square wave (Note: must have the signal processing toolbox installed to use square())</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Provide a rigorous mathematical derivation explaining your results from taking the FFT of this square wave. This is similar to a theory/background section of a standard engineering lab report. Also include a MATLAB figure showing the FFT (calculated in MATLAB) of your simulated time domain square wave data. Explain your derivation and use it to justify the power levels and frequency components in your measured data by writing 5-7 paragraphs of accompanying text. Pay attention to units on the x and y axes of any FFT you analyze, and justify how to change between different units. You may include other figures if needed.</p>
 <p>The document should contain as many mathematical equations and/or figures as you need, and five to seven paragraphs that describe the mathematical derivations and draw conclusions about the FFT. You must include equations in your text and reference them properly. In this assignment you may need to reference the laboratory manual, MATLAB documentation or mathematical references that you referred to when putting together your derivation. Though you don’t need to write a full-fledged introduction to the experiment, you will need to be mindful to orient the reader in the first paragraph.</p>
 <p>Be mindful of tense. Tense should always agree within a paragraph, but could vary within a report. Describing the methods in past tense (e.g.: “the voltage was measured”) and the future work in future perfect (e.g., “the voltage will be used to pick a resistor”) is reasonable. Be sure to avoid use of the first person including saying “we” or “the team,” both of which count as first person because you are implying the presence of an experimenter. Two ways to avoid first person are using passive voice (discouraged where possible) and making the technical artifact the subject of the sentence.</p>
@@ -467,13 +468,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
