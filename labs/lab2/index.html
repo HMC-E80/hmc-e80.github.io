@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-58135ac23807cc178f9fcb42480e9b01.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-6a05e5f35095af84eca7077488d38d8b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -299,7 +299,7 @@ window.Quarto = {
 </section>
 <section id="sec-teensy-analog" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="sec-teensy-analog"><span class="header-section-number">2</span> Logging Analog Data with the Teensy</h2>
-<p>The Teensy contains an analog to digital converter which can measure analog signals on many of its pins. In this section you will take your first analog measurement with the Teensy. You will use two different pieces of software to log data from the Teensy in this section: A program on your Teensy (written in Arduino code) will sample data, and a MATLAB program will interpret serial data sent by your Teensy. These programs sample the voltage on input A0, which is identified on the silk screen on the back of your motherboard.</p>
+<p>The Teensy contains an analog to digital converter, which can measure analog signals on many of its pins. In this section you will take your first analog measurement with the Teensy. You will use two different pieces of software to log data from the Teensy in this section: A program on your Teensy (written in Arduino code) will sample data, and a MATLAB program will interpret serial data sent by your Teensy. These programs sample the voltage on input A0, which is identified on the silk screen on the back of your motherboard.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -336,7 +336,7 @@ Warning
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
-<li>You may need to modify the <code>matlablogging.m</code> so that it points at the COM port which is correct for your Teensy.</li>
+<li>You may need to modify the <code>matlablogging.m</code> so that it points at the COM port that is correct for your Teensy.</li>
 <li><code>matlablogging.m</code> can’t access your COM port if the Arduino serial monitor is open, so be sure that it is closed.</li>
 <li>Sometimes COM ports get stuck in unusual states and MATLAB can’t access them. Closing all of your programs will usually fix this problem.</li>
 </ul>
@@ -388,7 +388,7 @@ Serial.println("Waiting..."); } </code></pre>
 <div id="fig-divider" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-divider-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../..\labs/lab2/img/voltagedividerwsiggen.png" class="img-fluid figure-img">
+<img src="../../labs/lab2/img/voltagedividerwsiggen.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-divider-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: A voltage divider
@@ -492,7 +492,7 @@ Table&nbsp;1: Impedance values and measurement instruments for experiment
 </div>
 <p>You will be asked to measure the output Voltage with the devices in the “Measure With” column, but some of the devices in the “Measure With” column may be unfamiliar to you. The devices are described below, and datasheet links are provided for each of them. To finish this section, you will need to read these datasheets to find the input impedance and the measurement uncertainty of each device.</p>
 <ul>
-<li>“Multimeter” refers to the multimeter chained to your desk. Our multimeters are the <a href="./doc/greenlee-multimeter-datasheet.pdf">Greenlee DM-210A Digital Multimeter</a>. Since the <span class="math inline">\(V_{out}\)</span> node will very with time, you should be sure to measure it with your multimeter set to AC mode. The uncertainty listings for multimeters can use unusual units (e.g.: dgt and rdg), so don’t forget about <a href="https://www.designworldonline.com/how-to-determine-digital-multimeter-accuracy/">this document on multimeter specifications</a> that we also link on the lectures page.</li>
+<li>“Multimeter” refers to the multimeter chained to your desk. Our multimeters are the <a href="./doc/greenlee-multimeter-datasheet.pdf">Greenlee DM-210A Digital Multimeter</a>. Since the <span class="math inline">\(V_{out}\)</span> node will vary with time, you should be sure to measure it with your multimeter set to AC mode. The uncertainty listings for multimeters can use unusual units (e.g.: dgt and rdg), so don’t forget about <a href="https://www.designworldonline.com/how-to-determine-digital-multimeter-accuracy/">this document on multimeter specifications</a> that we also link on the lectures page.</li>
 <li>“1x scope probe” refers to using a BNC cable with hooks directly connected to an oscilloscope input. BNC cables don’t have datasheets worth reading for this lab because they’re just wires, so they have a low series impedance. However, the oscilloscope itself (an <a href="./doc/InfiniiVision-2000-X-Series-Oscilloscopes.pdf">Agilent 2024A</a>) has an input impedance and accuracy that you will need to look up. You can also create a 1x probe by using an oscilloscope probe with a switch set to 1x mode, and it will behave the same way as a BNC cable. When you are using a 1x probe, you must change the channel setting of the oscilloscope to be 1x. Note that some scopes call the channel setting 1:1 instead of 1x.</li>
 <li>“10x scope probe” refers to connecting a standard oscilloscope probe (set to 10x mode if there’s a switch) to an oscilloscope input. The gray scope probes in the lab are <a href="./doc/oscilloscope-passive-probes-N28xxA-ds.pdf">Keysight N2842A</a> probes, and the black scope probes in 10x mode have a similar input impedance. Note that the input impedance of a scope probe is added <em>in series</em> with that of the oscilloscope itself, so the datasheet may report a total “terminated impedance” that includes the input impedance of the oscilloscope. When you are using a 10x probe, you must change the channel setting of the oscilloscope to be 10x. Note that some scopes call the channel setting 10:1 instead of 10x.</li>
 <li>“Teensy” refers to making an analog measurement with your Teensy. You made similar to the measurements in <a href="#sec-teensy-analog" class="quarto-xref">Section&nbsp;2</a>. You made some calculations of the uncertainty of the Teensy, which arises from the size of the Teensy unit, in <a href="#sec-teensy-analog" class="quarto-xref">Section&nbsp;2</a>, and you can find information about Teensy input impedance in the videos. This information is also included in Section 4.8.2 of the <a href="./doc/IMXRT1060CEC_rev4.pdf">datasheet for the microcontroller on the Teensy board</a>.</li>
@@ -553,7 +553,7 @@ Note
 <div id="fig-opamp-low-z" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-opamp-low-z-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../..\labs/lab2/img/Opamp_Follower_Lowimpedance.png" class="img-fluid figure-img" data-ref-parent="fig-opamp-buffers">
+<img src="../../labs/lab2/img/Opamp_Follower_Lowimpedance.png" class="img-fluid figure-img" data-ref-parent="fig-opamp-buffers">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-opamp-low-z-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (a) An op-amp buffer connected to a low impedance divider.
@@ -565,7 +565,7 @@ Note
 <div id="fig-opamp-hi-z" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-opamp-hi-z-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../..\labs/lab2/img/Opamp_Follower_Highimpedance.png" class="img-fluid figure-img" data-ref-parent="fig-opamp-buffers">
+<img src="../../labs/lab2/img/Opamp_Follower_Highimpedance.png" class="img-fluid figure-img" data-ref-parent="fig-opamp-buffers">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-opamp-hi-z-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (b) An op-amp buffer connected to a high impedance divider.
@@ -584,7 +584,7 @@ Figure&nbsp;2: Op-amp buffers for divider experiments.
 <div id="fig-opamp-supplies" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-opamp-supplies-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../..\labs/lab2/img/unitygainwithcaps.png" class="img-fluid figure-img">
+<img src="../../labs/lab2/img/unitygainwithcaps.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-opamp-supplies-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;3: An op-amp schematic showing all connections.
@@ -616,7 +616,7 @@ Figure&nbsp;3: An op-amp schematic showing all connections.
 </ul>
 <p>You may have noticed that the circuit has many capacitors connected to its power rails. These are called decoupling or bypass capacitors and they help to stabilize (in a feedback sense) the operational amplifier. The high gain of operational amplifiers can cause op-amps to interact with long power busses to cause oscillations. This manifests as intermittent, large noise in the output of the circuit. You can almost totally eliminate this issue by placing bypass capacitors between the power supply pins and ground <em>as close as physically possible</em> to each op-amp.</p>
 <p>Standard practice recommends both a 10 µF electrolytic capacitor and a 0.1 µF standard capacitor. For E80 you can get away with just the 0.1 µF standard capacitor. If you use electrolytic capacitors, remember that they are polar and if you put them in backwards they won’t work and may explode.</p>
-<p>For dual supplies the capacitors run between V+ and ground, and V– and ground. For single-sided supplies, they run between V+ and ground. The circuit below shows a unity-gain buffer amp with dual power supplies and bypass capacitors.</p>
+<p>For dual supplies the capacitors run between V+ and ground, and V– and ground. For single-sided supplies, they run between V+ and ground. The circuit above shows a unity-gain buffer amp with dual power supplies and bypass capacitors.</p>
 </div>
 </div>
 </div>
