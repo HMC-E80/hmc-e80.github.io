@@ -276,42 +276,42 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>1</td>
-<td><a href="../..\labs/lab0" target="_blank">Lab 0: Tutorial and Skill Review</a></td>
+<td><a href="../..\labs/lab0">Lab 0: Tutorial and Skill Review</a></td>
 <td>Kickoff lecture</td>
 </tr>
 <tr class="even">
 <td>2</td>
-<td><a href="../..\labs/lab1" target="_blank">Lab 1: Go Autonomous</a></td>
+<td><a href="../..\labs/lab1">Lab 1: Go Autonomous</a></td>
 <td></td>
 </tr>
 <tr class="odd">
 <td>3</td>
-<td><a href="../..\labs/lab2" target="_blank">Lab 2: Basic Electrical Measurements</a></td>
+<td><a href="../..\labs/lab2">Lab 2: Basic Electrical Measurements</a></td>
 <td></td>
 </tr>
 <tr class="even">
 <td>4</td>
-<td><a href="../..\labs/lab3" target="_blank">Lab 3: Op Amps and Marine Sensors</a></td>
+<td><a href="../..\labs/lab3">Lab 3: Op Amps and Marine Sensors</a></td>
 <td></td>
 </tr>
 <tr class="odd">
 <td>5</td>
-<td><a href="../..\labs/lab4" target="_blank">Lab 4: Temperature Sensors</a></td>
+<td><a href="../..\labs/lab4">Lab 4: Temperature Sensors</a></td>
 <td></td>
 </tr>
 <tr class="even">
 <td>6</td>
-<td>Odd Numbered Teams: <a href="../..\labs/lab5" target="_blank">Lab 5: Underwater Acoustics</a> <br> Even Numbered Teams: <a href="../..\labs/lab6" target="_blank">Lab 6: Fluid Mechanics</a></td>
+<td>Odd Numbered Teams: <a href="../..\labs/lab5">Lab 5: Underwater Acoustics</a> <br> Even Numbered Teams: <a href="../..\labs/lab6">Lab 6: Fluid Mechanics</a></td>
 <td></td>
 </tr>
 <tr class="odd">
 <td>7</td>
-<td>Odd Numbered Teams: <a href="../..\labs/lab6" target="_blank">Lab 6: Fluid Mechanics</a> <br> Even Numbered Teams: <a href="../..\labs/lab5" target="_blank">Lab 5: Underwater Acoustics</a></td>
+<td>Odd Numbered Teams: <a href="../..\labs/lab6">Lab 6: Fluid Mechanics</a> <br> Even Numbered Teams: <a href="../..\labs/lab5">Lab 5: Underwater Acoustics</a></td>
 <td>Project kickoff lecture</td>
 </tr>
 <tr class="even">
 <td>8</td>
-<td><a href="../..\project/proposal" target="_blank">Project Proposal Week</a></td>
+<td><a href="../..\project/proposal">Project Proposal Week</a></td>
 <td>Proposal and tech memo</td>
 </tr>
 <tr class="odd">
@@ -370,7 +370,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="hardware-checkout" class="level2">
 <h2 class="anchored" data-anchor-id="hardware-checkout">Hardware checkout</h2>
-<p>You will work with some expensive hardware in this class. Expensive hardware like motherboards and batteries must be explicitly checked out from a professor or proctor so that we can track where it is. If any hardware that you checked out breaks, you will need to request a replacement from a professor. You make this request by filling out an <a href="https://drive.google.com/open?id=1FnHDzDSCuc3pAsEXzUg6BnTacfLF-ODs" target="_blank">error report</a> (paper copies will be in lab). This report needs to be well thought out; professors will reject reports that don’t represent sufficient testing or thought. You will keep this hardware with you throughout the semester in your storage box.</p>
+<p>You will work with some expensive hardware in this class. Expensive hardware like motherboards and batteries must be explicitly checked out from a professor or proctor so that we can track where it is. If any hardware that you checked out breaks, you will need to request a replacement from a professor. You make this request by filling out an <a href="https://drive.google.com/open?id=1FnHDzDSCuc3pAsEXzUg6BnTacfLF-ODs">error report</a> (paper copies will be in lab). This report needs to be well thought out; professors will reject reports that don’t represent sufficient testing or thought. You will keep this hardware with you throughout the semester in your storage box.</p>
 </section>
 <section id="warning-callouts" class="level2">
 <h2 class="anchored" data-anchor-id="warning-callouts">Warning Callouts</h2>
@@ -480,6 +480,11 @@ Warning
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {

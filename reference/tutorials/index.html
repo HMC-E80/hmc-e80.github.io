@@ -248,7 +248,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <section id="designing-an-offset-amplifier" class="level2">
-<h2 class="anchored" data-anchor-id="designing-an-offset-amplifier"><a href="./designing-an-offset-amplifier/" target="_blank">Designing an Offset Amplifier</a></h2>
+<h2 class="anchored" data-anchor-id="designing-an-offset-amplifier"><a href="./designing-an-offset-amplifier/">Designing an Offset Amplifier</a></h2>
 <p><img src="./designing-an-offset-amplifier/images/generic-offset-amplifier-schematic.png" class="img-fluid"></p>
 <p>This tutorial describes how to design, build, and simulate an offset amplifier.</p>
 
@@ -343,6 +343,11 @@ ul.task-list li input[type="checkbox"] {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {

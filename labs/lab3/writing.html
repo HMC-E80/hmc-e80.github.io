@@ -340,8 +340,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="tools-for-mechanical-drawings" class="level2">
 <h2 class="anchored" data-anchor-id="tools-for-mechanical-drawings">Tools for Mechanical Drawings</h2>
-<p>You may use whatever tool you are most comfortable with for preparing your mechanical drawings. <a href="http://www.solidworks.com" target="_blank">SolidWorks</a> is a good choice since you learn it in E4, but sometimes can be difficult to run on your personal computer. <a href="https://www.onshape.com" target="_blank">Onshape</a> is a popular alternative which runs in your browser and has free education accounts.</p>
-<p>If you’d like to use Onshape, first create an account. Then, you can create a new workspace and import the <code>.sldprt</code> files for the cuvette holder. Alternatively, you may directly make a copy of <a href="https://cad.onshape.com/documents/4b648f31b2d8954d7686e422/w/f1213c6513c0b4fa8d754f46/e/3acd2f1f4f0c2c48650767d5" target="_blank">this Onshape document</a>, which has the parts already imported and a drawing made to which you can directly add relevant dimensions for your figure.</p>
+<p>You may use whatever tool you are most comfortable with for preparing your mechanical drawings. <a href="http://www.solidworks.com">SolidWorks</a> is a good choice since you learn it in E4, but sometimes can be difficult to run on your personal computer. <a href="https://www.onshape.com">Onshape</a> is a popular alternative which runs in your browser and has free education accounts.</p>
+<p>If you’d like to use Onshape, first create an account. Then, you can create a new workspace and import the <code>.sldprt</code> files for the cuvette holder. Alternatively, you may directly make a copy of <a href="https://cad.onshape.com/documents/4b648f31b2d8954d7686e422/w/f1213c6513c0b4fa8d754f46/e/3acd2f1f4f0c2c48650767d5">this Onshape document</a>, which has the parts already imported and a drawing made to which you can directly add relevant dimensions for your figure.</p>
 <p>The screenshots below in <a href="#fig-onshape-1" class="quarto-xref">Figure&nbsp;1</a> and <a href="#fig-onshape-2" class="quarto-xref">Figure&nbsp;2</a> show how to copy the workspace and add dimensions.</p>
 <div id="fig-onshape-1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -455,6 +455,11 @@ Figure&nbsp;2: Use the Dimension tool in the Drawing tab to add dimensions to yo
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {

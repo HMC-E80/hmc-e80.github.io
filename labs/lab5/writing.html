@@ -408,9 +408,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="resources" class="level2">
 <h2 class="anchored" data-anchor-id="resources">Resources</h2>
 <ul>
-<li>This document is a great place to start: “<a href="https://gradstudents.carleton.ca/2014/use-mathematical-equations-thesis/" target="_blank">How to Use Mathematical Equations in Your Thesis</a>”, by Rozita Rashtchi.</li>
+<li>This document is a great place to start: “<a href="https://gradstudents.carleton.ca/2014/use-mathematical-equations-thesis/">How to Use Mathematical Equations in Your Thesis</a>”, by Rozita Rashtchi.</li>
 <li>Make sure you refer to equations as “Equation 1” or “Eq. 1” not “eq 1” or any other way, and be sure to include units wherever appropriate. Units should not be italicized.</li>
-<li>Pages 4-8 of the “<a href="https://texdoc.org/serve/amsldoc.pdf/0" target="_blank">User’s Guide for the <code>amsmath</code> Package</a>”</li>
+<li>Pages 4-8 of the “<a href="https://texdoc.org/serve/amsldoc.pdf/0">User’s Guide for the <code>amsmath</code> Package</a>”</li>
 </ul>
 
 
@@ -504,6 +504,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {

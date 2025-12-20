@@ -377,7 +377,7 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<p>These resistors are the ones stocked in the E80 parts boxes (according to the <a href="https://en.wikipedia.org/wiki/E_series_of_preferred_numbers" target="_blank">E12 preferred numbers</a>). Many other resistors are available in the analog lab closet. Don’t take resistors (or any other components) from E84 stock.</p>
+<p>These resistors are the ones stocked in the E80 parts boxes (according to the <a href="https://en.wikipedia.org/wiki/E_series_of_preferred_numbers">E12 preferred numbers</a>). Many other resistors are available in the analog lab closet. Don’t take resistors (or any other components) from E84 stock.</p>
 </section>
 <section id="capacitors" class="level3">
 <h3 class="anchored" data-anchor-id="capacitors">Capacitors</h3>
@@ -613,6 +613,11 @@ window.Quarto = {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {

@@ -241,29 +241,29 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>E80 uses several custom-build circuit boards. This page collects all of the design files for them in one place. The CAD files for each board are viewable using <a href="http://kicad.org/" target="_blank">KiCAD</a>.</p>
+<p>E80 uses several custom-build circuit boards. This page collects all of the design files for them in one place. The CAD files for each board are viewable using <a href="http://kicad.org/">KiCAD</a>.</p>
 <ul>
 <li>Motherboard (assembled in lab 1, used throughout)
 <ul>
-<li><a href="https://drive.google.com/file/d/1pk_mORYsxhedKjjqzhMrxj9H5ZVH3zqp/view?usp=sharing" target="_blank">schematic</a></li>
-<li><a href="https://drive.google.com/file/d/1pmm8xwpyAHAL5YvwMIQma4W8DuV-MP31/view?usp=sharing" target="_blank">layout</a></li>
-<li><a href="https://drive.google.com/file/d/1pi9WNW7WoIx80xgb_0LWSUyA-LMfp94Z/view?usp=sharing" target="_blank">KiCAD files</a></li>
-<li><a href="https://drive.google.com/file/d/18bMajGNwH1K2yHB1dQLZRx5eqrYiNQWA/view?usp=sharing" target="_blank">Introduction to the E80 Motherboard</a> document from lab 1</li>
-<li><a href="https://docs.google.com/document/d/1v1vE3GXXUw8o6T2IJJws_xr_b3ntKiPx/edit?usp=sharing&amp;ouid=105511935419108795487&amp;rtpof=true&amp;sd=true" target="_blank">Motherboard Assembly Document</a> from lab 1</li>
+<li><a href="https://drive.google.com/file/d/1pk_mORYsxhedKjjqzhMrxj9H5ZVH3zqp/view?usp=sharing">schematic</a></li>
+<li><a href="https://drive.google.com/file/d/1pmm8xwpyAHAL5YvwMIQma4W8DuV-MP31/view?usp=sharing">layout</a></li>
+<li><a href="https://drive.google.com/file/d/1pi9WNW7WoIx80xgb_0LWSUyA-LMfp94Z/view?usp=sharing">KiCAD files</a></li>
+<li><a href="https://drive.google.com/file/d/18bMajGNwH1K2yHB1dQLZRx5eqrYiNQWA/view?usp=sharing">Introduction to the E80 Motherboard</a> document from lab 1</li>
+<li><a href="https://docs.google.com/document/d/1v1vE3GXXUw8o6T2IJJws_xr_b3ntKiPx/edit?usp=sharing&amp;ouid=105511935419108795487&amp;rtpof=true&amp;sd=true">Motherboard Assembly Document</a> from lab 1</li>
 </ul></li>
 <li>Protoboard (provides a platform to solder your final sensor designs during the final project)
 <ul>
-<li><a href="img/protoboard.jpg" target="_blank">picture</a></li>
-<li><a href="https://drive.google.com/open?id=1pDpDoSiCln73AbEeGSCm-o7L3ETTjlG9" target="_blank">schematic</a></li>
-<li><a href="https://drive.google.com/open?id=1VT_N11I8Alo8cQPUag5moUuXnGed80gd" target="_blank">layout</a></li>
-<li><a href="https://drive.google.com/open?id=1NZ2dgC0PsSTcEsx0r2AD4S_84Wv5dpuq" target="_blank">KiCAD files</a></li>
+<li><a href="img/protoboard.jpg">picture</a></li>
+<li><a href="https://drive.google.com/open?id=1pDpDoSiCln73AbEeGSCm-o7L3ETTjlG9">schematic</a></li>
+<li><a href="https://drive.google.com/open?id=1VT_N11I8Alo8cQPUag5moUuXnGed80gd">layout</a></li>
+<li><a href="https://drive.google.com/open?id=1NZ2dgC0PsSTcEsx0r2AD4S_84Wv5dpuq">KiCAD files</a></li>
 </ul></li>
 <li>Pressure sensor adapter PCB for Project Jump Start diving activity
 <ul>
-<li><a href="https://drive.google.com/open?id=1LEGhYjHPmEy7TEqDj1MgLXBuiTXaycc3" target="_blank">picture</a></li>
-<li><a href="https://drive.google.com/open?id=1KLr1kXQqwAI7urwtZSGdn_CvxM2G_UvH" target="_blank">schematic</a></li>
-<li><a href="https://drive.google.com/open?id=1L3BF7umlX180xhOMnQ9K8Ubop1LF_Auk" target="_blank">layout</a></li>
-<li><a href="https://drive.google.com/open?id=1JyV-FahVbUNkURrN65v0to_McqpwAE12" target="_blank">KiCAD</a></li>
+<li><a href="https://drive.google.com/open?id=1LEGhYjHPmEy7TEqDj1MgLXBuiTXaycc3">picture</a></li>
+<li><a href="https://drive.google.com/open?id=1KLr1kXQqwAI7urwtZSGdn_CvxM2G_UvH">schematic</a></li>
+<li><a href="https://drive.google.com/open?id=1L3BF7umlX180xhOMnQ9K8Ubop1LF_Auk">layout</a></li>
+<li><a href="https://drive.google.com/open?id=1JyV-FahVbUNkURrN65v0to_McqpwAE12">KiCAD</a></li>
 </ul></li>
 </ul>
 
@@ -357,6 +357,11 @@ ul.task-list li input[type="checkbox"] {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {

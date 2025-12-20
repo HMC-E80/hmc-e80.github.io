@@ -278,7 +278,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Results &amp; Deployment Details</li>
 <li>Conclusion</li>
 </ol>
-<p>See the <a href="../../labs/lab6/writing-template.html" target="_blank">tech memo writing template</a> for a refresher on good topics sentences and equations.</p>
+<p>See the <a href="../../labs/lab6/writing-template.html">tech memo writing template</a> for a refresher on good topics sentences and equations.</p>
 </section>
 <section id="template" class="level2">
 <h2 class="anchored" data-anchor-id="template">Template</h2>
@@ -481,6 +481,11 @@ ul.task-list li input[type="checkbox"] {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {

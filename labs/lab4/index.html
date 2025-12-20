@@ -282,10 +282,10 @@ window.Quarto = {
 
 
 <p>Team size: 2</p>
-<p>Submission Sheet: <a href="../../labs/lab4/submission.html" target="_blank">html</a> <a href="./submission.docx">docx</a></p>
-<p>Prelab Help Sheet: <a href="../../labs/lab4/prelab.html" target="_blank">html</a></p>
-<p>Writing Assignment: <a href="../../labs/lab4/writing.html" target="_blank">html</a></p>
-<p>Writing Template: <a href="../../labs/lab4/writing-template.html" target="_blank">html</a> <a href="./writing-template.docx">docx</a></p>
+<p>Submission Sheet: <a href="../../labs/lab4/submission.html">html</a> <a href="./submission.docx">docx</a></p>
+<p>Prelab Help Sheet: <a href="../../labs/lab4/prelab.html">html</a></p>
+<p>Writing Assignment: <a href="../../labs/lab4/writing.html">html</a></p>
+<p>Writing Template: <a href="../../labs/lab4/writing-template.html">html</a> <a href="./writing-template.docx">docx</a></p>
 <section id="introduction" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1</span> Introduction</h2>
 <p>In this lab you will build some common sensors for the final project – a pressure sensor and a thermistor-based temperature sensor – perform a non-linear fit to thermistor data, and experiment with a thermocouple. Temperature and pressure have been called the “monarchs of measurements” by some Mudd professors because of their wide applicability in chemical and industrial processes, aerospace applications, and natural sciences (including oceanography), which is why we are working with these measurements this week. You might find some time in this lab to prepare a resubmission, possibly by revisiting data from labs 1-3.</p>
@@ -298,7 +298,7 @@ window.Quarto = {
 <li><label><input type="checkbox">Describe the basics of cold junction compensation</label></li>
 <li><label><input type="checkbox">Comment on the relative speed of solid-state linear temperature sensors, thermistors and thermocouples.</label></li>
 </ul>
-<p>This lab will be carried out as sub-teams of two. Policies for sub-teams are discussed in <a href="../../labs/lab2/index.html" target="_blank">Lab 2</a>.</p>
+<p>This lab will be carried out as sub-teams of two. Policies for sub-teams are discussed in <a href="../../labs/lab2/index.html">Lab 2</a>.</p>
 <p><strong>IT IS YOUR TEAM’S RESPONSIBILITY TO BRING ICE TO LAB. THIS IS PART OF YOUR PRELAB!</strong> Hot water will be available from the water heater in the lab.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -336,19 +336,19 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The only constant-temperature bath in the lab is the 25 °C bath in the E80 lab (B171). Use your <a href="https://generaltools.com/deluxe-stem-thermometer" target="_blank">digital thermometer</a> to monitor the temperatures of any other baths.</p>
+<p>The only constant-temperature bath in the lab is the 25 °C bath in the E80 lab (B171). Use your <a href="https://generaltools.com/deluxe-stem-thermometer">digital thermometer</a> to monitor the temperatures of any other baths.</p>
 </div>
 </div>
 </section>
 <section id="build-a-pressure-sensor-interface-circuit" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="build-a-pressure-sensor-interface-circuit"><span class="header-section-number">2</span> Build a Pressure Sensor Interface Circuit</h2>
-<p>E79 and E80 both rely on the same pressure sensor, the <a href="./assets/MPX5700-783436.pdf" target="_blank">MPX5700</a>, which has a reasonable range of output voltages over the depths that E79/E80 robots can easily traverse. However, that range of output voltages is small compared to the input range of the Teensy, so if you want to use this sensor in your final project, you will get large errors from Teensy quantization unless you build an amplifier. In this section, you will design an op-amp circuit that shifts and scales MPX5700 output Voltage range into the Teensy input range, which is approximately 0 V to 3.3 V. Use the <a href="./assets/21314g.pdf" target="_blank">MCP601</a> op-amp and Vdd = 5 V.</p>
+<p>E79 and E80 both rely on the same pressure sensor, the <a href="./assets/MPX5700-783436.pdf">MPX5700</a>, which has a reasonable range of output voltages over the depths that E79/E80 robots can easily traverse. However, that range of output voltages is small compared to the input range of the Teensy, so if you want to use this sensor in your final project, you will get large errors from Teensy quantization unless you build an amplifier. In this section, you will design an op-amp circuit that shifts and scales MPX5700 output Voltage range into the Teensy input range, which is approximately 0 V to 3.3 V. Use the <a href="./assets/21314g.pdf">MCP601</a> op-amp and Vdd = 5 V.</p>
 <ol type="1">
 <li>Find the Voltages the MPX5700 will produce when at depths between 0 m and 40 cm. Recall that the sensor will experience atmospheric pressure at 0m. We will call this Voltage range the target Voltage range.</li>
 <li>Design an op-amp circuit that will shift and scale MPX5700 output Voltages from the target voltage range to a new Voltage range that is suitable for reading by the Teensy. The new Voltage range should have a maximum of 2.2 V and a minimum of 1.1 V.</li>
 <li>If using an inverting amplifier configuration, the input impedance falls to <span class="math inline">\(R_i\)</span>. A unity gain buffer may be useful.</li>
 <li>Build the op-amp circuit and test it with a function generator to convince yourself it is working.</li>
-<li>Build an MPX5700 on your breadboard, and test that it works using a multimeter and a water column in a graduated cylinder. Section 6 in these <a href="https://sites.google.com/g.hmc.edu/e79-practicum/module-2/practicum-2d" target="_blank">instructions from E79</a> might help.</li>
+<li>Build an MPX5700 on your breadboard, and test that it works using a multimeter and a water column in a graduated cylinder. Section 6 in these <a href="https://sites.google.com/g.hmc.edu/e79-practicum/module-2/practicum-2d">instructions from E79</a> might help.</li>
 <li>Connect your MPX5700 to your op-amp circuit and test the assembled pressure sensor using a water column in a graduated cylinder. Record a depth vs.&nbsp;Voltage calibration curve, and include regression lines and appropriate measures of uncertainty.</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -367,7 +367,7 @@ Tip
 </section>
 <section id="build-a-thermistor-interface-circuit" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="build-a-thermistor-interface-circuit"><span class="header-section-number">3</span> Build a Thermistor Interface Circuit</h2>
-<p>In another echo of E79, this section is about building a thermistor-based temperature sensor. The sensor will consist of a resistor/thermistor divider circuit and an op-amp circuit. The op-amp circuit will shift and scale the divider circuit’s output Voltage range to better match the Teensy’s input Voltage range. The thermistor you will use is a <a href="./assets/NXFT15WB473FA2B150.pdf" target="_blank">Murata NXFT15WB473FA2B150</a>. You will need to predict the resistance as a function of temperature, and the formula you will use here shown in <a href="#eq-RB-thermistor" class="quarto-xref">Equation&nbsp;1</a> where <span class="math inline">\(R\)</span> is the current resistance of the thermistor at temperature <span class="math inline">\(T\)</span> in Kelvins, <span class="math inline">\(R_0\)</span> is the known resistance at reference temperature <span class="math inline">\(T_0\)</span> in Kelvins, and <span class="math inline">\(B\)</span> is a constant in the datasheet.</p>
+<p>In another echo of E79, this section is about building a thermistor-based temperature sensor. The sensor will consist of a resistor/thermistor divider circuit and an op-amp circuit. The op-amp circuit will shift and scale the divider circuit’s output Voltage range to better match the Teensy’s input Voltage range. The thermistor you will use is a <a href="./assets/NXFT15WB473FA2B150.pdf">Murata NXFT15WB473FA2B150</a>. You will need to predict the resistance as a function of temperature, and the formula you will use here shown in <a href="#eq-RB-thermistor" class="quarto-xref">Equation&nbsp;1</a> where <span class="math inline">\(R\)</span> is the current resistance of the thermistor at temperature <span class="math inline">\(T\)</span> in Kelvins, <span class="math inline">\(R_0\)</span> is the known resistance at reference temperature <span class="math inline">\(T_0\)</span> in Kelvins, and <span class="math inline">\(B\)</span> is a constant in the datasheet.</p>
 <p><span id="eq-RB-thermistor"><span class="math display">\[ R=R_0 \exp{\left(B(1/T-1/T_0)\right)}  \tag{1}\]</span></span></p>
 <ol type="1">
 <li>Predict the resistance you will see from the thermistor when it is in a 0 °C bath to a 20 °C bath.</li>
@@ -387,7 +387,7 @@ Tip
 </div>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>See the <a href="https://en.wikipedia.org/wiki/Thermistor#B_or_%CE%B2_parameter_equation" target="_blank">Thermistor wikipedia page</a> or the <a href="https://en.wikipedia.org/wiki/Steinhart%E2%80%93Hart_equation" target="_blank">Steinhart-Hart Equation Wikipedia page</a>.</p>
+<p>See the <a href="https://en.wikipedia.org/wiki/Thermistor#B_or_%CE%B2_parameter_equation">Thermistor wikipedia page</a> or the <a href="https://en.wikipedia.org/wiki/Steinhart%E2%80%93Hart_equation">Steinhart-Hart Equation Wikipedia page</a>.</p>
 </div>
 </div>
 </div>
@@ -403,7 +403,7 @@ Tip
 </div>
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>It is possible to do this lab by just connecting to thermistor leads using BNC-hook connections. However, this might be mechanically touchy in some situations, and you might find the thermistor wires to be short. You have the option of adding leads to your thermistor temperature probe using the <a href="https://sites.google.com/g.hmc.edu/e79-practicum/robot-umbilical" target="_blank">instructions from E79</a> in section 3. You DO NOT need to make a whole umbilical. You only need to make the temperature sensor. You will certainly need to extend thermistor leads if you choose to use a thermistor in your final project.</p>
+<p>It is possible to do this lab by just connecting to thermistor leads using BNC-hook connections. However, this might be mechanically touchy in some situations, and you might find the thermistor wires to be short. You have the option of adding leads to your thermistor temperature probe using the <a href="https://sites.google.com/g.hmc.edu/e79-practicum/robot-umbilical">instructions from E79</a> in section 3. You DO NOT need to make a whole umbilical. You only need to make the temperature sensor. You will certainly need to extend thermistor leads if you choose to use a thermistor in your final project.</p>
 </div>
 </div>
 </div>
@@ -425,7 +425,7 @@ Tip
 </section>
 <section id="measure-and-decode-thermocouple-voltage-vs.-temperature" class="level2" data-number="5">
 <h2 data-number="5" class="anchored" data-anchor-id="measure-and-decode-thermocouple-voltage-vs.-temperature"><span class="header-section-number">5</span> Measure and Decode Thermocouple Voltage vs.&nbsp;Temperature</h2>
-<p>In this section we will give thermocouples the same attention we’ve just given thermistors. Thermocouples are extremely common temperature probes that have huge ranges and fast response times. We don’t see many thermocouples on E80 final projects (you could change that!) because they have complicated interface requirements, but they’re such important sensors that we want to spend some time working with them in lab. As in <a href="#sec-therm" class="quarto-xref">Section&nbsp;4</a>, we’ll use the multimeter to measure properties here so that we can focus on the sensor itself. As a reminder, we use the <a href="./assets/52058078-5.pdf" target="_blank">Greenlee DM-210A Digital Multimeter</a>, and you may need to review the datasheet to understand how to take temperature measurements with the thermocouple. You’ll need the <a href="https://srdata.nist.gov/its90/main/its90_main_page.html" target="_blank">NIST tables</a> to decode your thermocouple Voltages.</p>
+<p>In this section we will give thermocouples the same attention we’ve just given thermistors. Thermocouples are extremely common temperature probes that have huge ranges and fast response times. We don’t see many thermocouples on E80 final projects (you could change that!) because they have complicated interface requirements, but they’re such important sensors that we want to spend some time working with them in lab. As in <a href="#sec-therm" class="quarto-xref">Section&nbsp;4</a>, we’ll use the multimeter to measure properties here so that we can focus on the sensor itself. As a reminder, we use the <a href="./assets/52058078-5.pdf">Greenlee DM-210A Digital Multimeter</a>, and you may need to review the datasheet to understand how to take temperature measurements with the thermocouple. You’ll need the <a href="https://srdata.nist.gov/its90/main/its90_main_page.html">NIST tables</a> to decode your thermocouple Voltages.</p>
 <ol type="1">
 <li>Obtain a type-K thermocouple from the instructors. Be sure to return it at the end of lab!</li>
 <li>Obtain a digital thermometer to use for “ground truth” temperature measurements.</li>
@@ -443,8 +443,8 @@ Tip
 </section>
 <section id="compare-temperature-sensor-settling-times" class="level2" data-number="6">
 <h2 data-number="6" class="anchored" data-anchor-id="compare-temperature-sensor-settling-times"><span class="header-section-number">6</span> Compare Temperature Sensor Settling Times</h2>
-<p>The response time of temperature sensors is critical to their performance. We’re going to race our temperature sensors to get a sense of their settling time. To avoid building some amplifiers (see the thermocouple <a href="../../reference/design/index.html" target="_blank">reference design</a> if you’re curious), we’re going to do this with the multimeter and a stopwatch instead of hooking everything up to the oscilloscope.</p>
-<p>We are going to round out our spread of temperature sensors by revisiting the <a href="./assets/DS20001942G.pdf" target="_blank">MCP9701A</a> temperature sensor from E79. This part is an example of an integrated linear circuit.</p>
+<p>The response time of temperature sensors is critical to their performance. We’re going to race our temperature sensors to get a sense of their settling time. To avoid building some amplifiers (see the thermocouple <a href="../../reference/design/index.html">reference design</a> if you’re curious), we’re going to do this with the multimeter and a stopwatch instead of hooking everything up to the oscilloscope.</p>
+<p>We are going to round out our spread of temperature sensors by revisiting the <a href="./assets/DS20001942G.pdf">MCP9701A</a> temperature sensor from E79. This part is an example of an integrated linear circuit.</p>
 <ol type="1">
 <li>Find a MCP9701A, solder leads to it and heat shrink the exposed metal.</li>
 <li>Prepare two baths at 0 °C and 50 °C.</li>
@@ -562,6 +562,11 @@ Note
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {

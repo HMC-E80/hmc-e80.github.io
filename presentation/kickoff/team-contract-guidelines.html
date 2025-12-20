@@ -260,11 +260,11 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="team-contract-template">Team Contract Template</h2>
 <section id="contract" class="level3">
 <h3 class="anchored" data-anchor-id="contract">Contract</h3>
-<p><a href="./team-contract-template.html" target="_blank">View</a> or <a href="./team-contract-template.docx">download</a> the team contract template.</p>
+<p><a href="./team-contract-template.html">View</a> or <a href="./team-contract-template.docx">download</a> the team contract template.</p>
 </section>
 <section id="specs" class="level3">
 <h3 class="anchored" data-anchor-id="specs">Specs</h3>
-<p><a href="./team-contract-specs.html" target="_blank">View</a> or <a href="./team-contract-specs.docx">download</a> the team contract specifications.</p>
+<p><a href="./team-contract-specs.html">View</a> or <a href="./team-contract-specs.docx">download</a> the team contract specifications.</p>
 </section>
 </section>
 <section id="guidelines-for-writing-a-team-contract" class="level2">
@@ -382,6 +382,11 @@ These developments generally are precursors to the <strong>performing</strong> s
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {

@@ -341,8 +341,8 @@ ul.task-list li input[type="checkbox"] {
 <li>The title of article, patent, conference paper, etc., in quotation marks.</li>
 <li>The title of the journal or book from which the reference is taken in italics.</li>
 </ol>
-<p>The short guide from IEEE available <a href="./assets/IEEE Citation Guidelines.pdf" target="_blank">here</a> has a list of helpful examples for you to follow (e.g., how to cite a datasheet).</p>
-<p>While there are many tools like <a href="https://www.zotero.org" target="_blank">Zotero</a> or <a href="https://www.mendeley.com" target="_blank">Mendeley</a>, which can help you manage your research library and automatically generate citations, these are most useful once you are dealing with a large number of references. You are welcome to use these tools for this writeup if you wish, but it will likely take more time to set up and wrangle with the tool than it would to manually format the references yourself by hand. For this lab, we recommend that you write the references without the aid of a reference manager so that you can understand the main components of a reference. Whether you use a tool or not, you should always double check your citations to make sure they are complete and accurate.</p>
+<p>The short guide from IEEE available <a href="./assets/IEEE Citation Guidelines.pdf">here</a> has a list of helpful examples for you to follow (e.g., how to cite a datasheet).</p>
+<p>While there are many tools like <a href="https://www.zotero.org">Zotero</a> or <a href="https://www.mendeley.com">Mendeley</a>, which can help you manage your research library and automatically generate citations, these are most useful once you are dealing with a large number of references. You are welcome to use these tools for this writeup if you wish, but it will likely take more time to set up and wrangle with the tool than it would to manually format the references yourself by hand. For this lab, we recommend that you write the references without the aid of a reference manager so that you can understand the main components of a reference. Whether you use a tool or not, you should always double check your citations to make sure they are complete and accurate.</p>
 
 
 </section>
@@ -435,6 +435,11 @@ ul.task-list li input[type="checkbox"] {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {

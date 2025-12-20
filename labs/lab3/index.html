@@ -252,10 +252,10 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Team Size: 2</p>
-<p>Submission Sheet: <a href="../../labs/lab3/submission.html" target="_blank">html</a> <a href="./submission.docx">docx</a></p>
-<p>Prelab Help Sheet: <a href="../../labs/lab3/prelab.html" target="_blank">html</a></p>
-<p>Writing Assignment: <a href="../../labs/lab3/writing.html" target="_blank">html</a></p>
-<p>Writing Template: <a href="../../labs/lab3/writing-template.html" target="_blank">html</a> <a href="./writing-template.docx">docx</a></p>
+<p>Submission Sheet: <a href="../../labs/lab3/submission.html">html</a> <a href="./submission.docx">docx</a></p>
+<p>Prelab Help Sheet: <a href="../../labs/lab3/prelab.html">html</a></p>
+<p>Writing Assignment: <a href="../../labs/lab3/writing.html">html</a></p>
+<p>Writing Template: <a href="../../labs/lab3/writing-template.html">html</a> <a href="./writing-template.docx">docx</a></p>
 <section id="introduction" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1</span> Introduction</h2>
 <p>In this lab you will use operational amplifiers to build a turbidity meter, a sensor that measures the relative clarity of water. Turbidity is an interesting and useful measurement in oceanography, so this turbidity meter could be a stepping stone towards your final project. Further, the op-amp techniques that you use to construct this turbidity meter will be useful in any final project you select; the ability to buffer, shift and scale Voltages and currents is essential to many instruments. Extra credit sections offer the opportunity to explore other interesting marine sensors, and those sensors are also excellent candidates for final project sensors.</p>
@@ -271,7 +271,7 @@ ul.task-list li input[type="checkbox"] {
 <li><label><input type="checkbox">Build and test a complex design by thoughtfully testing and assembling individual parts</label></li>
 <li><label><input type="checkbox">Use linear regression to extract slope, offset, and appropriate error measures from data</label></li>
 </ul>
-<p>This lab will be carried out as sub-teams of two. Policies for sub-teams are discussed in <a href="../../labs/lab2/index.html" target="_blank">lab 2</a>.</p>
+<p>This lab will be carried out as sub-teams of two. Policies for sub-teams are discussed in <a href="../../labs/lab2/index.html">lab 2</a>.</p>
 <p>This lab asks you to prepare solutions and handle chemicals. Though we aren’t working with anything hazardous (or which can’t be flushed down the drain), be sure to observe good chemical hygiene practices and use gloves and goggles when handling chemicals or sensitive equipment. Always use gloves when handling any glassware that will go into the turbidity meter.</p>
 <p>There are a few resources used in this lab that must be shared. Please respect others and don’t abuse these resources. All the teams in lab are going to have to share a single turbidity meter and beaker of mystery solution. There will be three digital scales available. For Extra Credit 1, we have a limited supply of buffer solutions that must last for all our labs, so don’t pour out more than you need to cover your pH probes, and be sure to use the smaller set of beakers.</p>
 </section>
@@ -280,7 +280,7 @@ ul.task-list li input[type="checkbox"] {
 <p>In this section, we are going to demonstrate an op-amp failing to work properly, and then we will correct that failure by modifying the op-amp circuit. The modified circuit will be an offset amplifier, which is one of the most common circuits in the final project.</p>
 <p>Do the following:</p>
 <ol type="1">
-<li>Use an <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/21314g.pdf" target="_blank">MCP601</a> to build a single-rail, non-inverting amplifier with a gain of two. Pay attention to the maximum allowed supply Voltage. Use a 5 V supply Voltage.</li>
+<li>Use an <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/21314g.pdf">MCP601</a> to build a single-rail, non-inverting amplifier with a gain of two. Pay attention to the maximum allowed supply Voltage. Use a 5 V supply Voltage.</li>
 <li>Apply a 100 mV amplitude sine wave with a 1 V offset to the amplifier input and observe the output. This output should match simple theoretical calculations well.</li>
 <li>Apply a 100 mV amplitude sine wave with a 0 V offset to the amplifier input and observe the output. This output should have severe non-idealities related to the amplifier behavior. Identify the non-idealities, and explain why they are present in the output.</li>
 <li>Design, build and test an offset amplifier that can take a 100mV amplitude sine wave with 0 V offset and produce an output with none of the non-idealities in step 3. Use a 5 V supply Voltage and aim for a gain of negative two (an inverting gain) and an appropriate offset.</li>
@@ -304,9 +304,9 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="sec-led" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="sec-led"><span class="header-section-number">3</span> 555 Timer LED Driver</h2>
-<p>Turbidity is a measurement that depends on illuminating a water sample, then measuring the ratio of transmitted and 90° scattered light. We are going to use an infrared light-emitting diode (IR LED) called the <a href="https://media.digikey.com/PDF/Data%20Sheets/Everlight%20PDFs/9-IR1503.pdf" target="_blank">IR1503</a> to illuminate our sample, and we are going to blink it on and off using a circuit called a <a href="https://www.ti.com/lit/ds/symlink/se555.pdf?" target="_blank">555 timer</a>. Because IR radiation is invisible to the human eye, we need a sensor to tell if our system is working, and the <a href="http://datasheet.octopart.com/OP950-TT-datasheet-7617992.pdf" target="_blank">OP950</a> IR photodiode serves that job well.</p>
+<p>Turbidity is a measurement that depends on illuminating a water sample, then measuring the ratio of transmitted and 90° scattered light. We are going to use an infrared light-emitting diode (IR LED) called the <a href="https://media.digikey.com/PDF/Data%20Sheets/Everlight%20PDFs/9-IR1503.pdf">IR1503</a> to illuminate our sample, and we are going to blink it on and off using a circuit called a <a href="https://www.ti.com/lit/ds/symlink/se555.pdf?">555 timer</a>. Because IR radiation is invisible to the human eye, we need a sensor to tell if our system is working, and the <a href="http://datasheet.octopart.com/OP950-TT-datasheet-7617992.pdf">OP950</a> IR photodiode serves that job well.</p>
 <ol type="1">
-<li>Build an astable 555 timer oscillator that has a frequency between 500 Hz and 1 kHz and a <a href="https://en.wikipedia.org/wiki/Duty_cycle" target="_blank">duty cycle</a> of approximately 60%. If you use reference designs from the datasheet, <strong>omit RL</strong> from any circuit you build.</li>
+<li>Build an astable 555 timer oscillator that has a frequency between 500 Hz and 1 kHz and a <a href="https://en.wikipedia.org/wiki/Duty_cycle">duty cycle</a> of approximately 60%. If you use reference designs from the datasheet, <strong>omit RL</strong> from any circuit you build.</li>
 <li>Verify that your oscillator is working by measuring the oscillator output Voltage and the capacitor Voltage.</li>
 <li>Attach a series combination of a resistor and an IR1503 the output of the 555 timer. Select the resistor value and diode orientation such that you will drive 20-40 mA through the diode when the output is high. Selecting this resistor will require approximating the diode’s forward voltage (VF) at your desired current level, and information in the datasheet can help you figure out an appropriate VF.</li>
 <li>Measure the Voltage across the resistor in the resistor-IR1503 combination while the 555 timer is operating. Check that this Voltage waveform implies that the correct current waveform is passing through the IR1503.</li>
@@ -326,7 +326,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="callout-body-container callout-body">
 <p>LEDs, like all diodes, have an exponential relationship between the voltage applied across them and the current that passes through them. That means applying voltage carelessly can easily blow them up. We prevent such explosions by installing a resistor in series with our IR1503 when we use them. Note that you don’t have to calculate the exponential behavior of the diode because graphs and tables in the datasheet have all the information you need.</p>
 <p>The OP950 has similar behavior, so hook it up in series with resistors when you’re testing it on its own. However, we usually use OP950s in transimpedance amplifiers (see <a href="#sec-transimpedance" class="quarto-xref">Section&nbsp;4</a>), which protects them from careless overvoltage conditions.</p>
-<p><a href="http://www.physics.unlv.edu/~bill/PHYS483/LED_PIN.pdf" target="_blank">This reference</a> provides background information on LEDs and photodiodes.</p>
+<p><a href="http://www.physics.unlv.edu/~bill/PHYS483/LED_PIN.pdf">This reference</a> provides background information on LEDs and photodiodes.</p>
 </div>
 </div>
 </div>
@@ -346,7 +346,7 @@ Figure&nbsp;1: Schematic for a transimpedance amplifier
 </div>
 <ol type="1">
 <li>Analyze the transimpedance amplifier circuit to determine a formula that relates the diode current, ID, the feedback resistance, RF, and the output voltage, VOUT. Note that the diode acts like a current source pointing away from the op-amp when the photodiode is illuminated.</li>
-<li>Build a transimpedance amplifier using the <a href="https://www.digikey.com/en/products/detail/microchip-technology/MCP6004-I-P/523060" target="_blank">MCP6004</a> and an OP950. Configure unused op-amps as unity gain buffers with their inputs and outputs grounded.</li>
+<li>Build a transimpedance amplifier using the <a href="https://www.digikey.com/en/products/detail/microchip-technology/MCP6004-I-P/523060">MCP6004</a> and an OP950. Configure unused op-amps as unity gain buffers with their inputs and outputs grounded.</li>
 <li>Use your LED light source from <a href="#sec-led" class="quarto-xref">Section&nbsp;3</a> to test the transimpedance amplifier. If you are seeing no signal, try flipping your OP950 around. Adjust the feedback resistor so you are seeing a large output signal.</li>
 <li>Build and test a second copy of this op-amp circuit for use in your turbidity meter.</li>
 </ol>
@@ -369,7 +369,7 @@ Figure&nbsp;1: Schematic for a transimpedance amplifier
 </section>
 <section id="turbidity-measurements" class="level2" data-number="5">
 <h2 data-number="5" class="anchored" data-anchor-id="turbidity-measurements"><span class="header-section-number">5</span> Turbidity Measurements</h2>
-<p>Now it is time to assemble and use the turbidity meter. You will prepare solutions of known turbidity using the <a href="https://drive.google.com/file/d/1aRRGL3DGFiiZZP9Hb7o4LIQauYPwHxP3/view?usp=sharing" target="_blank">TU-2016</a> calibrated laboratory turbidity meter, illuminate them with the LED from <a href="#sec-led" class="quarto-xref">Section&nbsp;3</a>, then measure the transmitted and 90° scattered light using the transimpedance amplifiers from <a href="#sec-transimpedance" class="quarto-xref">Section&nbsp;4</a>. Arranging all of these elements – the sample cuvette holding your solutions, the LEDs and the photodiodes – requires a little bit of mechanical finesse, so we provide a 3D printed fixture (<a href="https://drive.google.com/open?id=1-pEcuCK1zzoU1dhB6DvrvpxaZKwmPZqh" target="_blank">instructions</a>, <a href="https://drive.google.com/open?id=1peSZif9B1dCVGjBPbByFevaRjnXc4YCT" target="_blank">Solidworks for base</a>, <a href="https://drive.google.com/open?id=1zrdfRXLA9rLq4WYW_jSm_Pb-nRgdP9Iq" target="_blank">Solidworks for cover</a>) for holding the cuvette, LED and photodiodes.</p>
+<p>Now it is time to assemble and use the turbidity meter. You will prepare solutions of known turbidity using the <a href="https://drive.google.com/file/d/1aRRGL3DGFiiZZP9Hb7o4LIQauYPwHxP3/view?usp=sharing">TU-2016</a> calibrated laboratory turbidity meter, illuminate them with the LED from <a href="#sec-led" class="quarto-xref">Section&nbsp;3</a>, then measure the transmitted and 90° scattered light using the transimpedance amplifiers from <a href="#sec-transimpedance" class="quarto-xref">Section&nbsp;4</a>. Arranging all of these elements – the sample cuvette holding your solutions, the LEDs and the photodiodes – requires a little bit of mechanical finesse, so we provide a 3D printed fixture (<a href="https://drive.google.com/open?id=1-pEcuCK1zzoU1dhB6DvrvpxaZKwmPZqh">instructions</a>, <a href="https://drive.google.com/open?id=1peSZif9B1dCVGjBPbByFevaRjnXc4YCT">Solidworks for base</a>, <a href="https://drive.google.com/open?id=1zrdfRXLA9rLq4WYW_jSm_Pb-nRgdP9Iq">Solidworks for cover</a>) for holding the cuvette, LED and photodiodes.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -412,7 +412,7 @@ Warning
 <p>Turbidity is an optical measurement that is related to the total undissolved solids in the water. Turbidity is an important environmental monitor since undissolved solids can be indicative of eroded runoff, disturbance of the sea floor or other sources of particles.</p>
 <p>Modern electronic measurements of turbidity are measured by shining light through a sample and measuring transmission — how much light passes directly through — and 90° scattering — how much light bounces off the particles to a sensor located at 90° relative to the light source.</p>
 <p>Devices which measure only 90° scattering are called nephelometers, and devices which measure the ratio of the 90° signal to the transmitted signal are called turbidity meters or turbidimeters. The relative effectiveness of the two devices depends on exactly how many solids are in the water.</p>
-<p><a href="https://www.lakesuperiorstreams.org/understanding/param_turbidity.html" target="_blank">This link</a> has some additional information about turbidity, including a picture of some suspensions of different turbidity for visual reference.</p>
+<p><a href="https://www.lakesuperiorstreams.org/understanding/param_turbidity.html">This link</a> has some additional information about turbidity, including a picture of some suspensions of different turbidity for visual reference.</p>
 </div>
 </div>
 </div>
@@ -508,6 +508,11 @@ Warning
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
