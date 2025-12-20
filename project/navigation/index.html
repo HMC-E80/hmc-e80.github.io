@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6a05e5f35095af84eca7077488d38d8b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-58135ac23807cc178f9fcb42480e9b01.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -297,7 +297,7 @@ window.Quarto = {
 
 
 <p>Team size: 4</p>
-<p>Submission sheet: <a href="../../project/navigation/submission.html">html</a> <a href="../../project/navigation/submission.docx">Word</a></p>
+<p>Submission sheet: <a href="../../project/navigation/submission.html">html</a> <a href="../..\project/navigation/submission.docx">Word</a></p>
 <p>Prelab help sheet: None, but you’re pros at this point.</p>
 <p>Writing: None.</p>
 <section id="introduction" class="level2" data-number="1">
@@ -311,7 +311,7 @@ window.Quarto = {
 </ul>
 <p>In this lab, every team is going to do some activities to learn about your robot software, then test out using IMU data to dead reckon a course, which is an echo of the work that you did in lab 1. After that, your team will select one of the following activities to pursue during this lab, each of which are designed to help prepare you for different types of projects:</p>
 <ul>
-<li><strong>Diving Activity</strong>: In this activity you will build a pressure sensor and a P control loop for robot depth. You will test your loop in the tank. Pick this if you plan to have your robot dive or use a depth-controlled winch. It is possible that there will be a queue for the tank if many students in your section are doing the diving activity. Feel free to start on your robot <a href="../../labs/build">build</a> while you are waiting.</li>
+<li><strong>Diving Activity</strong>: In this activity you will build a pressure sensor and a P control loop for robot depth. You will test your loop in the tank. Pick this if you plan to have your robot dive or use a depth-controlled winch. It is possible that there will be a queue for the tank if many students in your section are doing the diving activity. Feel free to start on your robot <a href="../..\labs/build">build</a> while you are waiting.</li>
 <li><strong>Surface Navigation Activity</strong>: In this activity you will use GPS and your magnetometer to control the bearing of your robot, and you will test that navigation system by walking around with your robot outside of Parsons. Pick this if you plan to do surface navigation, if you intend to have your robot keep station (stay still), or if you plan to do a hybrid diving/surface navigation scheme.</li>
 </ul>
 <p>After successful completion of this lab, you will be able to:</p>
@@ -425,7 +425,7 @@ Tip
 <p>In this section we’ll use our board stack and our IMU to try to calculate position by integrating noisy acceleration data. As the lecture videos suggest, the noise is likely to make this position measurement fail. We’re hoping to see a concrete demonstration of that principle.</p>
 <ol type="1">
 <li>Power your motherboard with a battery</li>
-<li>Run stock <code>E80_Lab_07_dive.ino</code> code without your modifications from last section, or run <code>Default_Robot.ino</code> if you don’t want to roll changes back. Make sure your <a href="https://www.st.com/content/ccc/resource/technical/document/datasheet/74/c4/19/54/62/c5/46/13/DM00177685.pdf/files/DM00177685.pdf/jcr:content/translations/en.DM00177685.pdf">IMU</a> is producing sensible accelerations by turning it around in the air and, if need be, reviewing your <a href="../../labs/lab1/">lab 1</a> results.</li>
+<li>Run stock <code>E80_Lab_07_dive.ino</code> code without your modifications from last section, or run <code>Default_Robot.ino</code> if you don’t want to roll changes back. Make sure your <a href="https://www.st.com/content/ccc/resource/technical/document/datasheet/74/c4/19/54/62/c5/46/13/DM00177685.pdf/files/DM00177685.pdf/jcr:content/translations/en.DM00177685.pdf">IMU</a> is producing sensible accelerations by turning it around in the air and, if need be, reviewing your <a href="../..\labs/lab1/">lab 1</a> results.</li>
 <li>With the data logger running, move your motherboard along a linear path in the horizontal x-y plane, keeping the orientation fixed. In other words, create your own global Cartesian coordinate frame on a table, set the position of the board stack to be (0 m,0 m,0 m), set the orientation of the board stack to be (0°, 0°, 0°). Then, move the board stack through the following positions: (0 m, 0 m, 0 m), (0.5 m, 0 m, 0 m), (0 m, 0 m, 0 m). Don’t move too fast, and note that it may help to wait 5 seconds at the (0.5 m, 0 m, 0 m) coordinate.</li>
 <li>Using MATLAB, load the IMU data and calculate the position of the board stack as a function of time by integrating accelerations.</li>
 <li>Plot the x,y coordinates of the board stack and comment on whether the plotted path resembles the straight 0.5 meter path.</li>
@@ -438,7 +438,7 @@ Tip
 <p>In this activity, you will design a P control loop that interacts with a pressure sensor to control the robot’s depth. You will need to modify <code>E80_Lab_07_dive.ino</code> and the <a href="https://github.com/HMC-E80/E80/tree/main/libraries/main">E80 C++ libraries</a> to do so.</p>
 <section id="calibrate-and-test-a-pressure-sensor" class="level3" data-number="3.1">
 <h3 data-number="3.1" class="anchored" data-anchor-id="calibrate-and-test-a-pressure-sensor"><span class="header-section-number">3.1</span> Calibrate and Test a Pressure Sensor</h3>
-<p>In order to implement closed loop depth control with your AUV, it first needs to be able to sense its current depth, which we will do by interpreting a pressure sensor. You have two options to make your pressure sensor: build the pressure sensor from your project proposal on a breadboard, or use one of our pre-made pressure sensor adapter PCBs (<a href="https://drive.google.com/open?id=1LEGhYjHPmEy7TEqDj1MgLXBuiTXaycc3">picture</a>, <a href="https://drive.google.com/open?id=1KLr1kXQqwAI7urwtZSGdn_CvxM2G_UvH">schematic</a>, <a href="https://drive.google.com/open?id=1L3BF7umlX180xhOMnQ9K8Ubop1LF_Auk">layout</a>, <a href="https://drive.google.com/open?id=1JyV-FahVbUNkURrN65v0to_McqpwAE12">KiCAD</a>). We recommend building your own design to get a start on your project <a href="../../project/build">build</a>, but feel free to use our PCB if you’re short on time. (Do note that our PCB uses a weird op-amp circuit that you’ll need to analyze on your own.)</p>
+<p>In order to implement closed loop depth control with your AUV, it first needs to be able to sense its current depth, which we will do by interpreting a pressure sensor. You have two options to make your pressure sensor: build the pressure sensor from your project proposal on a breadboard, or use one of our pre-made pressure sensor adapter PCBs (<a href="https://drive.google.com/open?id=1LEGhYjHPmEy7TEqDj1MgLXBuiTXaycc3">picture</a>, <a href="https://drive.google.com/open?id=1KLr1kXQqwAI7urwtZSGdn_CvxM2G_UvH">schematic</a>, <a href="https://drive.google.com/open?id=1L3BF7umlX180xhOMnQ9K8Ubop1LF_Auk">layout</a>, <a href="https://drive.google.com/open?id=1JyV-FahVbUNkURrN65v0to_McqpwAE12">KiCAD</a>). We recommend building your own design to get a start on your project <a href="../..\project/build">build</a>, but feel free to use our PCB if you’re short on time. (Do note that our PCB uses a weird op-amp circuit that you’ll need to analyze on your own.)</p>
 <p>In a deviation from previous practice, you will measure the operation of this sensor using your Teensy. By measuring your pressure directly in the Teensy, you can write code that interacts with your results in a direct way. We will take advantage of the serial data</p>
 <ol type="1">
 <li>Attach your pressure sensor output to pin A0 on the Teensy.</li>
@@ -570,7 +570,7 @@ Note
 <h3 data-number="4.2" class="anchored" data-anchor-id="gps-integration"><span class="header-section-number">4.2</span> GPS Integration</h3>
 <p>Integrate the <a href="https://www.adafruit.com/product/746">Adafruit Ultimate GPS</a> into the motherboard</p>
 <ol type="1">
-<li>Solder a 9x1 female header pin row onto the motherboard at the position labelled GPS (see <a href="../../labs/lab1/">Lab 1</a> for details).</li>
+<li>Solder a 9x1 female header pin row onto the motherboard at the position labelled GPS (see <a href="../..\labs/lab1/">Lab 1</a> for details).</li>
 <li>Try to find an assembled GPS. If you can’t find one, then solder male header pins to the BOTTOM of the GPS breakout board. Be sure to get the orientation correct; <a href="#fig-gps-on-board" class="quarto-xref">Figure&nbsp;1</a> shows the correct orientation.</li>
 <li>Use screws, nuts, and standoffs to help secure the GPS breakout board to the motherboard.</li>
 </ol>
