@@ -81,7 +81,7 @@
     "href": "presentation/kickoff/kickoff-presentation.html#scheduling-details",
     "title": "E80 Kickoff Presentation",
     "section": "Scheduling & Details",
-    "text": "Scheduling & Details\nE80 moves quickly and you’ve got multiple things to turn in each week.\nCanvas is the place to turn everything in!\n1. Lecture Quiz\n\nWatch lecture videos and take quiz each week. Due each Monday at 12 pm (noon).\n\n2. Lab Submission Sheet\n\nSubmit key deliverables collected in lab. Due at the end of your lab section each week (5:15 pm).\n\n3. Writing & Reflection Section\n\nBring deliverables from lab each week. Write a small section of a technical memo each week, review it to meet spec, and check it off with an instructor. Due at Friday at 3:15 pm.\n\n4. Weekly Team Check In\n\nFill out a survey to help you assess how your team is doing and if there are any issues developing. We will give you time to complete this at the beginning of the Writing & Reflection Section on Friday. Due Friday at 3:30 pm."
+    "text": "Scheduling & Details\nE80 moves quickly and you’ve got multiple things to turn in each week.\nCanvas is the place to turn everything in!\n1. Lecture Quiz\n\nWatch lecture videos and take quiz each week. Due each Monday at 12 pm (noon).\n\n2. Lab Submission Sheet\n\nSubmit key deliverables collected in lab. Due at the end of your lab section each week (12:15, 5:15 pm).\n\n3. Writing & Reflection Section\n\nBring deliverables from lab each week. Write a small section of a technical memo each week, review it to meet spec, and check it off with an instructor. Due at Friday at 3:15 pm.\n\n4. Weekly Team Check In\n\nFill out a survey to help you assess how your team is doing and if there are any issues developing. We will give you time to complete this at the beginning of the Writing & Reflection Section on Friday. Due Friday at 3:30 pm."
   },
   {
     "objectID": "presentation/kickoff/kickoff-presentation.html#weekly-schedule",
@@ -140,6 +140,20 @@
     "text": "Resubmission Policy Continued\nThe resubmission policy limitations are described in detail on the syllabus. Please read it carefully!\n\nResubmitted assignments are worth full credit (i.e., no penalty for resubmitted work).\nAll writing assignments may be revised and resubmitted during resubmit week.\nUp to two lab submission sheets may be resubmitted:\n\nOne from a full-team lab (Labs 1, 5, or 6). It must be resubmitted by the entire team. The updated grade for this lab will be applied to all the team members.\nOne from a sub-team lab (Labs 2, 3, or 4) that will be completed as an individual. The updated grade will be applied only to the individual who resubmitted it (i.e., not to the other team member)."
   },
   {
+    "objectID": "presentation/kickoff/kickoff-presentation.html#the-point-of-going-to-college-is-to",
+    "href": "presentation/kickoff/kickoff-presentation.html#the-point-of-going-to-college-is-to",
+    "title": "E80 Kickoff Presentation",
+    "section": "The point of going to college is to…",
+    "text": "The point of going to college is to…\n\nPursue specialized knowledge?\nHone marketable skills to land a high-paying job?\nBe exposed to different ways of thinking?\nClimb the class ladder and improve your life?\nExperiment with who you want to be(come)?\nLearn not to fear the unknown?\nBuild relationships and form a long-lasting network?\nTry to make an impact in the world?\n\nDoes generative AI support you achieving any of these goals?"
+  },
+  {
+    "objectID": "presentation/kickoff/kickoff-presentation.html#ai-usage-policy",
+    "href": "presentation/kickoff/kickoff-presentation.html#ai-usage-policy",
+    "title": "E80 Kickoff Presentation",
+    "section": "AI Usage Policy",
+    "text": "AI Usage Policy\nIn this course, we have two distinct AI policies…\n\n\nAll Writing and Labs (0-7): \n\n\nAI Level 0: Not Allowed: The goal of this policy is to encourage you to develop your writing and laboratory skills. We believe that the use of generative AI tools will hinder your learning on these assignments.\n\n\n\nProject Code Development: \n\n\nAI Level ?: You Decide: Soon your team will draft a contract. As part of that exercise you can discuss whether you collectively wish to use generative AI tools for code development during the project phase."
+  },
+  {
     "objectID": "presentation/kickoff/kickoff-presentation.html#google-project-aristotle-describes-the-attributes-of-a-high-functioning-team",
     "href": "presentation/kickoff/kickoff-presentation.html#google-project-aristotle-describes-the-attributes-of-a-high-functioning-team",
     "title": "E80 Kickoff Presentation",
@@ -166,13 +180,6 @@
     "title": "E80 Kickoff Presentation",
     "section": "You are going to build cool stuff!",
     "text": "You are going to build cool stuff!\n\n\n\n\n\nE80 main PCB\n\n\n\n\n\n\nPaul Zoeller, The Post and Courier.\n\n\n\nYour E80 board has a GPS, IMU, Tiny Computer, 5 amp Motor Driver, and you’ll use the full robot in Lab 1."
-  },
-  {
-    "objectID": "presentation/kickoff/kickoff-presentation.html#engineering-department-climate-survey",
-    "href": "presentation/kickoff/kickoff-presentation.html#engineering-department-climate-survey",
-    "title": "E80 Kickoff Presentation",
-    "section": "Engineering Department Climate Survey",
-    "text": "Engineering Department Climate Survey\nOpen your email and search for an email you received from Prof. Harris on Wednesday 1/21 with the subject line “Engineering Department Climate Survey”."
   },
   {
     "objectID": "presentation/kickoff/kickoff-presentation.html#snacks",
