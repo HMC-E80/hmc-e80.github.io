@@ -498,13 +498,20 @@ Table&nbsp;1: Impedance values and measurement instruments for experiment
 <li>“Teensy” refers to making an analog measurement with your Teensy. You made similar measurements in <a href="#sec-teensy-analog" class="quarto-xref">Section&nbsp;2</a>. You made some calculations of the uncertainty of the Teensy, which arises from the size of the Teensy unit, in <a href="#sec-teensy-analog" class="quarto-xref">Section&nbsp;2</a>, and you can find information about Teensy input impedance in the videos. This information is also included in Section 4.8.2 of the <a href="./doc/IMXRT1060CEC_rev4.pdf">datasheet for the microcontroller on the Teensy board</a>.</li>
 <li>Though this is not in the “Measure With” column, you will also need to find the output impedance and amplitude uncertainty of your signal generator. If you are using the scope-integrated WaveGen output, then you can infer the output impedance and find the uncertainty in the oscilloscope manual. If you are, unusually, using a stand-alone function generators (an <a href="./doc/33120A-Function_Arbitrary-Waveform Generator.pdf">HP33120A</a>), you can find these values in the datasheet.</li>
 </ul>
-<p>Do the following</p>
+<p>Do the following:</p>
 <ol type="1">
-<li>For the circuit shown in <a href="#fig-divider" class="quarto-xref">Figure&nbsp;1</a>, and for each of the values of Z1 and Z2 and the measuring instruments in <a href="#tbl-experiment" class="quarto-xref">Table&nbsp;1</a>, calculate the expected output voltages with confidence intervals accounting for uncertainty in both components and instruments. Assume the resistors are 5% resistors. Be sure to include the effects of instrument loading in your calculations. Note that these analytical calculations can be made during prelab.<br>
-</li>
+<li>For the circuit shown in <a href="#fig-divider" class="quarto-xref">Figure&nbsp;1</a>, and for each of the values of Z1 and Z2 and the measuring instruments in <a href="#tbl-experiment" class="quarto-xref">Table&nbsp;1</a>, calculate the expected output RMS voltages with confidence intervals accounting for uncertainty in both components and instruments. Note that these analytical calculations can be made during prelab.
+<ol type="a">
+<li>Assume the resistors are 5% resistors.</li>
+<li>Be sure to include the effects of instrument loading in your calculations.
+<ol type="i">
+<li>You may neglect parallel capacitance for all devices except for the Teensy. The motherboard resistance and parallel capacitance are <span class="math inline">\(R_{MTB}=1000\,\ohm\)</span> and <span class="math inline">\(C_{MTB}=100\,\mathrm{pF}\)</span>.</li>
+<li>The Teensy is in 10 bit mode. Note that ADLPC=0, ADHSC=1. Note that there is a <span class="math inline">\(2^N\)</span> (not a <span class="math inline">\(2*N\)</span>) in the computation of the least significant bit.</li>
+</ol></li>
+</ol></li>
+<li>Measure and record the value of each resistor you will use in your circuit, and verify that the values fall in the expected range.</li>
 <li>Build several copies of the circuit in <a href="#fig-divider" class="quarto-xref">Figure&nbsp;1</a>, one for each pair of Z1/Z2 values in <a href="#tbl-experiment" class="quarto-xref">Table&nbsp;1</a>. These can all be built simultaneously on the same breadboard if you lay it out carefully. Please trim your resistor leads so that they lie flat on the breadboard.</li>
-<li>Measure and record the value of each component used in your construction, then recalculate the output voltages using your measured component values.</li>
-<li>Drive the circuits using a signal generator and measure the output voltage with each of the instruments in the table.</li>
+<li>Drive the circuits using a signal generator and measure the output voltage with each of the instruments in the table. When measuring using the oscilloscope, it may help to use the measurement setting called DC RMS - Full Screen.</li>
 <li>Check whether or not the measured voltages lie within the predicted confidence intervals. Recall that you have two sets of predicted voltages, one based on nominal component values and one based on measured component values, so there are two sets of confidence intervals to check against. Also look at the percent error between the predictions and the measurements.</li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled">
