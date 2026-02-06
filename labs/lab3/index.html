@@ -278,6 +278,26 @@ ul.task-list li input[type="checkbox"] {
 <section id="op-amp-familiarity-and-offset-amplifier" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="op-amp-familiarity-and-offset-amplifier"><span class="header-section-number">2</span> Op-Amp Familiarity and Offset Amplifier</h2>
 <p>In this section, we are going to demonstrate an op-amp failing to work properly, and then we will correct that failure by modifying the op-amp circuit. The modified circuit will be an offset amplifier, which is one of the most common circuits in the final project.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Clean Breadboarding Tips
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>If you would like efficient help in debugging your circuits, it’s important to have a neat and organized breadboard. Here are some tips for keeping your breadboard neat and organized:</p>
+<ul>
+<li>Use color-coded wires to indicate different types of connections. Red wires are typically used for positive power supply connections, black wires are typically used for ground connections, and other colors are typically used for signal and jumping connections.</li>
+<li>Use short wires whenever possible to reduce clutter and make it easier to trace connections. Wires should not cross each other unnecessarily, and they should not have unnecessary bends or loops.</li>
+</ul>
+</div>
+</div>
+</div>
 <p>Do the following:</p>
 <ol type="1">
 <li>Use an <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/21314g.pdf">MCP601</a> to build a single-rail, non-inverting amplifier with a gain of two. Pay attention to the maximum allowed supply Voltage. Use a 5 V supply Voltage.</li>
@@ -286,7 +306,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Design, build and test an offset amplifier that can take a 100mV amplitude sine wave with 0 V offset and produce an output with none of the non-idealities in step 3. Use a 5 V supply Voltage and aim for a gain of negative two (an inverting gain) and an appropriate offset.</li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -295,7 +315,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>We are using the MCP601, MCP6002 and MCP6004 in this lab because they are single rail op-amps that are easy to power from a battery. That makes them particularly useful in the final project. You used a few dual rail op-amps in lab 2, and some final projects might demand dual rail op-amps for exacting measurements. For instance, extra credit 1 demands a TL081 for good reason. Talk to an instructor if you want to learn more about the difference between op-amps, which largely have to do with input impedances, output voltage ranges, and some properties that can affect uncertainty.</p>
 </div>
@@ -306,14 +326,14 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="3" class="anchored" data-anchor-id="sec-led"><span class="header-section-number">3</span> 555 Timer LED Driver</h2>
 <p>Turbidity is a measurement that depends on illuminating a water sample, then measuring the ratio of transmitted and 90° scattered light. We are going to use an infrared light-emitting diode (IR LED) called the <a href="https://media.digikey.com/PDF/Data%20Sheets/Everlight%20PDFs/9-IR1503.pdf">IR1503</a> to illuminate our sample, and we are going to blink it on and off using a circuit called a <a href="https://www.ti.com/lit/ds/symlink/se555.pdf?">555 timer</a>. Because IR radiation is invisible to the human eye, we need a sensor to tell if our system is working, and the <a href="http://datasheet.octopart.com/OP950-TT-datasheet-7617992.pdf">OP950</a> IR photodiode serves that job well.</p>
 <ol type="1">
-<li>Build an astable 555 timer oscillator that has a frequency between 500 Hz and 1 kHz and a <a href="https://en.wikipedia.org/wiki/Duty_cycle">duty cycle</a> of approximately 60%. If you use reference designs from the datasheet, <strong>omit RL</strong> from any circuit you build.</li>
+<li>Build an <strong>astable</strong> 555 timer oscillator that has a frequency between 500 Hz and 1 kHz and an <a href="https://en.wikipedia.org/wiki/Duty_cycle">output waveform duty cycle</a> of approximately 60%. If you use reference designs from the datasheet, <strong>omit RL</strong> from any circuit you build.</li>
 <li>Verify that your oscillator is working by measuring the oscillator output Voltage and the capacitor Voltage.</li>
 <li>Attach a series combination of a resistor and an IR1503 the output of the 555 timer. Select the resistor value and diode orientation such that you will drive 20-40 mA through the diode when the output is high. Selecting this resistor will require approximating the diode’s forward voltage (VF) at your desired current level, and information in the datasheet can help you figure out an appropriate VF.</li>
 <li>Measure the Voltage across the resistor in the resistor-IR1503 combination while the 555 timer is operating. Check that this Voltage waveform implies that the correct current waveform is passing through the IR1503.</li>
 <li>Build the switching time test circuit in the OP950 datasheet and use it to check that IR light is coming out of your IR1503. It’s easy to get the OP950 backwards or to pick an unsuitable resistor value, so play around a bit with flipping your OP950 polarity or trying a few different VR and RL values.</li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -322,7 +342,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>LEDs, like all diodes, have an exponential relationship between the voltage applied across them and the current that passes through them. That means applying voltage carelessly can easily blow them up. We prevent such explosions by installing a resistor in series with our IR1503 when we use them. Note that you don’t have to calculate the exponential behavior of the diode because graphs and tables in the datasheet have all the information you need.</p>
 <p>The OP950 has similar behavior, so hook it up in series with resistors when you’re testing it on its own. However, we usually use OP950s in transimpedance amplifiers (see <a href="#sec-transimpedance" class="quarto-xref">Section&nbsp;4</a>), which protects them from careless overvoltage conditions.</p>
@@ -346,12 +366,12 @@ Figure&nbsp;1: Schematic for a transimpedance amplifier
 </div>
 <ol type="1">
 <li>Analyze the transimpedance amplifier circuit to determine a formula that relates the diode current, ID, the feedback resistance, RF, and the output voltage, VOUT. Note that the diode acts like a current source pointing away from the op-amp when the photodiode is illuminated.</li>
-<li>Build a transimpedance amplifier using the <a href="https://www.digikey.com/en/products/detail/microchip-technology/MCP6004-I-P/523060">MCP6004</a> and an OP950. Configure unused op-amps as unity gain buffers with their inputs and outputs grounded.</li>
+<li>Build a transimpedance amplifier using the <a href="https://www.digikey.com/en/products/detail/microchip-technology/MCP6004-I-P/523060">MCP6004</a> and an OP950. The MCP6004 contains four op-amps, which is useful for space-saving. Configure unused op-amps on your MCP6004 as unity gain buffers with their inputs and outputs grounded.</li>
 <li>Use your LED light source from <a href="#sec-led" class="quarto-xref">Section&nbsp;3</a> to test the transimpedance amplifier. If you are seeing no signal, try flipping your OP950 around. Adjust the feedback resistor so you are seeing a large output signal.</li>
 <li>Build and test a second copy of this op-amp circuit for use in your turbidity meter.</li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -360,7 +380,7 @@ Figure&nbsp;1: Schematic for a transimpedance amplifier
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Note: Transimpedance amplifiers can be designed in many ways. The design we are recommending that you use is not the highest-speed design. High-speed designs will reverse bias the diode to reduce its junction capacitance (a type of parasitic capacitance found in all diodes) and add a capacitor in parallel with the feedback resistor to filter out noise. However, applying the reverse bias makes current flow the other direction, which would require that the op-amp be dual rail or have an offset to ensure correct operation. This design is the simplest for a single-rail system, and it doesn’t lose performance when measuring large, slow signals like ours.</p>
 </div>
@@ -398,7 +418,7 @@ Warning
 <li>Examine the effect of ambient light on your measurements by shadowing your experimental setup while watching a transimpedance amplifier Voltage. Use your observation to justify why we switch our LED on and off with the 555 timer and why we care about peak-peak voltages instead of absolute voltages.</li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -407,7 +427,7 @@ Warning
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Turbidity is an optical measurement that is related to the total undissolved solids in the water. Turbidity is an important environmental monitor since undissolved solids can be indicative of eroded runoff, disturbance of the sea floor or other sources of particles.</p>
 <p>Modern electronic measurements of turbidity are measured by shining light through a sample and measuring transmission — how much light passes directly through — and 90° scattering — how much light bounces off the particles to a sensor located at 90° relative to the light source.</p>
