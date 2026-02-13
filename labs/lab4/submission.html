@@ -299,24 +299,26 @@ window.Quarto = {
 <ul class="task-list">
 <li><label><input type="checkbox">Provides a picture of the pressure sensor interface circuit, including the pressure sensor</label></li>
 <li><label><input type="checkbox">Provides a schematic of the pressure sensor interface circuit, including the pressure sensor</label></li>
-<li><label><input type="checkbox">Equation relating depth to pressure sensor output Voltage is included.</label></li>
-<li><label><input type="checkbox">Equation relating op-amp input Voltage to op-amp output Voltage is included. May be incorrect if it looks like a good faith effort.</label></li>
+<li><label><input type="checkbox">Equation relating depth to pressure sensor output voltage is included.</label></li>
+<li><label><input type="checkbox">Equation relating op-amp input voltage to op-amp output voltage is included. May be incorrect if it looks like a good faith effort.</label></li>
 </ul>
 <p>Complete:</p>
 <ul class="task-list">
 <li><label><input type="checkbox">Equation relating op-amp input to op-amp output is correct.</label></li>
-<li><label><input type="checkbox">Equations are combined into an overall equation relating depth and op-amp output Voltage.</label></li>
+<li><label><input type="checkbox">Equations are combined into an overall equation relating depth and op-amp output voltage.</label></li>
 <li><label><input type="checkbox">Provides a table of results that matches the form below with at least five data points. Note the following:</label>
 <ul>
-<li>VOP is predicted output Voltage</li>
-<li>VOM is measured output Voltage</li>
-<li>ERR is error between prediction and measurement</li>
+<li>VOP is predicted output voltage</li>
+<li>VOM is measured output voltage</li>
+<li>V ERR is error between voltage prediction and measurement</li>
+<li>P<span class="math inline">\(_{est}\)</span> is the estimated pressure based on the measured output voltage</li>
 </ul></li>
-<li><label><input type="checkbox">A graph of a calibration curve between pressure and depth is provided. The data points match the points in the table below. Appropriate regressions and measures of uncertainty are plotted.</label></li>
-<li><label><input type="checkbox">Predicted and measured Voltages are consistent with equations.</label></li>
-<li><label><input type="checkbox">Predicted and measured Voltage at 0 m depth is close to 1.1 V or 2.2 V.</label></li>
-<li><label><input type="checkbox">Predicted and measured Voltage at 40 cm depth is close to 1.1 V or 2.2 V (whichever is farthest from the 0 m measurement)</label></li>
-<li><label><input type="checkbox">2-3 sentences on possible sources of uncertainty</label></li>
+<li><label><input type="checkbox">Predicted and measured voltages are consistent with equations.</label></li>
+<li><label><input type="checkbox">Estimated pressures are reasonable.</label></li>
+<li><label><input type="checkbox">Predicted and measured voltage at 0 m depth is close to 1.1 V or 2.2 V.</label></li>
+<li><label><input type="checkbox">Predicted and measured voltage at 40 cm depth is close to 1.1 V or 2.2 V (whichever is farthest from the 0 m measurement).</label></li>
+<li><label><input type="checkbox">A plot of depth vs voltage is provided. The data points match the points in the table below. Appropriate regressions and measures of uncertainty are plotted.</label></li>
+<li><label><input type="checkbox">2-3 sentences on possible sources of error between VOP and VOM.</label></li>
 </ul>
 <table class="caption-top table">
 <thead>
@@ -324,7 +326,8 @@ window.Quarto = {
 <th>Depth (cm)</th>
 <th>VOP (V)</th>
 <th>VOM (V)</th>
-<th>ERR (%)</th>
+<th>V ERR (%)</th>
+<th>P<span class="math inline">\(_{est}\)</span> (kPa)</th>
 </tr>
 </thead>
 <tbody>
@@ -333,9 +336,11 @@ window.Quarto = {
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr class="even">
 <td>…</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -350,17 +355,17 @@ window.Quarto = {
 <ul class="task-list">
 <li><label><input type="checkbox">Provides a picture of the thermistor interface circuit, including the thermistor divider.</label></li>
 <li><label><input type="checkbox">Provides a schematic of the thermistor interface circuit, including the thermistor divider.</label></li>
-<li><label><input type="checkbox">Equation relating op-amp input Voltage to op-amp output Voltage is included. May be incorrect if it looks like a good faith effort.</label></li>
+<li><label><input type="checkbox">Equation relating op-amp input voltage to op-amp output voltage is included. May be incorrect if it looks like a good faith effort.</label></li>
 </ul>
 <p>Complete:</p>
 <ul class="task-list">
 <li><label><input type="checkbox">Equation relating op-amp input to op-amp output is correct.</label></li>
 <li><label><input type="checkbox">Predicted and measured resistance values are reported for 0 °C and 20 °C temperatures.</label></li>
 <li><label><input type="checkbox">Predicted and measured output voltages are reported for 0 °C and 20 °C temperatures.</label></li>
-<li><label><input type="checkbox">Predicted Voltages and measured voltages are consistent with equations.</label></li>
-<li><label><input type="checkbox">Predicted and measured Voltage at 0 °C is close to 0.3 V or 3.0 V.</label></li>
-<li><label><input type="checkbox">Predicted and measured Voltage at 20 °C is close to 0.3V or 3.0 V (whichever is farthest from the 0 °C measurement).</label></li>
-<li><label><input type="checkbox">2-3 sentences on possible sources of uncertainty</label></li>
+<li><label><input type="checkbox">Predicted voltages and measured voltages are consistent with equations.</label></li>
+<li><label><input type="checkbox">Predicted and measured voltage at 0 °C is close to 0.3 V or 3.0 V.</label></li>
+<li><label><input type="checkbox">Predicted and measured voltage at 20 °C is close to 0.3V or 3.0 V (whichever is farthest from the 0 °C measurement).</label></li>
+<li><label><input type="checkbox">2-3 sentences on possible sources of error between VOP and VOM.</label></li>
 </ul>
 <table class="caption-top table">
 <thead>
@@ -395,22 +400,22 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="report-on-steinhart-hart-fitting-of-thermistor">Report on Steinhart-Hart Fitting of Thermistor</h2>
 <p>Provide a table of results that matches the form below. Note the following:</p>
 <ul>
-<li>T is the temperature measured by the digital thermometer</li>
+<li>T is the temperature measured by the digital thermometer.</li>
 <li>R is the resistance measured by the multimeter.</li>
 </ul>
-<p>Also provide extracted Steinhart-Hart coefficients with uncertainty and two graphs. One graph overlays R-T data and the Non-linear Steinhart-Hart fit. The other provides residuals from the Steinhart-Hart fit.</p>
 <p>Effort:</p>
 <ul class="task-list">
-<li><label><input type="checkbox">At least four of table rows are filled in.</label></li>
+<li><label><input type="checkbox">At least four of the table rows are filled in.</label></li>
+<li><label><input type="checkbox">Includes code showing how to calculate Steinhart-Hart coefficients.</label></li>
+<li><label><input type="checkbox">Reports Steinhart-Hart coefficients with 95% confidence intervals.</label></li>
 <li><label><input type="checkbox">Provides graph of T vs.&nbsp;R data.</label></li>
-<li><label><input type="checkbox">2-3 sentences on possible sources of uncertainty</label></li>
+<li><label><input type="checkbox">2-3 sentences on possible sources of uncertainty.</label></li>
 </ul>
 <p>Complete:</p>
 <ul class="task-list">
-<li><label><input type="checkbox">All table rows are filled in.</label></li>
-<li><label><input type="checkbox">Includes code showing how to calculate Steinhart-Hart coefficients.</label></li>
-<li><label><input type="checkbox">Includes a plot of T vs.&nbsp;R that shows measured points with uncertainty and fit based on extracted Steinhart-Hart coefficients.</label></li>
-<li><label><input type="checkbox">Include plot of residuals from Steinhart-Hart fit.</label></li>
+<li><label><input type="checkbox">All six table rows are filled in.</label></li>
+<li><label><input type="checkbox">Includes a plot of T vs.&nbsp;R that shows measured points, the fit based on extracted Steinhart-Hart coefficients, and functional and observational bounds.</label></li>
+<li><label><input type="checkbox">Includes a plot of residuals from Steinhart-Hart fit.</label></li>
 </ul>
 <table class="caption-top table">
 <thead>
@@ -441,21 +446,21 @@ window.Quarto = {
 <p>Provide a table of results that matches the form below. Note the following:</p>
 <ul>
 <li>TT is the temperature measured by the digital thermometer</li>
-<li>TK is the temperature measured by the type-K thermocouple when the multimeter was in temperature mode.</li>
-<li>V is the thermocouple Voltage when the multimeter was in Voltage mode.</li>
-<li>CJC is the cold junction compensation Voltage.</li>
-<li>TD is the temperature decoded from the Voltage in Thermocouple mode.</li>
+<li>TK is the temperature measured by the type-K thermocouple when the multimeter was in temperature mode</li>
+<li>V is the thermocouple voltage when the multimeter was in Voltage mode</li>
+<li>CJC is the cold junction compensation voltage</li>
+<li>TD is the temperature decoded from the voltage in Thermocouple mode</li>
 </ul>
 <p>Effort:</p>
 <ul class="task-list">
-<li><label><input type="checkbox">At least two of table rows are filled in.</label></li>
+<li><label><input type="checkbox">At least four of the table rows are filled in.</label></li>
 <li><label><input type="checkbox">CJC column has at least a reasonable guess.</label></li>
-<li><label><input type="checkbox">2-3 sentences on possible sources of uncertainty</label></li>
 </ul>
 <p>Complete:</p>
 <ul class="task-list">
-<li><label><input type="checkbox">All table rows are filled in.</label></li>
-<li><label><input type="checkbox">CJC column and decoded temperature are correct for measured Voltages.</label></li>
+<li><label><input type="checkbox">All six table rows are filled in.</label></li>
+<li><label><input type="checkbox">CJC column and decoded temperature are correct for measured voltages.</label></li>
+<li><label><input type="checkbox">2-3 sentences on possible sources of discrepancy between TT and TK.</label></li>
 </ul>
 <table class="caption-top table">
 <thead>
