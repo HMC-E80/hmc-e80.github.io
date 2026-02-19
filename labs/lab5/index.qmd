@@ -55,7 +55,7 @@ Do the following:
 
 ## Circuit Interfaces to Microphones {#sec-interface}
 
-You will need to use microphones to pick up sounds in the tank. We will be using a waterproof electret microphone called the [CME-1538-100LB](http://www.cui.com/product/resource/cme-1538-100lb.pdf). 
+You will need to use microphones to pick up sounds in the tank. We will be using a waterproof electret microphone called the [CME-1538-100LB](https://www.sameskydevices.com/product/resource/cme-1538-100lb.pdf). 
 
 1. Build the reference circuit from the datasheet for your electret microphone.
 2. Verify that you can receive signals with your electret microphone by clapping near it.  You will need to set your scope to "Single" mode to capture your clap.
