@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-da552e2c5b8a3b77aa8178cf3b4054db.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-6a05e5f35095af84eca7077488d38d8b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -266,7 +266,7 @@ ul.task-list li input[type="checkbox"] {
 <li><label><input type="checkbox">Use the gain-bandwidth product of an op-amp to predict the achievable maximum gain.</label></li>
 <li><label><input type="checkbox">Describe the effect of multipath on the amplitudes of acoustic measurements.</label></li>
 </ul>
-<p>This is a rotation lab, so not all teams will be working on this lab in the same week. Odd numbered teams (11, 23, 35, etc.) will do this lab in week 6, while Even numbered teams (12, 24, 36, etc.) work on <a href="../../labs/lab6/index.html">Lab 6</a>. Even numbered teams will do this lab in week 7, while Odd numbered teams work on lab 6. Be sure to watch the correct videos, do the correct quiz, and put in prelab effort for the correct lab!</p>
+<p>This is a rotation lab, so not all teams will be working on this lab in the same week. Odd numbered teams (11, 23, 35, etc.) will work on Lab 5 in the first week and Lab 6 in the second week; Even numbered teams (12, 24, 36, etc.) will work on Lab 6 in the first week and Lab 5 in the second week. Be sure to watch the correct videos, do the correct quiz, and put in prelab effort for the correct lab!</p>
 </section>
 <section id="introduction-to-the-fft" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="introduction-to-the-fft"><span class="header-section-number">2</span> Introduction to the FFT</h2>
@@ -302,7 +302,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="sec-interface" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="sec-interface"><span class="header-section-number">3</span> Circuit Interfaces to Microphones</h2>
-<p>You will need to use microphones to pick up sounds in the tank. We will be using a waterproof electret microphone called the <a href="http://www.cui.com/product/resource/cme-1538-100lb.pdf">CME-1538-100LB</a>.</p>
+<p>You will need to use microphones to pick up sounds in the tank. We will be using a waterproof electret microphone called the <a href="https://www.sameskydevices.com/product/resource/cme-1538-100lb.pdf">CME-1538-100LB</a>.</p>
 <ol type="1">
 <li>Build the reference circuit from the datasheet for your electret microphone.</li>
 <li>Verify that you can receive signals with your electret microphone by clapping near it. You will need to set your scope to “Single” mode to capture your clap.</li>
@@ -311,7 +311,7 @@ ul.task-list li input[type="checkbox"] {
 <p>The electret microphone output is small (generally 10s of mV depending on the sound) and zero centered, so you will need to amplify the tank signals to see them your oscilloscope. Designing an amplifier is trickier than you’d expect because of an op-amp parameter called the <a href="https://en.wikipedia.org/wiki/Gain%E2%80%93bandwidth_product">Gain-Bandwidth product</a>.</p>
 <ol type="1">
 <li>Build an amplifier with a gain of 100 by cascading two stages that each have a gain of 10. Use dual-rail op-amps (like the TL081 or OP07).</li>
-<li>Calculate the bandwidth you expect out of each op-amp stage using the gain-bandwidth product of your op-amps.</li>
+<li>Calculate the bandwidth you expect out of each op-amp stage using the gain-bandwidth product of your op-amps. How might this influence your choice of op-amp?</li>
 <li>Test your amplifier using appropriate signals from the function generator.</li>
 <li>Record your test results and your amplifier schematic in the submission sheet.</li>
 </ol>
@@ -422,7 +422,7 @@ Note
 </section>
 <section id="sampling-audio-with-a-teensy" class="level2" data-number="5">
 <h2 data-number="5" class="anchored" data-anchor-id="sampling-audio-with-a-teensy"><span class="header-section-number">5</span> Sampling Audio with a Teensy</h2>
-<p>This section requires that you use the Teensy sampling rigs (shown in <a href="#fig-sampling-rig" class="quarto-xref">Figure&nbsp;2</a>) that have been set up in the tank room. The rigs consist of an amplifier with an offset attached to an E80 motherboard that samples the amplifier output. We provide software, <a href="https://github.com/HMC-E80/E80-SP2023/blob/main/MATLAB/E80_Lab_05_Teensy_Rig.m">E80_Lab05_Teensy_Rig.m</a> and <a href="https://github.com/HMC-E80/E80-SP2023/blob/main/E80_Lab_05_Teensy_Rig/E80_Lab_05_Teensy_Rig.ino">E80_Lab05_Teensy_Rig.ino</a> (which is already running on the rig), that allows you to adjust the sample rate of the Teensy, and we’re going to use that power to explore how sample rate affects real world data samples.</p>
+<p>This section requires that you use the Teensy sampling rigs (shown in <a href="#fig-sampling-rig" class="quarto-xref">Figure&nbsp;2</a>) that have been set up in the tank room. The rigs consist of an amplifier with an offset attached to an E80 motherboard that samples the amplifier output. We provide software, <a href="https://github.com/HMC-E80/E80-SP2023/blob/main/MATLAB/E80_Lab_05_Teensy_Rig.m">E80_Lab05_Teensy_Rig.m</a> and <a href="https://github.com/HMC-E80/E80-SP2023/blob/main/E80_Lab_05_Teensy_Rig/E80_Lab_05_Teensy_Rig.ino">E80_Lab05_Teensy_Rig.ino</a> (which is already running on the rig), that allows you to adjust the sample rate of the Teensy, and we’re going to use that power to explore how sample rate affects real world data samples. DO NOT reprogram the Teensy for this section, as the provided software is already set up to sample data.</p>
 <div id="fig-sampling-rig" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-sampling-rig-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
