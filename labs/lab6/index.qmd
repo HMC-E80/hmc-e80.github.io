@@ -232,5 +232,5 @@ For parts 2 and 3 of this section, please make sure to watch  Grandma Spark's st
 
 ![](img/plate_wing_2.png)
 
-Dimensions of a "flat plate wing" inspired by https://grabcad.com/library/naca0012-airfoil-1
+Dimensions of a "flat plate wing" inspired by https://grabcad.com/library/naca0012-airfoil-1. Note that this is NOT a flat plate wing, and you should not recreate this exact geometry. Instead, you should create a flat plate wing with the same reference area as this geometry.
 :::
