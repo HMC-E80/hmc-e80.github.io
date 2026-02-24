@@ -1351,11 +1351,11 @@
     "text": "Keep answers as short as possible while still meeting specifications. Submit as a PDF.\nTeam Number:\nTeam Member Names:"
   },
   {
-    "objectID": "labs/lab6/submission.html#measured-calibration-curve-for-wind-tunnel-fan-speed-vs.-air-velocity",
-    "href": "labs/lab6/submission.html#measured-calibration-curve-for-wind-tunnel-fan-speed-vs.-air-velocity",
+    "objectID": "labs/lab6/submission.html#measured-calibration-curve-for-wind-tunnel-air-velocity-ms-vs.-fan-speed-rpm",
+    "href": "labs/lab6/submission.html#measured-calibration-curve-for-wind-tunnel-air-velocity-ms-vs.-fan-speed-rpm",
     "title": "Lab 6 Submission Sheet",
-    "section": "Measured Calibration Curve for Wind Tunnel Fan Speed vs. Air Velocity",
-    "text": "Measured Calibration Curve for Wind Tunnel Fan Speed vs. Air Velocity\nEffort:\n\nPresent\n\nComplete:\n\nCalibration curve shows correct numbers.\nCalibration curve shows correct regression line and uncertainty bounds."
+    "section": "Measured Calibration Curve for Wind Tunnel Air Velocity [m/s] vs. Fan Speed [RPM]",
+    "text": "Measured Calibration Curve for Wind Tunnel Air Velocity [m/s] vs. Fan Speed [RPM]\nEffort:\n\nPresent\n\nComplete:\n\nCalibration curve shows correct numbers.\nCalibration curve shows correct regression line and uncertainty bounds."
   },
   {
     "objectID": "labs/lab6/submission.html#plots-of-drag-forces-on-cylindrical-objects",
