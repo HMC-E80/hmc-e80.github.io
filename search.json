@@ -1558,7 +1558,7 @@
     "href": "presentation/project/project-presentation.html#experimental-design-considerations",
     "title": "E80 Project Kickoff Presentation",
     "section": "Experimental Design Considerations",
-    "text": "Experimental Design Considerations\n\n\n\n\n\n\n |\n\n\n\n\nImpact: What are the scientific and/or engineering goals of your E80 project?\nElectronics Elements: Audio, Digital interfaces, Communication, Telemetry\nSoftware Elements: Time of flight, Advanced navigation, Diving\nMechanical Elements: Shape, Sensor placement, Winch, Diving, Tethers"
+    "text": "Experimental Design Considerations\n\n\n\n\n\n\n |\n\n\n\n\nPurpose: What are the scientific and/or engineering goals of your E80 project? What are the social and/or environmental impacts of this choice?\nElectronics Elements: Audio, Digital interfaces, Communication, Telemetry\nSoftware Elements: Time of flight, Advanced navigation, Diving\nMechanical Elements: Shape, Sensor placement, Winch, Diving, Tethers"
   },
   {
     "objectID": "presentation/project/project-presentation.html#project-ideation-activity",
@@ -1575,11 +1575,18 @@
     "text": "Two dispositions for thought processes"
   },
   {
-    "objectID": "presentation/project/project-presentation.html#round-1-what-do-you-want-to-measure",
-    "href": "presentation/project/project-presentation.html#round-1-what-do-you-want-to-measure",
+    "objectID": "presentation/project/project-presentation.html#round-1-what-do-you-care-about",
+    "href": "presentation/project/project-presentation.html#round-1-what-do-you-care-about",
     "title": "E80 Project Kickoff Presentation",
-    "section": "Round 1: What do you want to measure?",
-    "text": "Round 1: What do you want to measure?\n\nWhat do you want your robot to measure?\nBroadly in two categories: scientific and engineering relationships\n\nScientific examples: water quality, distribution of temperature, salinity, turbidity\nEngineering examples: sensor accuracy, battery life, sensor or craft mechanical durability, velocity vs. power"
+    "section": "Round 1: What do you care about?",
+    "text": "Round 1: What do you care about?\n“We don’t know how to measure what we care about, so we care about what we measure” - Richard A. Tapia\n\nReview the Project Impact pre-reading\nReflect individually on your project’s purpose - what do you want to study and why?\nCome together as a team and share your reflections"
+  },
+  {
+    "objectID": "presentation/project/project-presentation.html#round-2-what-do-you-want-to-measure",
+    "href": "presentation/project/project-presentation.html#round-2-what-do-you-want-to-measure",
+    "title": "E80 Project Kickoff Presentation",
+    "section": "Round 2: What do you want to measure?",
+    "text": "Round 2: What do you want to measure?\n\nWhat do you want your robot to measure?\nBroadly in two categories: scientific and engineering relationships\n\nScientific examples: water quality, distribution of temperature, salinity, turbidity\nEngineering examples: sensor accuracy, battery life, sensor or craft mechanical durability, velocity vs. power"
   },
   {
     "objectID": "presentation/project/project-presentation.html#instructions",
@@ -1596,18 +1603,18 @@
     "text": "“Yes, and” wild stories"
   },
   {
-    "objectID": "presentation/project/project-presentation.html#round-2-give-feedback-on-delightful-ideas",
-    "href": "presentation/project/project-presentation.html#round-2-give-feedback-on-delightful-ideas",
+    "objectID": "presentation/project/project-presentation.html#round-3-give-feedback-on-delightful-ideas",
+    "href": "presentation/project/project-presentation.html#round-3-give-feedback-on-delightful-ideas",
     "title": "E80 Project Kickoff Presentation",
-    "section": "Round 2: Give feedback on delightful ideas",
-    "text": "Round 2: Give feedback on delightful ideas\n\nSplit your team in half. Half move to the big sticky on the right, half move to the big sticky to the left.\nUse the dots to vote for the idea(s) you find most delightful or fascinating (do NOT consider feasibility at this point).\n\nYou get 3 votes each\nYou may vote for the same idea more than once."
+    "section": "Round 3: Give feedback on delightful ideas",
+    "text": "Round 3: Give feedback on delightful ideas\n\nSplit your team in half. Half move to the big sticky on the right, half move to the big sticky to the left.\nUse the dots to vote for the idea(s) you find most delightful or fascinating (do NOT consider feasibility at this point).\n\nYou get 3 votes each\nYou may vote for the same idea more than once."
   },
   {
-    "objectID": "presentation/project/project-presentation.html#round-3-how-do-you-want-to-measure-it",
-    "href": "presentation/project/project-presentation.html#round-3-how-do-you-want-to-measure-it",
+    "objectID": "presentation/project/project-presentation.html#round-4-how-do-you-want-to-measure-it",
+    "href": "presentation/project/project-presentation.html#round-4-how-do-you-want-to-measure-it",
     "title": "E80 Project Kickoff Presentation",
-    "section": "Round 3: How do you want to measure it?",
-    "text": "Round 3: How do you want to measure it?\n\nReview the feedback you got from your classmates’ dot votes.\nSelect 3 ideas that you wish to explore further.\nFor each idea, sketch a plot of the key figure that you hope to generate as the result of your project."
+    "section": "Round 4: How do you want to measure it?",
+    "text": "Round 4: How do you want to measure it?\n\nReview the feedback you got from your classmates’ dot votes.\nSelect 3 ideas that you wish to explore further.\nFor each idea, sketch a plot of the key figure that you hope to generate as the result of your project."
   },
   {
     "objectID": "presentation/project/project-presentation.html#think-about-the-axes-of-your-measurements",
@@ -1617,18 +1624,18 @@
     "text": "Think about the axes of your measurements\n\nWhat is the independent variable?\nWhat is the dependent variable?"
   },
   {
-    "objectID": "presentation/project/project-presentation.html#round-3-how-do-you-want-to-measure-it-1",
-    "href": "presentation/project/project-presentation.html#round-3-how-do-you-want-to-measure-it-1",
+    "objectID": "presentation/project/project-presentation.html#round-4-how-do-you-want-to-measure-it-1",
+    "href": "presentation/project/project-presentation.html#round-4-how-do-you-want-to-measure-it-1",
     "title": "E80 Project Kickoff Presentation",
-    "section": "Round 3: How do you want to measure it?",
-    "text": "Round 3: How do you want to measure it?\n\nWhat are your…\n\nIndependent variable(s): e.g., \\(t\\), \\(x\\), \\(y\\)\nDependent variable(s): e.g., \\(y(t)\\), \\(z(x,y)\\)\n\nSpecify for each variable\n\nUnits\nExpected ranges\nResolution required (e.g., sampling frequency in time/space, sensitivity)"
+    "section": "Round 4: How do you want to measure it?",
+    "text": "Round 4: How do you want to measure it?\n\nWhat are your…\n\nIndependent variable(s): e.g., \\(t\\), \\(x\\), \\(y\\)\nDependent variable(s): e.g., \\(y(t)\\), \\(z(x,y)\\)\n\nSpecify for each variable\n\nUnits\nExpected ranges\nResolution required (e.g., sampling frequency in time/space, sensitivity)"
   },
   {
-    "objectID": "presentation/project/project-presentation.html#round-4-what-instrumentation-will-you-use",
-    "href": "presentation/project/project-presentation.html#round-4-what-instrumentation-will-you-use",
+    "objectID": "presentation/project/project-presentation.html#round-5-what-instrumentation-will-you-use",
+    "href": "presentation/project/project-presentation.html#round-5-what-instrumentation-will-you-use",
     "title": "E80 Project Kickoff Presentation",
-    "section": "Round 4: What instrumentation will you use?",
-    "text": "Round 4: What instrumentation will you use?\nFor each desired quantity, list out any ways that you can think of to measure that quantity.\n\nWhat is the transduction method (e.g., electrical, mechanical, chemical, combination, etc.)\nWhat types of sensors might you use? Think about what you’ve used or seen in E80 so far for inspiration."
+    "section": "Round 5: What instrumentation will you use?",
+    "text": "Round 5: What instrumentation will you use?\nFor each desired quantity, list out any ways that you can think of to measure that quantity.\n\nWhat is the transduction method (e.g., electrical, mechanical, chemical, combination, etc.)\nWhat types of sensors might you use? Think about what you’ve used or seen in E80 so far for inspiration."
   },
   {
     "objectID": "presentation/project/project-presentation.html#wrap-up",
