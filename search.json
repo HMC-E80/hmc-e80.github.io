@@ -1554,11 +1554,11 @@
     "text": "Considerations when Picking Sensors\nPackage type – thru hole vs. surface mount w/ adapter board\nInterface\n\n\n\n\n\n\n\n\nInterface\nDifficulty\nDetails\n\n\n\n\nGPIO\nEasy\nUsing D3 and D4, can make sampler\n\n\nI2C\nMedium\nUsing SCL and SDA pins, some configuration\n\n\nUART\nMedium\nUsing RX and TX pins, some configuration\n\n\nSPI\nHard\nNeeds to be implemented in software (bit banging)\n\n\n\nMUST BE IN STOCK!"
   },
   {
-    "objectID": "presentation/project/project-presentation.html#design-elements-to-consider",
-    "href": "presentation/project/project-presentation.html#design-elements-to-consider",
+    "objectID": "presentation/project/project-presentation.html#experimental-design-considerations",
+    "href": "presentation/project/project-presentation.html#experimental-design-considerations",
     "title": "E80 Project Kickoff Presentation",
-    "section": "Design Elements to Consider",
-    "text": "Design Elements to Consider\n\n\n\n\n\n\n\n\n\n\n\n\n\nElectronics: Audio, Digital interfaces, Communication, Telemetry\nSoftware: Time of flight, Advanced navigation, Diving\nMechanical: Shape, Sensor placement, Winch, Diving, Tethers"
+    "section": "Experimental Design Considerations",
+    "text": "Experimental Design Considerations\n\n\n\n\n\n\n |\n\n\n\n\nImpact: What are the scientific and/or engineering goals of your E80 project?\nElectronics Elements: Audio, Digital interfaces, Communication, Telemetry\nSoftware Elements: Time of flight, Advanced navigation, Diving\nMechanical Elements: Shape, Sensor placement, Winch, Diving, Tethers"
   },
   {
     "objectID": "presentation/project/project-presentation.html#project-ideation-activity",
