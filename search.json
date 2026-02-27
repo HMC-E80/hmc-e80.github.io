@@ -1474,14 +1474,14 @@
     "href": "presentation/project/project-presentation.html#deployments",
     "title": "E80 Project Kickoff Presentation",
     "section": "Deployments",
-    "text": "Deployments\nYou must collect data from your deployments for your final report.\n\nWeek 4: Bernard Field Station (BFS)\n\nFirst chance to get field data which is required in the final report.\nNeed a deployment plan and launch checklist.\n\n\n\nWeek 5: Dana Point\n\nBus leaves from Mudd at 6:30 am on 4/25/26 and returns ~4:00 pm. Be there!"
+    "text": "Deployments\nYou must collect data from your deployments for your final report.\n\nWeek 13: Bernard Field Station (BFS)\n\nFirst chance to get field data which is required in the final report.\nNeed a deployment plan and launch checklist.\n\n\n\nWeek 14: Dana Point\n\nBus leaves from Mudd at 6:30 am on 4/25/26 and returns ~4:00 pm. Be there!\n\n\nWe will be hosting an optional service project on Fridays, 4/3 and 4/10, from 11:00 am - 3:00 pm (including lunch) to repair the docks (and boats) at pHake Lake. Let Prof. Helmns know if you want to participate!"
   },
   {
     "objectID": "presentation/project/project-presentation.html#project-requirements",
     "href": "presentation/project/project-presentation.html#project-requirements",
     "title": "E80 Project Kickoff Presentation",
     "section": "Project Requirements",
-    "text": "Project Requirements\n\nAutonomous deployment for at least one minute with active position control.\nThe deployment must end at a place where the robot can be recovered.\nSensor package\n\nDeployed on or from your AUV\nMust use at least three sensors with at least two unique electrical interfaces.\nThe IMU, GPS, and motor current sensors don’t count toward your three sensors."
+    "text": "Project Requirements\n\nAutonomous deployment for at least one minute with active position control.\nThe deployment must end at a place where the robot can be recovered.\nSensor package\n\nDeployed on or from your AUV\nMust use at least three sensors with at least two unique electrical interfaces (e.g., voltage-to-voltage, resistance-to-voltage, current-to-voltage, etc.).\nThe IMU, GPS, and motor current sensors don’t count toward your three sensors."
   },
   {
     "objectID": "presentation/project/project-presentation.html#what-we-give-you-to-start-from",
@@ -1502,14 +1502,14 @@
     "href": "presentation/project/project-presentation.html#resources-support",
     "title": "E80 Project Kickoff Presentation",
     "section": "Resources: Support",
-    "text": "Resources: Support\n\nFull teaching team in lab hours\nProfs and proctors in office hours"
+    "text": "Resources: Support\n\nFull teaching team in lab hours\n\nStarting Friday, March 13, the weekly writing section will become lab hours\n\nProfs and proctors in office hours"
   },
   {
     "objectID": "presentation/project/project-presentation.html#resources-stuff",
     "href": "presentation/project/project-presentation.html#resources-stuff",
     "title": "E80 Project Kickoff Presentation",
     "section": "Resources: Stuff",
-    "text": "Resources: Stuff\n\nAnything in lab – sign out expensive stuff & submit error reports for anything that breaks.\n\nThe E80 main PCBs and protoboards\nE80 frames, boxes and penetrator bolts\n\nStuff outside lab: $50 budget per team as long as you follow purchasing instructions"
+    "text": "Resources: Stuff\n\nAnything in lab – sign out expensive stuff & submit error reports for anything that breaks.\n\nThe E80 main PCBs and protoboards\nE80 frames, boxes and penetrator bolts\n\nStuff outside lab: $50 budget per team as long as you follow purchasing instructions\n\nThis $50 budget must include tax, shipping, and tariff fees"
   },
   {
     "objectID": "presentation/project/project-presentation.html#resources-strict-purchasing-protocol",
