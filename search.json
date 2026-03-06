@@ -28,11 +28,11 @@
     "text": "Plots of Drag Forces on Scale Robot Model\nThis section calls for two total graphs\n\nMeasured and Simulated drag force vs. Reynolds number\nMeasured and Simulated drag coefficient vs. Reynolds number\n\nEffort:\n\nBoth graphs are present\nCalibration information, the zero fan speed lift and drag, is reported.\nReference area used for finding drag coefficients is reported.\n\nComplete:\n\nAll plots show correct values.\n\nCalibration information and reference area are correct.\nDiscussion of differences between simulations and measurements lists plausible factors that could cause discrepancies.\nExplanation of how similitude lets us use a scale model of the robot in the wind tunnel and a full-sized model of the robot in simulated water flow."
   },
   {
-    "objectID": "labs/lab6/submission.html#plots-of-lift-and-drag-for-flat-plate-and-naca-airfoils-at-different-angles-of-attack",
-    "href": "labs/lab6/submission.html#plots-of-lift-and-drag-for-flat-plate-and-naca-airfoils-at-different-angles-of-attack",
+    "objectID": "labs/lab6/submission.html#plots-of-lift-for-flat-plate-and-naca-airfoils-at-different-angles-of-attack",
+    "href": "labs/lab6/submission.html#plots-of-lift-for-flat-plate-and-naca-airfoils-at-different-angles-of-attack",
     "title": "Lab 6 Submission Sheet",
-    "section": "Plots of Lift and Drag for Flat Plate and NACA Airfoils at Different Angles of Attack",
-    "text": "Plots of Lift and Drag for Flat Plate and NACA Airfoils at Different Angles of Attack\nThis section calls for four total graphs.\n\nFlat plate and NACA airfoil lift force vs. Reynolds number\nFlat plate and NACA airfoil coefficient of lift vs. Reynolds number\nFlat plate and NACA airfoil pressure contour plot\n\nEffort:\n\nThe flat plate graphs are present.\nIncludes a reference area and reference length for the flat plate measurements with one sentence of justification.\n\nComplete:\n\nAll plots are present.\nAll performance numbers are reported\n\nPressure on the bottom of the flat plate wing compare to the top of the flat plate wing at a 15 degree angle of attack\nNACA 6412 wing’s Coefficient of Lift compared to the flat plate at an angle of attack of 15 degrees\nPressure differences between the top and bottom surfaces of the NACA 6412 wing compare to the pressure difference on the flat plate at 45 m/s and a 15 degree angle of attack\n\nBrief (4 sentence) discussion considering performance numbers and comparing NACA airfoil to flat plate wing."
+    "section": "Plots of Lift for Flat Plate and NACA Airfoils at Different Angles of Attack",
+    "text": "Plots of Lift for Flat Plate and NACA Airfoils at Different Angles of Attack\nThis section calls for four total graphs.\n\nFlat plate and NACA airfoil lift force vs. Reynolds number\nFlat plate and NACA airfoil coefficient of lift vs. Reynolds number\nFlat plate and NACA airfoil pressure contour plot\n\nEffort:\n\nThe flat plate graphs are present.\nIncludes a reference area and reference length for the flat plate measurements with one sentence of justification.\n\nComplete:\n\nAll plots are present.\nAll performance numbers are reported\n\nPressure on the bottom of the flat plate wing compare to the top of the flat plate wing at a 15 degree angle of attack\nNACA 6412 wing’s Coefficient of Lift compared to the flat plate at an angle of attack of 15 degrees\nPressure differences between the top and bottom surfaces of the NACA 6412 wing compare to the pressure difference on the flat plate at 45 m/s and a 15 degree angle of attack\n\nBrief (4 sentence) discussion considering performance numbers and comparing NACA airfoil to flat plate wing."
   },
   {
     "objectID": "labs/lab6/writing-template.html",
@@ -2706,7 +2706,7 @@
     "href": "labs/lab6/writing.html#resources",
     "title": "Lab 6 Writing Assignment",
     "section": "Resources",
-    "text": "Resources\n\nRefer to previous E80 writing assignments for guidelines on how to write high-quality versions of the various sections needed.\n\nLab 1: Figures\nLab 2: Tables\nLab 3: Schematics and Mechanical Drawings\nLab 4: Introductions\nLab 5: Mathematical Derivations and Equations\n\nShort tech memo from Prof. Spjut (link)"
+    "text": "Resources\n\nRefer to previous E80 writing assignments for guidelines on how to write high-quality versions of the various sections needed.\n\nLab 1: Figures\nLab 2: Tables\nLab 3: Schematics and Equations\nLab 4: Introductions\n\nShort tech memo from Prof. Spjut (link)"
   },
   {
     "objectID": "labs/lab6/writing.html#rubric",
