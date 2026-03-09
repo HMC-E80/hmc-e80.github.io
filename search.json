@@ -760,7 +760,7 @@
     "href": "project/proposal/index.html#introduction",
     "title": "E80 Project Design and Proposal",
     "section": "Introduction",
-    "text": "Introduction\nYou will need to produce a project proposal and have it approved by TWO professors before spring break. The project proposal is made up of four parts:\n\nA one-page maximum written description of your experiment,\nA budget indicating what you intend to buy for the project,\nA mechanical drawing showing how you plan to mount or ruggedize the sensors for water submersion,\nA detailed schematic showing how you will connect your new sensors to power and to the Teensy.\n\nThe following sections describe each deliverable. Note that an example proposal is linked above."
+    "text": "Introduction\nYou will need to produce a project proposal and have it approved by TWO members of the teaching team before spring break. The project proposal is made up of four parts:\n\nA one-page maximum written description of your experiment,\nA budget indicating what you intend to buy for the project,\nA mechanical drawing showing how you plan to mount or ruggedize the sensors for water submersion,\nA detailed schematic showing how you will connect your new sensors to power and to the Teensy.\n\nThe following sections describe each deliverable. Note that an example proposal is linked above."
   },
   {
     "objectID": "project/proposal/index.html#one-page-description",
