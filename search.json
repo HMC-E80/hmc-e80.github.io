@@ -1957,7 +1957,7 @@
     "href": "project/proposal/template.html#mechanical-drawings",
     "title": "Project Proposal Template",
     "section": "Mechanical Drawings",
-    "text": "Mechanical Drawings\n\n\n\nPlaceholder image for mechanical drawing. Replace with yours.\n\n\nBrief paragraph describing major mechanical design decisions. &lt;200 words.\nDescribe any unusual features of the drawing and any calculations for unusual mechanical features.\nInclude mass, center of mass, buoyancy, center of buoyancy and (if necessary) ballast calculations"
+    "text": "Mechanical Drawings\n\n\n\nPlaceholder image for mechanical drawing. Replace with yours.\n\n\nBrief paragraph describing major mechanical design decisions. &lt;200 words.\nDescribe any unusual features of the drawing and any calculations for unusual mechanical features.\nInclude approximate mass, center of mass, buoyancy, center of buoyancy and (if necessary) ballast calculations"
   },
   {
     "objectID": "project/proposal/template.html#electrical-schematics",
