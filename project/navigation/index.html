@@ -457,7 +457,7 @@ Tip
 <li>Assign the desired depth to a variable named <code>depth_des</code>. The desired depth can be found in the <code>wayPoints</code> array at the index <code>currentWayPoint</code> (i.e.: at <code>wayPoints[currentWayPoint]</code>).</li>
 <li>Assign the current depth to a variable <code>depth</code>. The current dept can be found in the <code>state.z</code> variable.</li>
 <li>Calculate the error, <code>depth_error</code>, as the difference between <code>depth_des</code> and <code>depth</code>. Pay attention to the order you subtract <code>depth_des</code> and <code>depth</code>, because a sign error here can make your P control push <em>away</em> from the desired waypoint.</li>
-<li>Set the vertical motor control effort, <code>uV</code>, to be the product of the control gain, <code>Kp</code>, and the error, <code>depth_error</code>. The default value of Kp is 0, so you need to change it in <code>DepthControl.h</code>. <code>Kp=80</code> is usually pretty good, but tune it up or down if your motor is too weak or too strong.</li>
+<li>Set the vertical motor control effort, <code>uV</code>, to be the product of the control gain, <code>Kp</code>, and the error, <code>depth_error</code>. The default value of Kp is 0, so you need to change it in <code>DepthControl.h</code>. We recommend a Kp value somewhere between 100 - 1000, tuned based on how weak or strong your motor is.</li>
 <li>Bound the vertical control effort between -200 and 200. These are empirical values that work well for most situations. Depending on your motor, you may need to go beyond these limits. You can go up to a maximum of +/- 250.</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
