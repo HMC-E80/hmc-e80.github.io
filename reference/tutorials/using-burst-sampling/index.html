@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Kavi Dey">
 
-<title>Lab 6 Submission Sheet – HMC E80</title>
+<title>How to use the Burst ADC Sampler – HMC E80</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,23 +27,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-d044cb0722ecf0e254d35c8b0eaa50ff.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-d044cb0722ecf0e254d35c8b0eaa50ff.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -81,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">HMC E80</span>
     </a>
   </div>
@@ -92,11 +93,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../lectures/"> 
+    <a class="nav-link" href="../../../lectures/"> 
 <span class="menu-text">Lectures</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -105,35 +106,35 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-labs">    
         <li>
-    <a class="dropdown-item" href="../../labs/overview">
+    <a class="dropdown-item" href="../../../labs/overview">
  <span class="dropdown-text">Overview and Safety</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab0">
+    <a class="dropdown-item" href="../../../labs/lab0">
  <span class="dropdown-text">Lab 0: Tutorial &amp; Skills Review</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab1">
+    <a class="dropdown-item" href="../../../labs/lab1">
  <span class="dropdown-text">Lab 1: Go Autonomous</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab2">
+    <a class="dropdown-item" href="../../../labs/lab2">
  <span class="dropdown-text">Lab 2: BEM</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab3">
+    <a class="dropdown-item" href="../../../labs/lab3">
  <span class="dropdown-text">Lab 3: Op-Amps</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab4">
+    <a class="dropdown-item" href="../../../labs/lab4">
  <span class="dropdown-text">Lab 4: Temperature</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab5">
+    <a class="dropdown-item" href="../../../labs/lab5">
  <span class="dropdown-text">Lab 5: Acoustics</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab6">
+    <a class="dropdown-item" href="../../../labs/lab6">
  <span class="dropdown-text">Lab 6: Fluids</span></a>
   </li>  
     </ul>
@@ -144,27 +145,27 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-project">    
         <li>
-    <a class="dropdown-item" href="../../project/overview">
+    <a class="dropdown-item" href="../../../project/overview">
  <span class="dropdown-text">Overview</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../project/proposal">
+    <a class="dropdown-item" href="../../../project/proposal">
  <span class="dropdown-text">Design and Proposal</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../project/navigation">
+    <a class="dropdown-item" href="../../../project/navigation">
  <span class="dropdown-text">Navigation Jump Start</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../project/build">
+    <a class="dropdown-item" href="../../../project/build">
  <span class="dropdown-text">Build and Integrate</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../project/deploy">
+    <a class="dropdown-item" href="../../../project/deploy">
  <span class="dropdown-text">Field Deployment</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../project/report">
+    <a class="dropdown-item" href="../../../project/report">
  <span class="dropdown-text">Present and Report</span></a>
   </li>  
     </ul>
@@ -175,27 +176,27 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-references">    
         <li>
-    <a class="dropdown-item" href="../../reference/inventory">
+    <a class="dropdown-item" href="../../../reference/inventory">
  <span class="dropdown-text">Lab Inventory</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../reference/equipment">
+    <a class="dropdown-item" href="../../../reference/equipment">
  <span class="dropdown-text">Lab Equipment</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../reference/board">
+    <a class="dropdown-item" href="../../../reference/board">
  <span class="dropdown-text">Board Information</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../reference/design">
+    <a class="dropdown-item" href="../../../reference/design">
  <span class="dropdown-text">Reference Designs</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../reference/tutorials">
+    <a class="dropdown-item" href="../../../reference/tutorials">
  <span class="dropdown-text">Tutorials</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../reference/history">
+    <a class="dropdown-item" href="../../../reference/history">
  <span class="dropdown-text">Old Final Projects</span></a>
   </li>  
     </ul>
@@ -219,19 +220,34 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="submission.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#sampling-with-the-teensy" id="toc-sampling-with-the-teensy" class="nav-link active" data-scroll-target="#sampling-with-the-teensy">Sampling with the Teensy</a></li>
+  <li><a href="#adding-the-burst-adc-sampler-to-your-robot-code" id="toc-adding-the-burst-adc-sampler-to-your-robot-code" class="nav-link" data-scroll-target="#adding-the-burst-adc-sampler-to-your-robot-code">Adding the Burst ADC Sampler to your Robot Code</a></li>
+  <li><a href="#processing-burst-adc-sampler-data" id="toc-processing-burst-adc-sampler-data" class="nav-link" data-scroll-target="#processing-burst-adc-sampler-data">Processing Burst ADC Sampler Data</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Lab 6 Submission Sheet</h1>
+<h1 class="title">How to use the Burst ADC Sampler</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Kavi Dey </p>
+          </div>
+  </div>
     
   
     
@@ -242,94 +258,103 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Keep answers as short as possible while still meeting specifications. Submit as a PDF.</p>
-<p>Team Number:</p>
-<p>Team Member Names:</p>
-<div style="page-break-after: always;"></div>
-<section id="measured-calibration-curve-for-wind-tunnel-air-velocity-ms-vs.-fan-speed-rpm" class="level2">
-<h2 class="anchored" data-anchor-id="measured-calibration-curve-for-wind-tunnel-air-velocity-ms-vs.-fan-speed-rpm">Measured Calibration Curve for Wind Tunnel Air Velocity [m/s] vs.&nbsp;Fan Speed [RPM]</h2>
-<p>Effort:</p>
-<ul class="task-list">
-<li><label><input type="checkbox">Present</label></li>
-</ul>
-<p>Complete:</p>
-<ul class="task-list">
-<li><label><input type="checkbox">Calibration curve shows correct numbers.</label></li>
-<li><label><input type="checkbox">Calibration curve shows correct regression line and uncertainty bounds.</label></li>
-</ul>
-<div style="page-break-after: always;"></div>
+<p>This tutorial will describe how to increase the sampling rate of the Teensy. This is necessary for time of fight sonar and can help with any sensor which relies on high frequency signals.</p>
+<section id="sampling-with-the-teensy" class="level2">
+<h2 class="anchored" data-anchor-id="sampling-with-the-teensy">Sampling with the Teensy</h2>
+<p>In lab 2, you measured the sampling rate of the Teensy at around 200 kHz. The provided ADCSampler saves the voltage on each pin <em>once per loop</em>, at a rate of 10 Hz. This is not fast enough for some sensors (such as time of flight sonar), so we also provide a burst sampler that saves a sequence of samples each loop at a much higher frequency.</p>
+<p>In addition to the <code>LOG#.bin</code> and <code>INF#.txt</code> files saved on the SD card, using the burst sampler creates a <code>datalog#</code> storing all of the burst samples.</p>
 </section>
-<section id="plots-of-drag-forces-on-cylindrical-objects" class="level2">
-<h2 class="anchored" data-anchor-id="plots-of-drag-forces-on-cylindrical-objects">Plots of Drag Forces on Cylindrical Objects</h2>
-<p>This section calls for eight total graphs:</p>
-<ul>
-<li>[1] Measured and Simulated Drag force vs.&nbsp;Reynolds number for Nose 1, 2, and 3</li>
-<li>[1] Measured and Simulated Coefficient of Drag vs.&nbsp;Reynolds number for Nose 1, 2, and 3</li>
-<li>[3] Simulated velocity profile of Nose 1, 2, and 3</li>
-<li>[3] Simulated pressure contour plot of profile of Nose 1, 2, and 3</li>
-</ul>
-<p>Effort:</p>
-<ul class="task-list">
-<li><label><input type="checkbox">Graphs are present for at least one nose cone</label></li>
-<li><label><input type="checkbox">Calibration information, the zero fan speed lift and drag, is reported.</label></li>
-<li><label><input type="checkbox">Reference area used for finding drag coefficients is reported.</label></li>
-</ul>
-<p>Complete:</p>
-<ul class="task-list">
-<li><label><input type="checkbox">All plots show correct values.<br>
-</label></li>
-<li><label><input type="checkbox">Calibration information and reference area are correct.</label></li>
-<li><label><input type="checkbox">Discussion of differences between simulations and measurements lists plausible factors that could cause discrepancies.</label></li>
-</ul>
-<div style="page-break-after: always;"></div>
+<section id="adding-the-burst-adc-sampler-to-your-robot-code" class="level2">
+<h2 class="anchored" data-anchor-id="adding-the-burst-adc-sampler-to-your-robot-code">Adding the Burst ADC Sampler to your Robot Code</h2>
+<p>The <a href="https://github.com/HMC-E80/E80/blob/main/libraries/main/BurstADCSampler.cpp">BurstADCSampler</a> library is provided in our default Github package. Invoking <code>BurstADCSampler</code> by calling <code>burst_adc.sampler()</code> in the main <code>Default_Robot.ino</code> will cause the ADC to rapidly sample data. You need to disable analog read averaging to use the <code>BurstADCSampler</code>, and you do that by adding the following line to your <code>Default_Robot.ino</code> setup function:</p>
+<pre class="{c}"><code>// Create the burst sampler where all the other sensors are created
+BurstADCSampler burst_sampler;
+
+...
+
+void setup() {
+    // required when using burst sampling
+    analogReadAveraging(0);
+
+    ... SETUP CODE
+
+    // Initialize the sampler where all other sensors are initialized
+    burst_sampler.init()
+
+    ... REST OF SETUP CODE
+}</code></pre>
+<p>You also need to add a section to the loop function that calls the burst sampler:</p>
+<pre class="{c}"><code>void loop() {
+    ... LOOP CODE
+
+    // Add code to burst sample each loop, or when a condition is met
+    if (currentTime - burst_sampler.lastExecutionTime &gt; LOOP_PERIOD) {
+        burst_sampler.lastExecutionTime = currentTime;
+        burst_sampler.sample();
+    }
+
+    ... REST OF LOOP CODE
+}</code></pre>
+<p>By default the burst sampler saves the same 9 analog inputs as the normal ADC sampler at a sample rate of roughly 7.5 kHz. If you need a faster sampling rate you can reduce the number of pins it measures for a linear increase in sample rate by editing <code>NUM_BURST_PINS</code> and <code>pinMap</code> in <code>BurstADCSampler.h</code>. Make sure to measure the true sampling frequency using a known signal as you did in lab 2.</p>
+<p>You can also edit the number of samples it saves each time, by changing <code>NUM_SAMPLES</code>. You may want to decrease how often <code>sample()</code> is called if you are saving a lot of data each time (eg you may only need sonar measurements when you get to your desired position).</p>
 </section>
-<section id="plots-of-drag-forces-on-scale-robot-model" class="level2">
-<h2 class="anchored" data-anchor-id="plots-of-drag-forces-on-scale-robot-model">Plots of Drag Forces on Scale Robot Model</h2>
-<p>This section calls for two total graphs</p>
-<ul>
-<li>Measured and Simulated drag force vs.&nbsp;Reynolds number</li>
-<li>Measured and Simulated drag coefficient vs.&nbsp;Reynolds number</li>
-</ul>
-<p>Effort:</p>
-<ul class="task-list">
-<li><label><input type="checkbox">Both graphs are present</label></li>
-<li><label><input type="checkbox">Calibration information, the zero fan speed lift and drag, is reported.</label></li>
-<li><label><input type="checkbox">Reference area used for finding drag coefficients is reported.</label></li>
-</ul>
-<p>Complete:</p>
-<ul class="task-list">
-<li><label><input type="checkbox">All plots show correct values.<br>
-</label></li>
-<li><label><input type="checkbox">Calibration information and reference area are correct.</label></li>
-<li><label><input type="checkbox">Discussion of differences between simulations and measurements lists plausible factors that could cause discrepancies.</label></li>
-<li><label><input type="checkbox">Explanation of how similitude lets us use a scale model of the robot in the wind tunnel and a full-sized model of the robot in simulated water flow.</label></li>
-</ul>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="plots-of-lift-for-flat-plate-and-naca-airfoils-at-different-angles-of-attack" class="level2">
-<h2 class="anchored" data-anchor-id="plots-of-lift-for-flat-plate-and-naca-airfoils-at-different-angles-of-attack">Plots of Lift for Flat Plate and NACA Airfoils at Different Angles of Attack</h2>
-<p>This section calls for four total graphs.</p>
-<ul>
-<li>Flat plate and NACA airfoil lift force vs.&nbsp;Reynolds number</li>
-<li>Flat plate and NACA airfoil coefficient of lift vs.&nbsp;Reynolds number</li>
-<li>Flat plate and NACA airfoil pressure contour plot</li>
-</ul>
-<p>Effort:</p>
-<ul class="task-list">
-<li><label><input type="checkbox">The flat plate graphs are present.</label></li>
-<li><label><input type="checkbox">Includes a reference area and reference length for the flat plate measurements with one sentence of justification.</label></li>
-</ul>
-<p>Complete:</p>
-<ul class="task-list">
-<li><label><input type="checkbox">All plots are present.</label></li>
-<li><label><input type="checkbox">All performance numbers are reported</label>
-<ul>
-<li>Pressure on the bottom of the flat plate wing compare to the top of the flat plate wing at a 15 degree angle of attack</li>
-<li>NACA 6412 wing’s Coefficient of Lift compared to the flat plate at an angle of attack of 15 degrees</li>
-<li>Pressure differences between the top and bottom surfaces of the NACA 6412 wing compare to the pressure difference on the flat plate at 45 m/s and a 15 degree angle of attack</li>
-</ul></li>
-<li><label><input type="checkbox">Brief (4 sentence) discussion considering performance numbers and comparing NACA airfoil to flat plate wing.</label></li>
-</ul>
+<section id="processing-burst-adc-sampler-data" class="level2">
+<h2 class="anchored" data-anchor-id="processing-burst-adc-sampler-data">Processing Burst ADC Sampler Data</h2>
+<p>Every time <code>burst_sampler.sample()</code> is called, it adds <code>NUM_SAMPLES + 1</code> rows to the <code>datalog#</code> file. The first row of each sample is a list of timestamps, measured in microseconds. The following rows are the voltages on each pin from <code>pinMap</code> in teensy units.</p>
+<p>The following code shows how to load and process a single file from the burst sampler. You may want to combine the this with <code>logreader.m</code> so you can analyze this data with your other sensors.</p>
+<pre class="{matlab}"><code>%% LOAD DATA
+rows_per_sample = 3 % 1 row for time + 2 rows for 2 pins
+
+T = readtable("datalog0"); % name of file
+data = table2array(T);
+
+% number of samples saved in file
+num_samples = length(data)/rows_per_sample;
+
+teensy_conversion = 3.3/2^10;
+
+%% PLOT SINGLE sample
+sample_to_plot = 10 % change this to make sure your data was saved correctly
+vin = data(sample_to_plot*rows_per_sample+2, :) * teensy_conversion;
+vout = data(sample_to_plot*rows_per_sample+3, :) * teensy_conversion;
+samp_time = data(i*rows_per_sample+1, :) * 1e-6;
+
+plot(samp_time, vin, samp_time, vout)
+%% CALCULATE SENSOR VALUE FOR ALL SAMPLES
+time = []; % time when each sample was started
+sensor = []; % output measurement of the sensor at time
+
+for i = 0:(num_samples-1)
+    % add to array of sample times
+    time = [time data(i*rows_per_sample+1, 1) * 1e-6]; %Fix Time 
+
+    % calculate the time of each measurement in this sample
+    samp_time = data(i*rows_per_sample+1, :) * 1e-6;
+    
+    % convert teensy units to volts
+    % ADD MORE ROWS HERE IF YOU MEASURE MORE PINS
+    vin = data(i*rows_per_sample+2, :) * teensy_conversion;
+    vout = data(i*rows_per_sample+3, :) * teensy_conversion;
+
+    % use vin and vout to calculate a single number that represents
+    % what the sensor measured at this point
+    sensor_value = ... 
+
+    % for sensors like salinity and turbidity,
+    % you may find it helpful to take a fourier transform of your signal and compare the amplitude of the largest (fundamental) harmonic
+    % fs = 1/samp_time(2) - samp_time(1);
+    % N = length(vin);
+    % f0 = fs/N;
+    % X_in = fft(vin)/N;
+    % X_out = fft(vout)/N;
+    % true_vin = max(X);
+    % true_vout = max(X2);
+
+    % add calculated sensor value to array of sensor measurements
+    sensor = [sensor calculated_sensor_value];
+end
+
+% PLOT OR ANALYZE THE CALCULATED SENSOR DATA</code></pre>
 
 
 </section>
