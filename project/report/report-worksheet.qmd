@@ -27,7 +27,10 @@ Consult with a professor or proctor if you have any questions.
 3. Sensor Design
 4. Robot Design
 5. Deployment Details
-6. Conclusion
+6. Results
+7. Conclusion
+8. Acknowledgements
+9. References
 
 See the [tech memo writing template](/labs/lab6/writing-template.qmd) for a refresher on good topics sentences and equations.
 
@@ -41,13 +44,11 @@ See the [tech memo writing template](/labs/lab6/writing-template.qmd) for a refr
 
 ### Introduction
 
-#### List the key concepts that you need to introduce
+#### List the key concepts that you need to introduce (with references)
 
 - Concept 1
 - Concept 2
 - ...
-
-#### What references are needed to support the concepts you want to introduce?
 
 ### Sensor Design
 
@@ -111,3 +112,11 @@ Plots should include comparisons to theory and ground truth measurements.
 #### What were the big-picture takeaways from your work?
 
 #### What are your recommendations for future work? If you were deploying again next week, what would you change/improve?
+
+### Acknowledgements
+
+#### Who helped you with your project? Who made the deployments possible?
+
+### References
+
+#### What references are needed to support the concepts you introduced?
