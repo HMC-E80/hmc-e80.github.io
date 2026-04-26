@@ -18,7 +18,7 @@ In the sections below, fill out the bulleted lists or include responses/plots be
 
 ## Outline
 
-There are a variety of ways that you can organize your tech memo.
+There are a variety of ways that you can organize your final report.
 The list of sections below is a suggested place to start, but you should feel free to modify it to best fit your rhetorical purpose.
 Consult with a professor or proctor if you have any questions.
 
@@ -32,7 +32,7 @@ Consult with a professor or proctor if you have any questions.
 8. Acknowledgements
 9. References
 
-See the [tech memo writing template](/labs/lab6/writing-template.qmd) for a refresher on good topics sentences and equations.
+See the [tech memo writing template](/labs/lab6/writing-template.qmd) for a refresher on good topic sentences and equations.
 
 ## Template
 
@@ -44,11 +44,7 @@ See the [tech memo writing template](/labs/lab6/writing-template.qmd) for a refr
 
 ### Introduction
 
-#### List the key concepts that you need to introduce (with references)
-
-- Concept 1
-- Concept 2
-- ...
+#### List the key concepts that you need to introduce (with references).
 
 ### Sensor Design
 
@@ -94,16 +90,15 @@ For for each sensor, include information about its design.
 
 ### Robot Design
 
-Include information and calculations for the mechanical design and integration.
+#### Include information and calculations for the mechanical design and integration.
 
 ### Deployment Details
 
-Include relevant data for your deployment (e.g., relevant plots of data collected, photos/diagrams)
+#### Include relevant data for your deployment (e.g., experimental protocol, safety precautions, photos/diagrams of deployment locations and launch trajectories)
 
 ### Results
 
-Include the plots you'll use to present the key results from your deployments.
-Plots should include comparisons to theory and ground truth measurements.
+#### Include the plots you'll use to present the key results from your deployments. Plots should include comparisons to theory and ground truth measurements.
 
 ### Conclusion
 
