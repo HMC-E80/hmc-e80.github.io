@@ -15,7 +15,7 @@ The following document describes the agenda for the E80 poster session.
 1. Half of team: remain at their poster  
 2. Other half of team: visit peer posters  
    - You must visit and peer review four posters, one from each section  
-   - You may not visit a poster that presently has three visitors  
+   - You may not visit a poster that presently has four visitors  
    - When you visit a poster, add a new mark to the visitor tally
    - Do your best to visit posters with fewer visitor tally marks
 
