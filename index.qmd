@@ -158,13 +158,12 @@ The Matlab onramp for Lab 0 is an exception: it is an individual assignment.
 
 #### Laboratory Writing Assignments
 
-You will be required to complete a writing assignment after Labs 1-6.
+You will be required to complete an in-class writing assignment after Labs 1-4.
 The purpose of the writing assignments is to train you in specific aspects of scientific writing: making figures, using tables, equations, etc. 
-These assignments are completed entirely on Friday in the Writing and Reflection section. 
-Each writing assignment will be worth 2.5% of your final grade, and you submit six assignments for a total of 15%.
+These assignments are completed entirely on Friday in the Writing and Reflection section. These are individual assignments.
 
-These are individual assignments.
-The team contract exercise in week 0 is an exception, there should be one team contract submission per team.
+The Team Contract in Week 1 and Project Proposal in Week 8 are team assignments; there should be one submission per team.
+Each writing assignment will be worth 2.5% of your final grade, and you submit six assignments for a total of 15%.
 
 #### Technical Memorandum
 
